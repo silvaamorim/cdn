@@ -1,0 +1,199 @@
+
+<html lang="pt-BR">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1", charset="utf-8">
+<style>
+
+.container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+</head>
+<body>
+
+<h2>CENTRAL INFORMAÇÕES SA/OSM</h2>
+<p>Clique no item para ver os detalhes.</p>
+
+<button class="accordion" title="Clique aqui - Informar dados da pesquisa">Pesquisa</button>
+<div class="panel">
+ 
+<br>
+
+<input type="text" id="numsa" name="numsa" maxlength="10" style="text-align:center;" size=6 placeholder="Nº SA/ANO" title="Número e Ano da SA. EX.: 123/2022" oninput="this.value = this.value.replace(/[^0-9./]/g, '').replace(/(\..*)\./g, '$1');">
+<input type="text" id="numosm" name="numosm" maxlength="10" style="text-align:center;" size=8 placeholder="Nº OSM/ANO" title="Número e Ano da OSM. EX.: 123/2022" oninput="this.value = this.value.replace(/[^0-9./]/g, '').replace(/(\..*)\./g, '$1');">
+<input type="date" id="datasadia" name="datasadia" title="Data da execução da SA"> 
+<input type="button" value="Pesquisar" title="Pesquisar os Dados. Informe pelo menos SA/ANO" onclick='SA();SADIA();OSM();'><br><br>
+
+</div>
+
+<button class="accordion"  title="Clique aqui - Informações SA">SA</button>
+
+<div class="panel">
+  <div class="container"> 
+    <iframe class="responsive-iframe" id="iframesa" src="https://appintranet.cptm.sp.gov.br/operacao/SSA/(S(0a5hypj3wrrqpnkwudlxn2ij))/Relatorios/relSSA010.aspx?vSolic=9357&vAno=2022"></iframe>
+  </div>
+</div>
+
+<button class="accordion"  title="Clique aqui - Informações SA Dia Agendado">SA Dia Agendado</button>
+<div class="panel">
+  <div class="container"> 
+    <iframe class="responsive-iframe" id="iframesadia" src="https://intranet.cptm.sp.gov.br/manutencao/sim/consultar/popCSSA.asp?valor=04/05/2022|9357|2022"></iframe>
+  </div>
+</div>
+
+<button class="accordion"  title="Clique aqui - Informações OSM">OSM</button>
+<div class="panel">
+  <div class="container"> 
+    <iframe class="responsive-iframe" id="iframeosm" src="https://intranet.cptm.sp.gov.br/Manutencao/sicom/osm/MSic_ListOSM_1.asp?parametro=5&id_osm=29728&id_ano=2022"></iframe>
+  </div>
+</div>
+
+<button class="accordion"  title="Clique aqui - SSA (Inclusão, alteração e pesquisa de SA)">SSA</button>
+<div class="panel">
+  <div class="container"> 
+    <iframe class="responsive-iframe" id="iframessa" src="https://appintranet.cptm.sp.gov.br/operacao/SSA/(S(axickcnmqqtwepi541yciebx))/Default.aspx"></iframe>
+  </div>
+</div>
+
+<button class="accordion"  title="Clique aqui - SICOM WEB (Inclusão, alteração, fechamento e pesquisa de SSM/OSM)">SICOM WEB</button>
+<div class="panel">
+  <div class="container"> 
+    <iframe class="responsive-iframe" id="iframesicom" src="https://appintranet.cptm.sp.gov.br/SICOM/"></iframe>
+  </div>
+</div>
+
+<button class="accordion"  title="Clique aqui - Informações SA DIA AGENDADO CONSULTA">SA DIA AGENDADO CONSULTA</button>
+<div class="panel">
+  <div class="container"> 
+    <iframe class="responsive-iframe" id="iframeconsultadia" src="https://intranet.cptm.sp.gov.br/manutencao/sim/consultar/cnAcompanhamento.asp?vMnu=1"></iframe>
+  </div>
+</div>
+
+<button class="accordion"  title="Clique aqui - Consulta Falhas">FALHAS - CONSULTA</button>
+<div class="panel">
+  <div class="container"> 
+    <iframe class="responsive-iframe" id="iframessa" src="https://intranet.cptm.sp.gov.br/Manutencao/sicom/sicomf.asp"></iframe>
+  </div>
+</div>
+
+<button class="accordion"  title="Clique aqui - DIAGRAMA UNIFICADO">DIAGRAMA UNIFICADO</button>
+<div class="panel">
+  <div class="container">     
+    <iframe class="responsive-iframe" src="https://silvaamorim.github.io/cdn/Diagrama%20Unificado.pdf"></iframe>
+</object>
+  </div>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+<script>
+
+function SA()
+{
+  
+  let SAANO = document.getElementById('numsa').value;
+
+  document.getElementById("iframesa").src = "https://appintranet.cptm.sp.gov.br/operacao/SSA/(S(0a5hypj3wrrqpnkwudlxn2ij))/Relatorios/relSSA010.aspx?vSolic=" + SAANO.substring(0,SAANO.indexOf("/")) + "&vAno=" + SAANO.substring(SAANO.indexOf("/")+1,10) ;
+}
+
+</script>
+
+<script>
+
+function SADIA()
+{
+  
+  let SAANO = document.getElementById('numsa').value;
+
+  let SADATA = document.getElementById('datasadia').value.split('-').reverse().join('/');
+   
+
+
+  document.getElementById("iframesadia").src = "https://intranet.cptm.sp.gov.br/manutencao/sim/consultar/popCSSA.asp?valor="+ SADATA + "|" + SAANO.substring(0,SAANO.indexOf("/")) +"|"+ SAANO.substring(SAANO.indexOf("/")+1,10) ;
+}
+
+</script>
+
+<script>
+
+function OSM()
+{
+  
+  let OSMANO = document.getElementById('numosm').value; 
+
+
+  document.getElementById("iframeosm").src = "https://intranet.cptm.sp.gov.br/Manutencao/sicom/osm/MSic_ListOSM_1.asp?parametro=5&id_osm="+ OSMANO.substring(0,OSMANO.indexOf("/")) +"&id_ano="+ OSMANO.substring(OSMANO.indexOf("/")+1,10) ;
+}
+
+</script>
+
+
+
+</body>
+</html>
