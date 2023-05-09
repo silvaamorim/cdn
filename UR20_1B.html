@@ -1,18 +1,106 @@
 <!DOCTYPE html>
 <html>
+<head>
 <meta charset="utf-8" />
-<head></head>
-<body>
-<img src="https://cptmsp-my.sharepoint.com/personal/givanildo_amorim_cptm_sp_gov_br/Documents/Compartilhado%20com%20Todos/CHAVES%20CVN/UR-20_CHV-1B.jpeg" usemap="#CHVM-1">
-<map name="CHVM-1">
-  <area shape="poly" coords="1932,515,2346,490,2562,880,1698,977" alt="Computer" href="http://maps.google.com/maps?t=k&q=loc:-23.531589, -46.531165" target="_blank" title="CHAVE 1B UR-20&#10;PERFIL: TR-68&#10;LINHA 11 VIA 2&#10;CLIQUE PARA ACESSAR GEOLOCALIZAÇÃO.">
+<style>
+ 
+ a {
   
-</map>
+  background: #fa4766;
+  color: #fff;
+  text-decoration: none;
+  font-size:11px;
+  padding: 3px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+  
 
+   
 
+ 
+ 
+ table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #00FFFF;
+}
+</style>
+ 
+ 
+ 
+</head>
+<body>
+ <input type="submit" id="consultar" value="INFORMAÇÕES, CLIQUE AQUI." onclick="mostraDiv('maisinfo');" />
+ <br> 
+ <br>
+ <div id="spoiler" style="display: none;">
+ <table>
+  <tr>
+    <th>LINHA</th>
+    <th>VIA</th>
+    <th>CHAVE</th>
+    <th>PERFIL</th>
+    <th>FABRIACANTE</th>
+    <th>MODELO</th>
+    <th>CONFIGURAÇÃO</th>
+    <th>AGULHA</th>
+    <th>DERIVAÇÃO</th>
+    <th>JACARÉ</th>
+    <th>CONTRA-TRILHO</th>
+    <th>GEOLOCAL</th>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>2</td>
+    <td size="5">L20-MCE-001B</td>
+    <td>TR-68</td>
+    <td>SIEMENS</td>
+    <td>MD-2000</td>
+    <td>LHNO</td>
+    <td>ESQUERDA</td>
+    <td>DIREITA</td>
+    <td>1:14</td>
+    <td>10 PLACAS</td>
+   <td><a href="http://maps.google.com/maps?t=k&q=loc:-23.531589, -46.531168" target="_blank">CLIQUE AQUI</a></td>
+  </tr>
+  
+</table>
+</div>
+ <br>
+ 
+<img src="https://silvaamorim.github.io/cdn/IMG_CHV/UR-20_CHV-1B.jpg"> 
+  
+
+<script>
+ 
+ function mostraDiv(obj) {
+    var el = document.getElementById('spoiler');
+        if ( el.style.display == 'none' ) {
+           /* se conteúdo está escondido, mostra e troca o valor do botão para: escondeOcultar */ 
+           el.style.display = 'block';
+           document.getElementById("consultar").value='Ocultar'
+        } else {
+           /* se conteúdo está a mostra, esconde o conteúdo e troca o valor do botão para: mostraConsultar */ 
+           el.style.display = 'none' 
+           document.getElementById("consultar").value='INFORMAÇÕES, CLIQUE AQUI.' 
+        }
+}
+ 
+ </script>
 </body>
 </html>
-
 
 
 
