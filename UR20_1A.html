@@ -60,8 +60,10 @@ tr:nth-child(even) {
  
 </head>
 <body>
- 
+ <input type="submit" id="consultar" value="Consultar" onclick="mostraDiv('maisinfo');" />
  <a title="LINHA: 11 VIA: 1&#10;CHAVE: L20-MCE-001A&#10;PERFIL: TR-68&#10;FABRICANTE: SIEMENS&#10;MODELO: MD-200&#10;CONF: LHNO&#10;AGULHA: ESQUERDA&#10;DERIVAÇÃO: DIREITA&#10;JACARÉ: 1:14&#10;CONTRA-TRILHO: 10 PLACAS&#10;CLIQUE NA CHAVE PARA ACESSAR GEOLOCALIZAÇÃO." tabindex="0">INFORMAÇÕES. POSICIONE O MOUSE AQUI, OU, CLIQUE.</a>
+ 
+ <div id="spoiler" style="display: none;">
  <table>
   <tr>
     <th>LINHA</th>
@@ -91,6 +93,7 @@ tr:nth-child(even) {
   </tr>
   
 </table>
+</div>
  <br>
  <br>
  
@@ -106,7 +109,22 @@ tr:nth-child(even) {
   
   
 
-
+<script>
+ 
+ function mostraDiv(obj) {
+    var el = document.getElementById('spoiler');
+        if ( el.style.display == 'none' ) {
+           /* se conteúdo está escondido, mostra e troca o valor do botão para: escondeOcultar */ 
+           el.style.display = 'block';
+           document.getElementById("consultar").value='Ocultar'
+        } else {
+           /* se conteúdo está a mostra, esconde o conteúdo e troca o valor do botão para: mostraConsultar */ 
+           el.style.display = 'none' 
+           document.getElementById("consultar").value='Consultar' 
+        }
+}
+ 
+ </script>
 </body>
 </html>
 
