@@ -60,9 +60,8 @@ tr:nth-child(even) {
  
 </head>
 <body>
- <input type="submit" id="consultar" value="Consultar" onclick="mostraDiv('maisinfo');" />
- <a title="LINHA: 11 VIA: 1&#10;CHAVE: L20-MCE-001A&#10;PERFIL: TR-68&#10;FABRICANTE: SIEMENS&#10;MODELO: MD-200&#10;CONF: LHNO&#10;AGULHA: ESQUERDA&#10;DERIVAÇÃO: DIREITA&#10;JACARÉ: 1:14&#10;CONTRA-TRILHO: 10 PLACAS&#10;CLIQUE NA CHAVE PARA ACESSAR GEOLOCALIZAÇÃO." tabindex="0">INFORMAÇÕES. POSICIONE O MOUSE AQUI, OU, CLIQUE.</a>
- 
+ <input type="submit" id="consultar" value="INFORMAÇÕES, CLIQUE AQUI." onclick="mostraDiv('maisinfo');" />
+ <br> 
  <div id="spoiler" style="display: none;">
  <table>
   <tr>
@@ -77,6 +76,7 @@ tr:nth-child(even) {
     <th>DERIVAÇÃO</th>
     <th>JACARÉ</th>
     <th>CONTRA-TRILHO</th>
+    <th>GEOLOCAL</th>
   </tr>
   <tr>
     <td>11</td>
@@ -90,23 +90,15 @@ tr:nth-child(even) {
     <td>DIREITA</td>
     <td>1:14</td>
     <td>10 PLACAS</td>
+   <td><a href="http://maps.google.com/maps?t=k&q=loc:-23.531778, -46.530181" target="_blank">CLIQUE AQUI</a></td>
   </tr>
   
 </table>
 </div>
  <br>
- <br>
  
  
- 
-<img src="https://silvaamorim.github.io/cdn/IMG_CHV/UR-20_CHV-1A.jpg" usemap="#CHVM-1">
-<map name="CHVM-1">
-  <area shape="poly" coords="586,141,720,155,824,355,468,325" alt="CHAVE: L20-MCE-001A" href="http://maps.google.com/maps?t=k&q=loc:-23.531778, -46.530181" target="_blank">
-  
-</map>
- 
- 
-  
+<img src="https://silvaamorim.github.io/cdn/IMG_CHV/UR-20_CHV-1A.jpg"> 
   
 
 <script>
@@ -120,7 +112,7 @@ tr:nth-child(even) {
         } else {
            /* se conteúdo está a mostra, esconde o conteúdo e troca o valor do botão para: mostraConsultar */ 
            el.style.display = 'none' 
-           document.getElementById("consultar").value='Consultar' 
+           document.getElementById("consultar").value='INFORMAÇÕES, CLIQUE AQUI.' 
         }
 }
  
