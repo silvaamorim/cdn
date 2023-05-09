@@ -5,8 +5,7 @@
 <style>
  
  a {
-  height: 40px;
-  width: 200px;
+  
   background: #fa4766;
   color: #fff;
   text-decoration: none;
@@ -16,26 +15,9 @@
   border-radius: 10px;
 }
   
-/*Functional Styling*/
-@media (pointer: coarse), (hover: none) {
-  [title] {
-    position: relative;
-    
-    justify-content: center;
-  }
-  [title]:focus::after {
-    content: attr(title);
-    position: absolute;
-    top: 90%;
-    color: #000;
-    background-color: #fff;
-    border: 1px solid;
-    width: 105px;
-    padding: 3px;
-    font-size: 10px;
-  }
 
-}
+   
+
  
  
  table {
@@ -62,6 +44,7 @@ tr:nth-child(even) {
 <body>
  <input type="submit" id="consultar" value="INFORMAÇÕES, CLIQUE AQUI." onclick="mostraDiv('maisinfo');" />
  <br> 
+ <br>
  <div id="spoiler" style="display: none;">
  <table>
   <tr>
@@ -96,7 +79,6 @@ tr:nth-child(even) {
 </table>
 </div>
  <br>
- 
  
 <img src="https://silvaamorim.github.io/cdn/IMG_CHV/UR-20_CHV-1A.jpg"> 
   
