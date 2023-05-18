@@ -1,112 +1,96 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8" />
-<style>
- 
- a {
-  
-  background: #fa4766;
-  color: #fff;
-  text-decoration: none;
-  font-size:11px;
-  padding: 3px;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-  
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
- 
- 
- table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+    <style>
+    
+      a {
+        
+        background: #fa4766;
+        color: #fff;
+        text-decoration: none;
+        font-size:11px;
+        padding: 3px;
+        box-sizing: border-box;
+        border-radius: 5px;
+      }
+
+      .center {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
   
-}
-
-td, th {
-  border: 1px solid black;
-  text-align: center;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #00FFFF;
-}
-</style>
- 
- 
- 
-</head>
-<body>
- <input type="submit" id="consultar" value="INFORMAÇÕES, CLIQUE AQUI." onclick="mostraDiv('maisinfo');" />
- <br> 
- <br>
- <div id="spoiler" style="display: none;">
- <table>
-  <tr>
-    <th>LINHA</th>
-    <th>VIA</th>
-    <th>KM+M</th>
-    <th>CHAVE</th>
-    <th>PERFIL</th>
-    <th>BASE</th>
-    <th>APOIO</th>   
-    <th>FABRIACANTE</th>
-    <th>MODELO</th>
-    <th>CONFIGURAÇÃO</th>
-    <th>AGULHA</th>
-    <th>DERIVAÇÃO</th>
-    <th>JACARÉ</th>
-    <th>CONTRA-TRILHO</th>
-    <th>GEOLOCAL</th>
-  </tr>
-  <tr>
-    <td>11</td>
-    <td>2</td>
-    <td>42+624</td>
-    <td>L36-MCE-001A</td>
-    <td>TR-57</td>
-    <td>LASTRO</td>
-    <td>DORMENTE MADEIRA</td>
-    <td>WABCO</td>
-    <td>M23A</td>
-    <td>LHNO</td>
-    <td>6,704</td>
-    <td>DIREITA</td>
-    <td>1:14</td>
-    <td>4,500M</td>
-   <td><a href="http://maps.google.com/maps?t=k&q=loc:-23.543029, -46.256142" target="_blank">CLIQUE AQUI</a></td>
-  </tr>
-  
-</table>
-</div>
- <br>
- 
-<img src="https://silvaamorim.github.io/cdn/IMG_CHV/CHVE_1A_UR_36.jpg"> 
-  
-
-<script>
- 
- function mostraDiv(obj) {
-    var el = document.getElementById('spoiler');
-        if ( el.style.display == 'none' ) {
-           /* se conteúdo está escondido, mostra e troca o valor do botão para: escondeOcultar */ 
-           el.style.display = 'block';
-           document.getElementById("consultar").value='Ocultar'
-        } else {
-           /* se conteúdo está a mostra, esconde o conteúdo e troca o valor do botão para: mostraConsultar */ 
-           el.style.display = 'none' 
-           document.getElementById("consultar").value='INFORMAÇÕES, CLIQUE AQUI.' 
         }
-}
- 
- </script>
-</body>
-</html>
+    
+    </style>
+    
+  
+  </head>
+  <body>
+        
+        <!-- Botão para acionar modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+      INFORMAÇÕES
+    </button>
 
+        <!-- Modal -->
+    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-danger" id="exampleModalLabel">L36-MCE-001A</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+              <div class="modal-body" style="background-color:green">
+                <strong>
+                  <p style="text-align:center; font-size:15px; color: white">
+                    LINHA: 11
+                    VIA: 2
+                    KM+M: 42+624
+                    PERFIL: TR-57
+                    BASE: LASTRO/DORMENTE DE MADEIRA
+                  </p>
+                </strong>
+
+                <strong>
+                  <p style="text-align:center; font-size:15px; color: white">
+                    FABRICANTE: WABCO
+                    MODELO: M23A
+                    CONFIGURAÇÃO: LHNO       
+                  </p>
+                </strong>
+
+                <strong>
+                  <p style="text-align:center; font-size:15px; color: white">
+                    AGULHA: 6,704
+                    DERIVAÇÃO: DIREITA
+                    JACARÉ: 1:14
+                    CONTRA-TRILHO: 4700MM       
+                  </p>
+                </strong>
+                <a href="http://maps.google.com/maps?t=k&q=loc:-23.543029, -46.256142" target="_blank">GEOLOCAL</a>
+              </div>
+                <hr>	 
+            
+          </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+    <img src="https://silvaamorim.github.io/cdn/IMG_CHV/CHV-03E_UR_36.jpg" class="center"> 
+      
+
+  </body>
+</html>
 
 
