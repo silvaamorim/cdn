@@ -49,11 +49,15 @@ $("#linhas").change(function() {
                 if(linha === Dados.Linhas[i].Linha){
                     contrato.value=Dados.Linhas[i].Contrato;
                     consorcio.innerText=Dados.Linhas[i].Consorcio;
+                    linhaatual.classList.remove("text-black")
+                    linhaatual.classList.add("text-white")
                     break;
                 }
                 else{
                     contrato.value="NÚMERO CONTRATO";
                     consorcio.innerText="CONSÓRCIO";
+                    linhaatual.classList.remove("text-white")
+                    linhaatual.classList.add("text-black")
                 }
             }
         })
