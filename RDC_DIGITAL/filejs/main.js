@@ -1,5 +1,6 @@
 $("#linhas").change(function() {
     let linhaatual = document.getElementById("linhas").value;
+    let linha = linhaatual.substring(0, 2).trim();
     let linhacel = document.getElementById("linha");
     let consorcio = document.getElementById("cons");
     let contrato = document.getElementById("ncontrato");
@@ -45,7 +46,7 @@ $("#linhas").change(function() {
         response.json().then((Dados) => {
 
             for (let i = 0; i < Dados.Linhas.length; i++){
-                if(linhaatual === Dados.Linhas[i].Linha){
+                if(linha === Dados.Linhas[i].Linha){
                     contrato.value=Dados.Linhas[i].Contrato
                     consorcio.value=Dados.Linhas[i].Consorcio
 
