@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #linhas, #nrdc{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#med, #sa, #falha, #nivel, #ocorr, #osm, #dt, #dtpi, #dtpf, #dtei, #dtef, #temp, #clima, #periodo, #loc, #via, #kmi, #kmf, #uri, #urf, #esti, #estf, #mod, #mun, #comp, #comp1, #codvp, #codct, #desc, #un,#qtd, #pos, #obs{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#linhas {
+	appearance: none;
+    
+};
+
+
+    </style>
+    <title>RDC DIGITALt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <table id="cabecalho" class="table table-bordered table-sm">
+        <thead>
+            <tr>
+                <th class="text-center align-middle" style="width: 10% " rowspan="2"><img src="img/logocptm.png"  alt="logocptm"><br>DO/GOM/GOV</th>
+            
+                <th class="text-center h3"style="width: 40%">MANUTENÇÃO DE VIA PERMANENTE</th>
+                
+                <th id="cons" class="text-center align-middle h3"style="width: 40%">CONSÓRCIO</th>
+                          
+                <th class="text-center align-middle" style="width: 10%" rowspan="2"><img src="img/Brasao.png"  alt="Brasao"></th>
+            </tr>
+            <tr>                
+                <th id="linha" class="text-center h3" style="width: 40%">
+                    <select id="linhas" class="form-select text-center text-black border-0" aria-label="Default select example">
+                        <option selected>Escolha a Linha</option>
+                        <option value="7 (Rubi)">7 (Rubi)</option>
+                        <option value="10 (Turquesa)">10 (Turquesa)</option>
+                        <option value="11 (Coral)">11 (Coral)</option>
+                        <option value="12 (Safira)">12 (Safira)</option>
+                        <option value="13 (Jade)">13 (Jade)</option>
+                    </select>
+                </th>
+                
+                <th class="text-center align-middle h3" style="width: 40%"class="text-center">CONTRATO: <input class="border-0" type="text" id="ncontrato" placeholder="NÚMERO CONTRATO"></th>
+            </tr>
+        </thead>       
+          
+    </table>
+    
+    <table id="rdc"class="table table-bordered">
+        <thead>
+            <tr>
+                <th class="text-center align-middle h1 bg-secondary" style="width: 70% ">RELATÓRIO DIÁRIO DE CAMPO</th>
+            
+                <th class="text-center h1 bg-secondary"style="width: 20%">RDC Nº</th>               
+                
+                          
+                <th class="text-center align-middle"  style="width: 10%"><input class="border-0 w-100 text-center" type="text" name="nrdc" id="nrdc" placeholder="RDC Nº"></th>
+            </tr>
+            
+        </thead>       
+          
+    </table>
+
+    <table id="geral"class="table table-bordered">
+        <thead>
+            <tr>
+                <th class="text-center align-middle h3 table-secondary">MEDIÇÃO</th>            
+                <th class="text-center h3 table-secondary">SA/ANO</th>                
+                          
+                <th class="text-center table-secondary h3">FALHA/ANO</th>
+
+                <th class="text-center table-secondary h3">NÍVEL</th>
+
+                <th class="text-center table-secondary h3">OCORRÊNCIA</th>
+
+                <th class="text-center table-secondary h3">OSM/ANO</th>
+
+                <th class="text-center table-secondary h3">DATA</th>
+
+            </tr>
+            
+        </thead>
+        
+        <body>
+            <tr>
+
+                <td class="text-center align-middle" style="width: 10%"><input class="border-0 text-center w-100" type="text" name="med" id="med" placeholder="MEDIÇÃO"></td>
+
+                <td class="text-center align-middle" style="width: 10%"><input class="border-0 text-center w-100" type="text" name="sa" id="sa" placeholder="SA/ANO"></td>
+
+                <td class="text-center align-middle" style="width: 10%"><input class="border-0 text-center w-100" type="text" name="falha" id="falha" placeholder="FALHA/ANO"></td>
+
+                <td class="text-center align-middle" style="width: 10%"><select name="nivel" id="nivel" class="form-select text-center border-0 w-100" aria-label="NÍVEL">
+                    <option selected>NÍVEL</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>                    
+                </select></td>
+
+                <td class="text-center align-middle"><select name="ocorr" id="ocorr" class="form-select text-center border-0 w-100" aria-label="OCORRÊNCIA">
+                    <option selected>OCORRÊNCIA</option>
+                    <option value="AGULHA DANIFICADA">AGULHA DANIFICADA</option>
+                    <option value="AMV DANIFICADA">AMV DANIFICADA</option>
+                    <option value="ALAGAMENTO/INUNDAÇÃO">ALAGAMENTO/INUNDAÇÃO</option>
+                    <option value="DESNIVELAMENTO">DESNIVELAMENTO</option>
+                    <option value="DESALINHAMENTO">DESALINHAMENTO</option>
+                    <option value="EQUIP. DRENAGEM DANIFICADO">EQUIP. DRENAGEM DANIFICADO</option>
+                    <option value="ENTULLHO/LIXO NA VIA">ENTULLHO/LIXO NA VIA</option>
+                    <option value="FIXAÇÃO/BITOLA">FIXAÇÃO/BITOLA</option>                    
+                    <option value="FUGA DE LASTRO">FUGA DE LASTRO</option>
+                    <option value="JACARÉ DANIFICADO">JACARÉ DANIFICADO</option>
+                    <option value="JIC QUEBRADA">JIC QUEBRADA</option>
+                    <option value="JIC TOPADA">JIC TOPADA</option>
+                    <option value="LASTRO COLMATADO">LASTRO COLMATADO</option>
+                    <option value="TALA DANIFICADA">TALA DANIFICADA</option>
+                    <option value="TORTUOSIDADE">TORTUOSIDADE</option>
+                    <option value="TRILHO PARTIDO">TRILHO PARTIDO</option>
+                    <option value="OUTROS (DESCREVER COMPLEMENTO)">OUTROS (DESCREVER COMPLEMENTO)</option>
+                </select></td>
+
+                <td class="text-center align-middle" style="width: 10%"><input class="border-0 text-center w-100" type="text" name="osm" id="osm" placeholder="OSM/ANO"></td>
+
+                <td class="text-center align-middle"><input class="border-0 text-center w-100" type="date" name="dt" id="dt"></td>
+
+            </tr>           
+        </body>
+          
+    </table>
+
+    <table id="tempo"class="table table-bordered">
+        <thead>
+            <tr>
+                <th class="text-center align-middle h3 table-secondary">HORÁRIO PREVISTO</th>            
+                <th class="text-center h3 table-secondary">HORÁRIO EXECUÇÃO</th>                
+                          
+                <th class="text-center table-secondary h3">PERÍODO</th>
+
+                <th class="text-center table-secondary h3">CLIMA</th>
+
+                <th class="text-center table-secondary h3">TEMPERATURA</th>               
+
+            </tr>
+            
+        </thead>
+        
+        <body>
+            <tr>
+
+                <td class="text-center align-middle"><span>INICIAL</span><input class="border-0 text-center w-75" type="datetime-local" name="dtpi" id="dtpi"></td>
+
+                <td class="text-center align-middle"><span>INICIAL</span><input class="border-0 text-center w-75" type="datetime-local" name="dtei" id="dtei"></td>                
+
+                <td class="text-center align-middle" style="width: 15%" rowspan="2"><select name="periodo" id="periodo" class="form-select text-center border-0 w-100" aria-label="PERÍODO">
+                    <option selected>PERÍODO</option>
+                    <option value="DIURNO">DIURNO</option>
+                    <option value="NOTURNO">NOTURNO</option>
+                    <option value="LONGO">LONGO</option>                                      
+                </select></td>
+
+                <td class="text-center align-middle" rowspan="2"><select name=" clima" id="clima" class="form-select text-center border-0 w-100" aria-label="CLIMA">
+                    <option selected>CLIMA</option>
+                    <option value="BOM">BOM</option>
+                    <option value="CHUVOSO">CHUVOSO</option>
+                    <option value="FRIO">FRIO</option>                    
+                </select></td>
+
+                <td class="text-center align-middle" style="width: 10%" rowspan="2"><input class="border-0 text-center w-100" type="text" name="temp" id="temp" placeholder="TEMPERATURA"></td>
+            </tr>
+            
+            <tr>
+                <td class="text-center align-middle"><span>FINAL:</span><input class="border-0 text-center w-75" type="datetime-local" name="dtpf" id="dtpf"></td>
+
+                <td class="text-center align-middle"><span>FINAL:</span><input class="tp border-0 text-center w-75" type="datetime-local" name="dtef" id="dtef"></td>  
+
+            </tr>
+        </body>
+          
+    </table>
+
+    <table id="local"class="table table-bordered">
+        <thead>
+            <tr>
+                <th class="text-center align-middle h3 table-secondary">LOCAL</th> 
+
+                <th class="text-center h3 table-secondary">VIA(S)</th>                
+                          
+                <th class="text-center table-secondary h3">KM/PT</th>   
+                                               
+                <th class="text-center table-secondary h3">UR/LOC</th>                
+
+                <th class="text-center table-secondary h3">ESTAÇÃO</th>
+
+                <th class="text-center table-secondary h3">MUNICÍPIO</th>
+
+                <th class="text-center table-secondary h3">MÓDULO</th>
+
+            </tr>
+            
+        </thead>
+        
+        <body>
+            <tr>
+
+                <td class="text-center align-middle" style="width: 15%" rowspan="2"><select name="loc" id="loc" class="form-select text-center border-0 w-100" aria-label="LOCAL">
+                    <option selected>LOCAL</option>
+                    <option value="ÁREA EXTERNA">ÁREA EXTERNA</option>
+                    <option value="CRD">CDR</option>
+                    <option value="ENTREVIAS">ENTREVIAS</option>
+                    <option value="LATERAL">LATERAL</option> 
+                    <option value="ENTREVIAS">ENTREVIAS</option>
+                    <option value="PÁTIO">PÁTIO</option>
+                    <option value="VIA PRINCIPAL">VIA PRINCIPAL</option>  
+                </select></td>
+
+                <td class="text-center align-middle" style="width: 20%" rowspan="2"><input class="border-0 text-center w-100" type="text" name="via" id="via" title="EX.: 1, 2"></td>                
+
+                <td class="text-center align-middle" style="width: 10%"><input class="border-0 text-center w-100" type="text" name="kmi" id="kmi" title="INICIAL: 25/08"></td>      
+                       
+                <td class="text-center align-middle" style="width: 10%"><input class="border-0 text-center w-100" type="text" name="uri" id="uri" title="INICIAL: UR-09"></td>           
+
+                <td class="text-center align-middle" style="width: 20%"><input class="border-0 text-center w-100" type="text" name="esti" id="esti" title="INICIAL: SÃO MIGUEL PALULISTA"></td>                
+
+                <td class="text-center align-middle" style="width: 10%" rowspan="2"><input class="border-0 text-center w-100" type="text" name="mun" id="mun" title="EX.: SÃO PAULO"></td>
+
+                <td class="text-center align-middle" style="width: 10%" rowspan="2"><input class="border-0 text-center w-100" type="text" name="mod" id="mod"></td>
+            </tr>
+
+            <tr>
+
+                <td class="text-center align-middle" style="width: 10%"><input class="border-0 text-center w-100" type="text" name="kmf" id="kmf" title="FINAL: 26/10"></td>
+
+                <td class="text-center align-middle" style="width: 10%"><input class="border-0 text-center w-100" type="text" name="uri" id="uri" title="FINAL: UR-10"></td>
+
+                <td class="text-center align-middle" style="width: 20%"><input class="border-0 text-center w-100" type="text" name="estf" id="estf" title="FINAL: ITAIM PALULISTA"></td>
+
+            </tr>
+            
+            <tr>
+                <td class="text-center align-middle table-secondary" id="comp1">COMPLEMENTO:</td>
+
+                <td class="text-center align-middle" colspan="6"><input class="border-0 text-center w-100" type="text" name="comp" id="comp"></td>      
+
+
+            </tr>
+        </body>
+          
+    </table>
+
+    <table id="servico"class="table table-bordered">
+        <thead>
+            <tr class="border border-secondary">
+                <th class="text-center align-middle h3 table-secondary" colspan="8">SERVIÇO(S) REALIZADO(S)</th>                
+            </tr>
+            
+            <tr>
+                <th class="text-center align-middle h3 table-secondary">COD</th>                             
+                          
+                <th class="text-center table-secondary h3">DESCRIÇÃO</th>   
+                                               
+                <th class="text-center table-secondary h3">UN</th>                
+
+                <th class="text-center table-secondary h3">QTDE</th>
+
+                <th class="text-center table-secondary h3">POSIÇÃO</th>
+
+                <th class="text-center table-secondary h3">OBS</th>                
+
+            </tr>
+            
+        </thead>
+        
+        <body>
+            <tr>
+
+                <td class="text-center align-middle" style="width: 8%"><select name="codvp" id="codvp" class="form-select text-center border-0 w-100" aria-label="CÓDIGO">
+                    <option selected>CÓDIGO</option>                    
+                </select></td>                              
+
+                <td class="text-center align-middle" style="width: 25%"><textarea rows="1" class="border-0 w-100"  name="obs" id="desc"></textarea></td>      
+                       
+                <td class="text-center align-middle" style="width: 5%"><input class="border-0 text-center w-100" type="text" name="un" id="un"></td>           
+
+                <td class="text-center align-middle" style="width: 5%"><input class="border-0 text-center w-100" type="text" name="qtd" id="qtd"></td>                
+
+                <td class="text-center align-middle" style="width: 10%"><input class="border-0 text-center w-100" type="text" name="pos" id="pos" title="EX.: V-1 12/01 12/03"></td>
+
+                <td class="text-center align-middle" style="width: 20%"><textarea rows="1" class="border-0 w-100"  name="obs" id="obs"></textarea></td>
+                
+            </tr>
+
+            
+        </body>
+          
+    </table>
+
+    <table id="veiculo"class="table table-bordered">
+        <thead>
+            <tr class="border border-secondary">
+                <th class="text-center align-middle h3 table-secondary" colspan="7">SERVIÇO(S) REALIZADO(S)</th>
+                <th class="text-center align-middle h3 table-secondary"><img src="img/plus.png" alt="adicionar"></th> 
+            </tr>
+            
+            <tr>
+                <th class="text-center align-middle h3 table-secondary">COD</th> 
+
+                <th class="text-center h3 table-secondary">COD</th>                
+                          
+                <th class="text-center table-secondary h3">DESCRIÇÃO</th>   
+                                               
+                <th class="text-center table-secondary h3">UN</th>                
+
+                <th class="text-center table-secondary h3">QTDE</th>
+
+                <th class="text-center table-secondary h3">POSIÇÃO</th>
+
+                <th class="text-center table-secondary h3">OBS</th>
+
+                <th class="text-center table-secondary h3">EXCLUIR</th>
+
+            </tr>
+            
+        </thead>
+        
+        <body>
+            <tr>
+
+                <td class="text-center align-middle" style="width: 8%"><select name="codvp" id="codvp" class="form-select text-center border-0 w-100" aria-label="CÓDIGO">
+                    <option selected>CÓDIGO</option>                    
+                </select></td>
+
+                <td class="text-center align-middle" style="width: 5%"><input class="border-0 text-center w-100" type="text" name="codct" id="codct"></td>                
+
+                <td class="text-center align-middle" style="width: 15%"><textarea class="border-0 w-100"  name="obs" id="desc"></textarea></td>      
+                       
+                <td class="text-center align-middle" style="width: 5%"><input class="border-0 text-center w-100" type="text" name="un" id="un"></td>           
+
+                <td class="text-center align-middle" style="width: 5%"><input class="border-0 text-center w-100" type="text" name="qtd" id="qtd"></td>                
+
+                <td class="text-center align-middle" style="width: 5%"><input class="border-0 text-center w-100" type="text" name="pos" id="pos" title="EX.: V-1 12/01 12/03"></td>
+
+                <td class="text-center align-middle" style="width: 15%"><textarea class="border-0 w-100"  name="obs" id="obs"></textarea></td>
+
+                <td class="text-center align-middle" style="width: 5%"><img src="img/delete.png" alt="deletar" id="del"></td>
+            </tr>
+
+            
+        </body>
+          
+    </table>
+
+    <table id="material"class="table table-bordered">
+        <thead>
+            <tr class="border border-secondary">
+                <th class="text-center align-middle h3 table-secondary" colspan="7">SERVIÇO(S) REALIZADO(S)</th>
+                <th class="text-center align-middle h3 table-secondary"><img src="img/plus.png" alt="adicionar"></th> 
+            </tr>
+            
+            <tr>
+                <th class="text-center align-middle h3 table-secondary">COD</th> 
+
+                <th class="text-center h3 table-secondary">COD</th>                
+                          
+                <th class="text-center table-secondary h3">DESCRIÇÃO</th>   
+                                               
+                <th class="text-center table-secondary h3">UN</th>                
+
+                <th class="text-center table-secondary h3">QTDE</th>
+
+                <th class="text-center table-secondary h3">POSIÇÃO</th>
+
+                <th class="text-center table-secondary h3">OBS</th>
+
+                <th class="text-center table-secondary h3">EXCLUIR</th>
+
+            </tr>
+            
+        </thead>
+        
+        <body>
+            <tr>
+
+                <td class="text-center align-middle" style="width: 8%"><select name="codvp" id="codvp" class="form-select text-center border-0 w-100" aria-label="CÓDIGO">
+                    <option selected>CÓDIGO</option>                    
+                </select></td>
+
+                <td class="text-center align-middle" style="width: 5%"><input class="border-0 text-center w-100" type="text" name="codct" id="codct"></td>                
+
+                <td class="text-center align-middle" style="width: 15%"><textarea class="border-0 w-100"  name="obs" id="desc"></textarea></td>      
+                       
+                <td class="text-center align-middle" style="width: 5%"><input class="border-0 text-center w-100" type="text" name="un" id="un"></td>           
+
+                <td class="text-center align-middle" style="width: 5%"><input class="border-0 text-center w-100" type="text" name="qtd" id="qtd"></td>                
+
+                <td class="text-center align-middle" style="width: 5%"><input class="border-0 text-center w-100" type="text" name="pos" id="pos" title="EX.: V-1 12/01 12/03"></td>
+
+                <td class="text-center align-middle" style="width: 15%"><textarea class="border-0 w-100"  name="obs" id="obs"></textarea></td>
+
+                <td class="text-center align-middle" style="width: 5%"><img src="img/delete.png" alt="deletar" id="del"></td>
+            </tr>
+
+            
+        </body>
+          
+    </table>
+
+    <table id="gerais"class="table table-bordered">
+        <thead>
+            <tr class="border border-secondary">
+                <th class="text-center align-middle h3 table-secondary" colspan="7">SERVIÇO(S) REALIZADO(S)</th>
+                <th class="text-center align-middle h3 table-secondary"><img src="img/plus.png" alt="adicionar"></th> 
+            </tr>
+            
+            <tr>
+                <th class="text-center align-middle h3 table-secondary">COD</th> 
+
+                <th class="text-center h3 table-secondary">COD</th>                
+                          
+                <th class="text-center table-secondary h3">DESCRIÇÃO</th>   
+                                               
+                <th class="text-center table-secondary h3">UN</th>                
+
+                <th class="text-center table-secondary h3">QTDE</th>
+
+                <th class="text-center table-secondary h3">POSIÇÃO</th>
+
+                <th class="text-center table-secondary h3">OBS</th>
+
+                <th class="text-center table-secondary h3">EXCLUIR</th>
+
+            </tr>
+            
+        </thead>
+        
+        <body>
+            <tr>
+
+                <td class="text-center align-middle" style="width: 8%"><select name="codvp" id="codvp" class="form-select text-center border-0 w-100" aria-label="CÓDIGO">
+                    <option selected>CÓDIGO</option>                    
+                </select></td>
+
+                <td class="text-center align-middle" style="width: 5%"><input class="border-0 text-center w-100" type="text" name="codct" id="codct"></td>                
+
+                <td class="text-center align-middle" style="width: 15%"><textarea class="border-0 w-100"  name="obs" id="desc"></textarea></td>      
+                       
+                <td class="text-center align-middle" style="width: 5%"><input class="border-0 text-center w-100" type="text" name="un" id="un"></td>           
+
+                <td class="text-center align-middle" style="width: 5%"><input class="border-0 text-center w-100" type="text" name="qtd" id="qtd"></td>                
+
+                <td class="text-center align-middle" style="width: 5%"><input class="border-0 text-center w-100" type="text" name="pos" id="pos" title="EX.: V-1 12/01 12/03"></td>
+
+                <td class="text-center align-middle" style="width: 15%"><textarea class="border-0 w-100"  name="obs" id="obs"></textarea></td>
+
+                <td class="text-center align-middle" style="width: 5%"><img src="img/delete.png" alt="deletar" id="del"></td>
+            </tr>
+
+            
+        </body>
+          
+    </table>
+
+    <table id="equipes"class="table table-bordered">
+        <thead>
+            <tr class="border border-secondary">
+                <th class="text-center align-middle h3 table-secondary" colspan="7">SERVIÇO(S) REALIZADO(S)</th>
+                <th class="text-center align-middle h3 table-secondary"><img src="img/plus.png" alt="adicionar"></th> 
+            </tr>
+            
+            <tr>
+                <th class="text-center align-middle h3 table-secondary">COD</th> 
+
+                <th class="text-center h3 table-secondary">COD</th>                
+                          
+                <th class="text-center table-secondary h3">DESCRIÇÃO</th>   
+                                               
+                <th class="text-center table-secondary h3">UN</th>                
+
+                <th class="text-center table-secondary h3">QTDE</th>
+
+                <th class="text-center table-secondary h3">POSIÇÃO</th>
+
+                <th class="text-center table-secondary h3">OBS</th>
+
+                <th class="text-center table-secondary h3">EXCLUIR</th>
+
+            </tr>
+            
+        </thead>
+        
+        <body>
+            <tr>
+
+                <td class="text-center align-middle" style="width: 8%"><select name="codvp" id="codvp" class="form-select text-center border-0 w-100" aria-label="CÓDIGO">
+                    <option selected>CÓDIGO</option>                    
+                </select></td>
+
+                <td class="text-center align-middle" style="width: 5%"><input class="border-0 text-center w-100" type="text" name="codct" id="codct"></td>                
+
+                <td class="text-center align-middle" style="width: 15%"><textarea class="border-0 w-100"  name="obs" id="desc"></textarea></td>      
+                       
+                <td class="text-center align-middle" style="width: 5%"><input class="border-0 text-center w-100" type="text" name="un" id="un"></td>           
+
+                <td class="text-center align-middle" style="width: 5%"><input class="border-0 text-center w-100" type="text" name="qtd" id="qtd"></td>                
+
+                <td class="text-center align-middle" style="width: 5%"><input class="border-0 text-center w-100" type="text" name="pos" id="pos" title="EX.: V-1 12/01 12/03"></td>
+
+                <td class="text-center align-middle" style="width: 15%"><textarea class="border-0 w-100"  name="obs" id="obs"></textarea></td>
+
+                <td class="text-center align-middle" style="width: 5%"><img src="img/delete.png" alt="deletar" id="del"></td>
+            </tr>
+
+            
+        </body>
+          
+    </table>
+
+
+    
+</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+
+    <script src="filejs/main.js"></script>
+
+</html>

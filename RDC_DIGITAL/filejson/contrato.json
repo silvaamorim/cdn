@@ -1,0 +1,33 @@
+{
+      "Linhas": [{
+         "Linha":"07",
+         "Consorcio":"Consórcio TGS Linhas 07/10",
+         "Contrato":"123456"
+
+   },
+   {
+         "Linha":"10",
+         "Consorcio":"Consórcio TGS Linhas 07/10",
+         "Contrato":"123456"
+
+   },
+   {
+         "Linha":"11",
+         "Consorcio":"Consórcio TGS Linhas 11/12/13",
+         "Contrato":"484545"
+
+   },
+   {
+         "Linha":"12",
+         "Consorcio":"Consórcio TGS Linhas 11/12/13",
+         "Contrato":"484545"
+
+   },
+        {
+          "Linha": "13",
+          "Consorcio": "Consórcio TGS Linhas 11/12/13",
+          "Contrato": "484545"
+        }
+      ]
+
+   }
