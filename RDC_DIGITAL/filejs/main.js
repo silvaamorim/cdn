@@ -1,6 +1,6 @@
 $("#linhas").change(function() {
-    let linhaatual = document.getElementById("linhas").value;
-    let linha = linhaatual.substring(0, 2).trim();
+    let linhaatual = document.getElementById("linhas");
+    let linha = linhaatual.value.substring(0, 2).trim();
     let linhacel = document.getElementById("linha");
     let consorcio = document.getElementById("cons");
     let contrato = document.getElementById("ncontrato");
