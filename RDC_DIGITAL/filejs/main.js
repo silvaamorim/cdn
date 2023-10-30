@@ -48,7 +48,7 @@ $("#linhas").change(function() {
             for (let i = 0; i < Dados.Linhas.length; i++){
                 if(linha === Dados.Linhas[i].Linha){
                     contrato.value=Dados.Linhas[i].Contrato
-                    consorcio.value=Dados.Linhas[i].Consorcio
+                    consorcio..innerText=Dados.Linhas[i].Consorcio
 
                 }
             }
