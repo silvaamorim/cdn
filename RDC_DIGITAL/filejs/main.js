@@ -6,33 +6,33 @@ $("#linhas").change(function() {
     let contrato = document.getElementById("ncontrato");
     if(linhaatual.value == "7 (Rubi)"){
         
-        linhacel.style.backgroundColor = "#F62217";
-        linhaatual.style.backgroundColor = "#F62217";
+        linhacel.style.backgroundColor = "#ac184a";
+        linhaatual.style.backgroundColor = "#ac184a";
 
     }
     else if(linhaatual.value == "10 (Turquesa)"){
         
-        linhacel.style.backgroundColor = "#40E0D0";
-        linhaatual.style.backgroundColor = "#40E0D0";
+        linhacel.style.backgroundColor = "#17839c";
+        linhaatual.style.backgroundColor = "#17839c";
 
     }
     else if(linhaatual.value == "11 (Coral)"){
         
-        linhacel.style.backgroundColor = "#FF7F50";
-        linhaatual.style.backgroundColor = "#FF7F50";
+        linhacel.style.backgroundColor = "#eb601f";
+        linhaatual.style.backgroundColor = "#eb601f";
 
     }
     else if(linhaatual.value == "12 (Safira)"){
         
-        linhacel.style.backgroundColor = "#385f8f";
-        linhaatual.style.backgroundColor = "#385f8f";
+        linhacel.style.backgroundColor = "#1c146b";
+        linhaatual.style.backgroundColor = "#1c146b";
 
     }
 
     else if(linhaatual.value == "13 (Jade)"){
         
-        linhacel.style.backgroundColor = "#00a86b";
-        linhaatual.style.backgroundColor = "#00a86b";
+        linhacel.style.backgroundColor = "#00b352";
+        linhaatual.style.backgroundColor = "#00b352";
 
     }
     else {
@@ -49,7 +49,10 @@ $("#linhas").change(function() {
                 if(linha === Dados.Linhas[i].Linha){
                     contrato.value=Dados.Linhas[i].Contrato
                     consorcio.innerText=Dados.Linhas[i].Consorcio
-
+                }
+                else{
+                    contrato.value="NÚMERO CONTRATO"
+                    consorcio.innerText="CONSÓRCIO"
                 }
             }
         })
