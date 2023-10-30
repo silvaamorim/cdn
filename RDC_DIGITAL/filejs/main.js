@@ -1,5 +1,5 @@
 $("#linhas").change(function() {
-    let linhaatual = document.getElementById("linhas");
+    let linhaatual = document.getElementById("linhas").value;
     let linhacel = document.getElementById("linha");
     let consorcio = document.getElementById("cons");
     let contrato = document.getElementById("ncontrato");
