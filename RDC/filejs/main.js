@@ -63,13 +63,14 @@ $(document).ready(function(){
     fetch("filejson/consorcios.json").then((response) => {
         response.json().then((Dados) => {
             let consorcios = document.getElementById("scs");
-            let options = document.createElement("option");
+            let texto = "";
+            let valor = "";
                        
 
             for (let i = 0; i < Dados.length; i++){
-                options.innerHTML = Dados[i].Consorcio;
-                options.value = Dados[i].Consorcio;
-                consorcios.options[consorcios.options.length] = new Option[ Dados[i].Consorcio,  Dados[i].Consorcio];
+                texto = Dados[i].Consorcio;
+                valor = Dados[i].Consorcio;
+                consorcios.options[consorcios.options.length] = new Option(texto,  valor);
                
             }
         })
