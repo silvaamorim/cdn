@@ -80,14 +80,14 @@ $("#linhas").change(function() {
             let estacaoi = document.getElementById("esti");            
             let estacaof = document.getElementById("estf");
             let mun = document.getElementById("mun");
-            let municatual = "";
+            let estacaoinicial = "";
 
             for (let i = 0; i < Dados.length; i++){
-                if(linhaatual.value === Dados[i].Linha_Nome & municatual != Dados[i].Municipios){
+                if(linhaatual.value === Dados[i].Linha_Nome & estacaoinicial != Dados[i].Estacoes_inicial){
                     estacaoi.options[estacaoi.options.length] = new Option(Dados[i].Estacoes_inicial,  Dados[i].Estacoes_inicial);
                     estacaof.options[estacaof.options.length] = new Option(Dados[i].Estaces_Final,  Dados[i].Estaces_Final);
                     mun.options[mun.options.length] = new Option(Dados[i].Municipios,  Dados[i].Municipios);
-                    municatual =   Dados[i].Municipios; 
+                   estacaoinicial =   Dados[i].Estacoes_inicial; 
                     
                 }
             }
