@@ -64,13 +64,32 @@ $("#linhas").change(function() {
             let consorcio = document.getElementById("scs").value;
 
             for (let i = 0; i < Dados.length; i++){
-                if(consorcio === Dados[i].Consorcio){
+                if(consorcio === Dados[i].Consorcio.toUpperCase()){
                     fiscalcconsorcio.options[fiscalcconsorcio.options.length] = new Option(Dados[i].Nome,  Dados[i].Nome);
                     
                 }
             }
         })
     });
+
+///Estações Inicial e Final
+
+    fetch("filejson/estacoes.json").then((response) => {
+        response.json().then((Dados) => {
+
+            let estacaoi = document.getElementById("esti");            
+            let estacaof = document.getElementById("estf");
+
+            for (let i = 0; i < Dados.length; i++){
+                if(linhaatual.value === Dados[i].Linha_Nome){
+                    estacaoi.options[estacaoi.options.length] = new Option(Dados[i].Estacoes_inicial,  Dados[i].Estacoes_inicial);
+                    estacaof.options[estacaof.options.length] = new Option(Dados[i].Estaces_Final,  Dados[i].Estaces_Final);
+                    
+                }
+            }
+        })
+    });
+    
     
 });
 
