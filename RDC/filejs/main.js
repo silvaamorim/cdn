@@ -75,6 +75,21 @@ $(document).ready(function(){
             }
         })
     });
+
+    fetch("filejson/equipecptm.json").then((response) => {
+        response.json().then((Dados) => {
+            let fiscalcptm = document.getElementById("fcm");
+            let supervisorcptm = document.getElementById("fsc");           
+                       
+
+            for (let i = 0; i < Dados.length; i++){
+                
+                fiscalcptm.options[fiscalcptm.options.length] = new Option(Dados[i].Nome,  Dados[i].Nome);
+                supervisorcptm.options[supervisorcptm.options.length] = new Option(Dados[i].Nome,  Dados[i].Nome);
+               
+            }
+        })
+    });
   
     $(".add").click(function(){
 
