@@ -55,7 +55,23 @@ $("#linhas").change(function() {
                 }
             }
         })
-    })
+    });
+
+    fetch("filejson/equipeconsorcio.json").then((response) => {
+        response.json().then((Dados) => {
+
+            let fiscalcconsorcio = document.getElementById("fsc");            
+            let consorcio = document.getElementById("scs").value;
+
+            for (let i = 0; i < Dados.Linhas.length; i++){
+                if(consorcio === Dados[i].Consorcio){
+                    fiscalcconsorcio.options[fiscalcconsorcio.options.length] = new Option(Dados[i].Nome,  Dados[i].Nome);
+                    
+                }
+            }
+        })
+    });
+    
 });
 
 $(document).ready(function(){
