@@ -69,7 +69,7 @@ $(document).ready(function(){
             for (let i = 0; i < Dados.length; i++){
                 options.innerHTML = Dados[i].Consorcio;
                 options.value = Dados[i].Consorcio;
-                consorcios.add(options,[i+1]);
+                consorcios.options[consorcios.options.length] = new Option[ Dados[i].Consorcio,  Dados[i].Consorcio];
                
             }
         })
