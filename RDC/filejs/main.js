@@ -2,7 +2,7 @@ $("#linhas").change(function() {
     let linhaatual = document.getElementById("linhas");
     let linha = linhaatual.value.substring(0, 2).trim();
     let linhacel = document.getElementById("linha");
-    let consorcio = document.getElementById("cons");
+    let consorcio = document.getElementById("scs");
     let contrato = document.getElementById("ncontrato");
     if(linhaatual.value == "7 (Rubi)"){
         
