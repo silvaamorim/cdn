@@ -98,15 +98,15 @@ $("#linhas").change(function() {
             for (let i = 0; i < Dados.length; i++){
                 if(linhaatual.value === Dados[i].Linha_Nome ){
 
-                    if(estacaoinicial.find(Dados[i].Estacoes_inicial)=="undefined"){                    
+                    if(estacaoinicial.find((element) => element == Dados[i].Estacoes_inicial)=="undefined"){                    
                         estacaoinicial.push(Dados[i].Estacoes_inicial);
                         estacaoi.options[estacaoi.options.length] = new Option(Dados[i].Estacoes_inicial,  Dados[i].Estacoes_inicial);
                     }
-                    if(estacaofinal.find(Dados[i].Estaces_Final)=="undefined"){                    
+                    if(estacaofinal.find((element) => element == Dados[i].Estaces_Final)=="undefined"){                    
                         estacaofinal.push(Dados[i].Estaces_Final);
                         estacaof.options[estacaof.options.length] = new Option(Dados[i].Estaces_Final,  Dados[i].Estaces_Final);
                     }
-                    if(nunicpio.find(Dados[i].Municipios)=="undefined"){                    
+                    if(nunicpio.find((element) => element == Dados[i].Municipios)=="undefined"){                    
                         estacaofinal.push(Dados[i].Municipios);
                         mun.options[mun.options.length] = new Option(Dados[i].Municipios,  Dados[i].Municipios);
                     } 
