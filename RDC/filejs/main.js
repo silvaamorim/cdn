@@ -79,7 +79,7 @@ $(document).ready(function(){
     fetch("filejson/equipecptm.json").then((response) => {
         response.json().then((Dados) => {
             let fiscalcptm = document.getElementById("fcm");
-            let supervisorcptm = document.getElementById("fsc");           
+            let supervisorcptm = document.getElementById("fsm");           
                        
 
             for (let i = 0; i < Dados.length; i++){
