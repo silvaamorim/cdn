@@ -63,6 +63,8 @@ $("#linhas").change(function() {
             let fiscalcconsorcio = document.getElementById("fsc");            
             let consorcio = document.getElementById("scs").value;
 
+             fiscalcconsorcio.options[0] = new Option"",  "");
+
             for (let i = 0; i < Dados.length; i++){
                 if(consorcio === Dados[i].Consorcio.toUpperCase()){
                     fiscalcconsorcio.options[fiscalcconsorcio.options.length] = new Option(Dados[i].Nome,  Dados[i].Nome);
@@ -80,17 +82,34 @@ $("#linhas").change(function() {
             $("#estf").empty();
             $("#mun").empty();
 
+            
+
             let estacaoi = document.getElementById("esti");            
             let estacaof = document.getElementById("estf");
             let mun = document.getElementById("mun");
-            let estacaoinicial = "";
+            let estacaoinicial =[];
+            let estacaofinal =[];
+            let nunicpio =[];
+
+            estacaoi.options[0] = new Option("", "");
+            estacaof.options[0] = new Option("", "");
+            mun.options[0] = new Option("", "");
 
             for (let i = 0; i < Dados.length; i++){
-                if(linhaatual.value === Dados[i].Linha_Nome & estacaoinicial != Dados[i].Estacoes_inicial){
-                    estacaoi.options[estacaoi.options.length] = new Option(Dados[i].Estacoes_inicial,  Dados[i].Estacoes_inicial);
-                    estacaof.options[estacaof.options.length] = new Option(Dados[i].Estaces_Final,  Dados[i].Estaces_Final);
-                    mun.options[mun.options.length] = new Option(Dados[i].Municipios,  Dados[i].Municipios);
-                   estacaoinicial =   Dados[i].Estacoes_inicial; 
+                if(linhaatual.value === Dados[i].Linha_Nome ){
+
+                    if(estacaoinicial.find(Dados[i].Estacoes_inicial)=="undefined"){                    
+                        estacaoinicial.push(Dados[i].Estacoes_inicial);
+                        estacaoi.options[estacaoi.options.length] = new Option(Dados[i].Estacoes_inicial,  Dados[i].Estacoes_inicial);
+                    }
+                    if(estacaofinal.find(Dados[i].Estaces_Final)=="undefined"){                    
+                        estacaofinal.push(Dados[i].Estaces_Final);
+                        estacaof.options[estacaof.options.length] = new Option(Dados[i].Estaces_Final,  Dados[i].Estaces_Final);
+                    }
+                    if(nunicpio.find(Dados[i].Municipios)=="undefined"){                    
+                        estacaofinal.push(Dados[i].Municipios);
+                        mun.options[mun.options.length] = new Option(Dados[i].Municipios,  Dados[i].Municipios);
+                    } 
                     
                 }
             }
