@@ -104,15 +104,15 @@ $("#linhas").change(function() {
                      testeestacaofinal = estacaofinal.find((element) => element == Dados[i].Estaces_Final)
                      testenunicpio = nunicpio.find((element) => element == Dados[i].Municipios)
 
-                    if(testeestacaoinicial=="undefined"){                    
+                    if(testeestacaoinicial == undefined){                    
                         estacaoinicial.push(Dados[i].Estacoes_inicial);
                         estacaoi.options[estacaoi.options.length] = new Option(Dados[i].Estacoes_inicial,  Dados[i].Estacoes_inicial);
                     }
-                    if(testeestacaofinal=="undefined"){                    
+                    if(testeestacaofinal == undefined){                    
                         estacaofinal.push(Dados[i].Estaces_Final);
                         estacaof.options[estacaof.options.length] = new Option(Dados[i].Estaces_Final,  Dados[i].Estaces_Final);
                     }
-                    if(testenunicpio=="undefined"){                    
+                    if(testenunicpio == undefined){                    
                         estacaofinal.push(Dados[i].Municipios);
                         mun.options[mun.options.length] = new Option(Dados[i].Municipios,  Dados[i].Municipios);
                     } 
