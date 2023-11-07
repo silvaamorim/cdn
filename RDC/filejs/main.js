@@ -63,7 +63,7 @@ $("#linhas").change(function() {
             let fiscalcconsorcio = document.getElementById("fsc");            
             let consorcio = document.getElementById("scs").value;
 
-            for (let i = 0; i < Dados.Linhas.length; i++){
+            for (let i = 0; i < Dados.length; i++){
                 if(consorcio === Dados[i].Consorcio){
                     fiscalcconsorcio.options[fiscalcconsorcio.options.length] = new Option(Dados[i].Nome,  Dados[i].Nome);
                     
