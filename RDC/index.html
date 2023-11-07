@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RDC DIGITAL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>     
+
+        .add{
+            opacity: 0;
+        }        
+
+        th:hover img{  
+        opacity:1;
+        }
+        
+        .delete, .del{
+            opacity: 0;
+        }        
+
+        div:hover .delete{  
+        opacity:1;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <!-- DADOS: LINHA, CONSÓRCIO E CONTRATO  -->
+
+    <table id="cabecalho" class="table table-bordered">
+        <thead>
+            <tr>
+                <th class="text-center align-middle" style="width: 10% " rowspan="2"><a href="https://silvaamorim.github.io/cdn/Diagrama_Unificado.pdf" target="_blank"><img src="img/logocptm.png"  alt="logocptm"></a><br>DO/GOM/GOV</th>
+            
+                <th class="text-center align-middle h5 fw-bold"style="width: 30%">MANUTENÇÃO DE VIA PERMANENTE</th>
+                
+                <th id="cons" class="text-center align-middle"style="width: 50%">
+                    <select id="scs" class="form-control text-center text-black fw-bold fs-6 border-0" aria-label="Default select example" title="INFORME O CONSÓRCIO RESPONSÁVEL PELO SERVIÇO.">
+                        <option selected></option>
+                        <option>CONSÓRCIO TGS MANUTENÇÃO LINHAS 11/12/13</option>
+                        
+                    </select>
+                </th>
+                          
+                <th class="text-center align-middle" style="width: 10%" rowspan="2"><img src="img/Brasao.png"  alt="Brasao"></th>
+            </tr>
+            <tr>                
+                <th id="linha" class="text-center align-middle" style="width: 40%">
+                    <select id="linhas" class="form-control  text-center text-black fw-bold fs-5 border-0" aria-label="Default select example" title="INFORME A LINHA DO SERVIÇO, EX.: 12.">
+                        <option selected></option>
+                        <option value="7 (Rubi)">7 (Rubi)</option>
+                        <option value="10 (Turquesa)">10 (Turquesa)</option>
+                        <option value="11 (Coral)">11 (Coral)</option>
+                        <option value="12 (Safira)">12 (Safira)</option>
+                        <option value="13 (Jade)">13 (Jade)</option>
+                    </select>
+                </th>
+                
+                <th class="text-center align-middle h6 fw-bold" style="width: 40%"class="text-center">CONTRATO: <input class="border-0 fw-bold h6" type="text" id="ncontrato" title="INFORME O NÚMERO DO CONTRATO, EX.: 45645646"></th>
+            </tr>
+        </thead>       
+          
+    </table>
+
+    <!-- DADO: RDC  -->
+
+    <table id="rdc"class="table table-bordered">
+        <thead>
+            <tr>
+                <th class="text-center align-middle h3 bg-secondary fw-bold" style="width: 70% ">RELATÓRIO DIÁRIO DE CAMPO</th>
+            
+                <th class="text-center align-middle h3 bg-secondary fw-bold"style="width: 20%">RDC Nº</th>               
+                
+                          
+                <th class="text-center align-middle"  style="width: 10%"><input class="border-0 w-100 text-center h3 fw-bold" type="text" name="nrdc" id="nrdc" title="INFORME O NÚMERO DA RDC, EX.: 1456."></th>
+            </tr>
+            
+        </thead>       
+          
+    </table>
+
+    <!-- DADOS: MEDIÇÃO, SA, FALHA, NÍVEL, OCORRÊNCIA, OSM E DATA SERVIÇO  -->
+
+    <form class="form-control  bg-dark-subtle">
+        
+        <fieldset> 
+           
+
+            <div class="row" id="idt">
+
+                <div class="col-1 text-center">            
+                    <label for="med" class="fw-bold">MEDIÇÃO</label><input type="text" class="form-control text-center fw-bold h-50" name="med" id="med" size="1" title="INFORME O NUMERO DA MEDIÇÃO EX.: 123.">
+                </div>
+                <div class="col text-center">
+                    <label for="sa" class="fw-bold">SA/ANO</label><input type="text" class="form-control text-center fw-bold h-50" name="sa" id="sa" title="INFORME O NUMERO E ANO DA SA, EX.: 1234/2023.">
+                </div>
+                <div class="col text-center">
+                    <label for="fal" class="fw-bold">FALHA/ANO</label><input type="text" class="form-control text-center fw-bold h-50" name="fal" id="fal" title="INFORME O NUMERO E ANO DA FALHA, EX.: 1234/2023.">
+                </div>
+                <div class="col-auto text-center">
+                    <label for="nvl" class="fw-bold">NÍVEL</label>
+                    <select name="nvl" id="nvl" class="form-control text-center w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME O NÍVEL DA FALHA, EX.: 3.">
+                        <option selected></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>                    
+                    </select>
+                </div>
+
+                <div class="col-auto text-center">
+                    <label for="oco" class="fw-bold">OCORRÊNCIA</label>
+                    <select name="oco" id="oco" class="form-control text-center w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME A OCORRÊNCIA DA FALHA, EX.: JIC QUEBRADA.">
+                        <option selected></option>
+                        <option value="AGULHA DANIFICADA">AGULHA DANIFICADA</option>
+                        <option value="AMV DANIFICADA">AMV DANIFICADA</option>
+                        <option value="ALAGAMENTO/INUNDAÇÃO">ALAGAMENTO/INUNDAÇÃO</option>
+                        <option value="DESNIVELAMENTO">DESNIVELAMENTO</option>
+                        <option value="DESALINHAMENTO">DESALINHAMENTO</option>
+                        <option value="EQUIP. DRENAGEM DANIFICADO">EQUIP. DRENAGEM DANIFICADO</option>
+                        <option value="ENTULLHO/LIXO NA VIA">ENTULLHO/LIXO NA VIA</option>
+                        <option value="FIXAÇÃO/BITOLA">FIXAÇÃO/BITOLA</option>                    
+                        <option value="FUGA DE LASTRO">FUGA DE LASTRO</option>
+                        <option value="JACARÉ DANIFICADO">JACARÉ DANIFICADO</option>
+                        <option value="JIC QUEBRADA">JIC QUEBRADA</option>
+                        <option value="JIC TOPADA">JIC TOPADA</option>
+                        <option value="LASTRO COLMATADO">LASTRO COLMATADO</option>
+                        <option value="TALA DANIFICADA">TALA DANIFICADA</option>
+                        <option value="TORTUOSIDADE">TORTUOSIDADE</option>
+                        <option value="TRILHO PARTIDO">TRILHO PARTIDO</option>
+                        <option value="OUTROS (DESCREVER COMPLEMENTO)">OUTROS (DESCREVER COMPLEMENTO)</option>
+                    </select>
+                </div>
+
+                <div class="col text-center">
+                    <label for="osm" class="fw-bold">OSM/ANO</label><input type="text" class="form-control text-center fw-bold h-50" name="osm" id="osm" title="INFORME O NUMERO E ANO DA OSM, EX.: 1234/2023.">
+                </div>
+
+                <div class="col-auto text-center">
+                    <label for="dat" class="fw-bold">DATA</label><input type="date" class="form-control text-center fw-bold h-50" name="dat" id="dat" title="INFORME A DATA DO SERVIÇO.">
+                </div>
+
+
+            </div>
+
+
+        </fieldset>  
+
+    </form>   
+
+    <hr class="m-2">
+
+    <!-- DADOS: HORÁRIO PREVISTO, HORÁRIO EXECUTADO, PERÍDOD, CLIMA E TEMPERATURA  -->
+    
+    <form class="form-control  bg-dark-subtle">
+        
+        <fieldset> 
+           
+
+            <div class="row" id="hor">
+
+                <div class="col-2 text-center">            
+                    <label for="dpi" class="fw-bold">PREVISTO INÍCIO</label><input type="datetime-local" class="form-control text-center fw-bold h-50" name="dpi" id="dpi" size="1" title="INFORME A DATA E HORA INÍCIO PREVISTO EX.: 12/12/2023 00:30.">
+                </div>
+                <div class="col-2 text-center"> 
+                    <label for="dpt" class="fw-bold">PREVISTO TERMINO</label><input type="datetime-local" class="form-control text-center fw-bold h-50" name="dpt" id="dpt" size="1" title="INFORME A DATA E HORA TERMINO PREVISTO EX.: 12/12/2023 05:30.">
+                </div>
+                <div class="col-2 text-center">            
+                    <label for="dei" class="fw-bold">EXECUÇÃO INÍCIO</label><input type="datetime-local" class="form-control text-center fw-bold h-50" name="dei" id="dei" size="1" title="INFORME A DATA E HORA INÍCIO EXECUÇÃO EX.: 12/12/2023 00:45.">
+                </div>
+                <div class="col-2 text-center">            
+                    <label for="det" class="fw-bold">EXECUÇÃO TERMINO</label><input type="datetime-local" class="form-control text-center fw-bold h-50" name="det" id="det" size="1" title="INFORME A DATA E HORA TERMINO EXECUÇÃO EX.: 12/12/2023 04:22.">
+                </div>
+                <div class="col text-center">
+                    <label for="prd" class="fw-bold">PERÍODO</label><select name="prd" id="prd" class="form-control text-center border-0 w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME O PERÍODO DO SERVIÇO, EX.: NOTURNO.">
+                        <option selected></option>
+                        <option value="DIURNO">DIURNO</option>
+                        <option value="NOTURNO">NOTURNO</option>
+                        <option value="LONGO">LONGO</option>                                      
+                    </select>
+                </div>                
+                <div class="col-auto text-center">
+                    <label for="clm" class="fw-bold">CLIMA</label>
+                    <select name="clm" id="clm" class="form-control text-center w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME O CLIMA, EX.: BOM.">
+                        <option selected></option>
+                        <option value="BOM">BOM</option>
+                        <option value="CHUVOSO">CHUVOSO</option>
+                        <option value="FRIO">FRIO</option>                        
+                    </select>
+                </div>               
+
+                <div class="col text-center">
+                    <label for="tpr" class="fw-bold">TEMPERATURA</label><input type="text" class="form-control text-center fw-bold h-50" name="tpr" id="tpr" title="INFORME A TEMPERATURA, EX.: 20.">
+                </div>              
+
+
+            </div>
+
+
+        </fieldset>  
+
+    </form>
+
+    <hr class="m-2">
+
+    <!-- DADOS: LOCAL, VIA, KM, UR, ESTAÇÃO, MUNÍCIPIO, MÓDULO E COMPLEMENTO  -->
+    
+    <form class="form-control  bg-dark-subtle">
+        
+        <fieldset> 
+           
+
+            <div class="row" id="loc">
+
+                <div class="col text-center">            
+                    <label for="lcl" class="fw-bold">LOCAL</label>
+                    <select name="lcl" id="lcl" class="form-control text-center border-0 w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME O LOCAL DO SERVIÇO EX.: VIA PRINCIPAL.">
+                        <option selected></option>
+                        <option value="ÁREA EXTERNA">ÁREA EXTERNA</option>
+                        <option value="CRD">CDR</option>
+                        <option value="ENTREVIAS">ENTREVIAS</option>
+                        <option value="LATERAL">LATERAL</option> 
+                        <option value="ENTREVIAS">ENTREVIAS</option>
+                        <option value="PÁTIO">PÁTIO</option>
+                        <option value="VIA PRINCIPAL">VIA PRINCIPAL</option>  
+                    </select>
+                </div>
+                <div class="col text-center"> 
+                    <label for="via" class="fw-bold">VIA(S)</label><input type="text" class="form-control text-center fw-bold h-50" name="via" id="via" size="1" title="INFORME A(S) VIA(S) DO SERVIÇO, EX.: 1, TERMINAL.">
+                </div>
+                <div class="col-1 text-center">            
+                    <label for="kmi" class="fw-bold">KM/PT I</label><input type="text" class="form-control text-center fw-bold h-50" name="kmi" id="kmi" size="1" title="INFORME O KM/POSTE INÍCIAL DO SERVIÇO EX.: 14/01.">
+                </div>
+                <div class="col-1 text-center">            
+                    <label for="kmf" class="fw-bold">KM/PT F</label><input type="text" class="form-control text-center fw-bold h-50" name="kmf" id="kmi" size="1" title="INFORME O KM/POSTE FINAL DO SERVIÇO EX.: 14/06.">
+                </div>            
+                <div class="col-1 text-center">
+                    <label for="uri" class="fw-bold">UR/LOC I</label><input type="text" class="form-control text-center fw-bold h-50" name="uri" id="uri" title="INFORME A UR/LOCAÇÃO INÍCIAL, EX.: UR-03.">
+                </div>
+                <div class="col-1 text-center">
+                    <label for="urf" class="fw-bold">UR/LOC F</label><input type="text" class="form-control text-center fw-bold h-50" name="urf" id="urf" title="INFORME A UR/LOCAÇÃO FINAL, EX.: UR-04.">
+                </div>
+                <div class="col text-center">
+                    <label for="esti" class="fw-bold">ESTAÇÃO I</label>
+                    <select name="esti" id="esti" class="form-control text-center border-0 w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME A ESTAÇÃO INÍCIAL, EX.: TATUAPÉ.">
+                        <option selected></option>                        
+                    </select>
+                </div>
+                <div class="col text-center">
+                    <label for="estf" class="fw-bold">ESTAÇÃO F</label>
+                    <select name="estf" id="estf" class="form-control text-center border-0 w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME A ESTAÇÃO INÍCIAL, EX.: TATUAPÉ.">
+                        <option selected></option>                        
+                    </select>
+                </div>
+                
+                <div class="col-1 text-center">
+                    <label for="mun" class="fw-bold">MUNÍCIPIO</label>
+                    <select name="mun" id="mun" class="form-control text-center border-0 w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME O MUNÍCIPIO DO SERVIÇO, EX.: SP.">
+                        <option selected></option>                        
+                    </select>
+                </div>               
+
+
+            </div>
+
+            <div class="row" id="comp">
+
+                <div class="col-1 text-center">
+                    <label for="mod" class="fw-bold">MÓDULO</label><input type="text" class="form-control text-center fw-bold h-50" name="mod" id="mod" title="INFORME O MÓDULO.">
+                </div>
+                
+                <div class="col text-center"> 
+                    <label for="comp" class="fw-bold">COMPLEMENTO</label><input type="text" class="form-control text-center fw-bold h-50" name="comp" id="comp" size="1" title="INFORMAÇÕES COMPLEMENTARES DE INDENTIFIÇÃO DO SERVIÇO E LOCAL.">
+                </div>
+            </div>
+
+
+        </fieldset>  
+
+    </form>
+
+    <hr class="m-2">
+
+    <!-- DADOS: SERVIÇO(S) EXECUTADO(S) -->
+
+    <table id="servico"class="adiconar table table-bordered mb-0">
+        <thead>
+            <tr class="border bg-dark-subtle">
+                
+                <th class="text-center align-middle h4 bg-dark-subtle fw-bold">SERVIÇO(S) REALIZADO(S) <img src="img/plus2.png" alt="adicionar item" class="add" data-clone="cloneserv" data-caixa="srv" title="ADICIONAR NOVO ITEM DE SERVIÇO."></th>                
+                
+            </tr>            
+        </thead>
+    </table>
+    
+    <form class="form-control  bg-dark-subtle">
+        
+        <fieldset> 
+           
+
+            <div class="row dados" id="srv">
+
+                <div id="cloneserv" class="row">
+                    <div class="col-auto text-center align-middle">            
+                        <img src="img/delete3.png" alt="deletar" class="del" title="DELETAR ITEM."> <label for="cod" class="fw-bold">CÓDIGO</label>
+                        <select name="cod" id="cod" class="form-control text-center border-0 w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME O CÓDIGO REDUZIDO DO ITEM EX.: 698.">
+                            <option selected></option>                        
+                        </select>
+                    </div>
+                    <div class="col text-center"> 
+                        <label for="dsc" class="fw-bold">DESCRIÇÃO</label><input type="text" class="form-control text-center fw-bold h-50" name="dsc" id="dsc" size="1" title="INFORME O CÓDIGO COMPLEMENTO E A DESCRIÇÃO DO ITEM, EX.: 698 - CARDA DE MATERIAIS.">
+                    </div>
+                    <div class="col-auto text-center">            
+                        <label for="und" class="fw-bold">UN</label><input type="text" class="form-control text-center fw-bold h-50" name="und" id="und" size="1" title="INFORME A UNIDADE DE MEDIDA DO ITEM, EX.: M³.">
+                    </div>
+                    <div class="col-auto text-center">            
+                        <label for="qtd" class="fw-bold">QTDE</label><input type="text" class="form-control text-center fw-bold h-50" name="qtd" id="qtd" size="1" title="INFORME A QUANTIDADE DO ITEM, EX.: 10.">
+                    </div>            
+                    <div class="col-2 text-center">
+                        <label for="pos" class="fw-bold">POSIÇÃO</label><input type="text" class="form-control text-center fw-bold h-50" name="pos" id="pos" title="INFORME A POSIÇÃO DA REALIZAÇÃO DO SERVIÇO, EX.: LV-1 12/10 12/13. LV SIGNIFICA LATERAL VIA 1.">
+                    </div>
+                    <div class="col text-center">
+                        <label for="obs" class="fw-bold">OBS</label><input type="text" class="form-control text-center fw-bold h-50" name="obs" id="obs" title="INFORME DETALHES DA EXECUÇÃO DO SERVIÇO.">
+                    </div>
+                </div>              
+                
+            </div>
+
+        </fieldset>  
+
+    </form>
+
+
+    <hr class="m-2">
+
+    <!-- DADOS: VEÍCULO(S) -->
+
+    <table id="veic"class="table table-bordered mb-0">
+        <thead>
+            <tr class="border bg-dark-subtle">
+                
+                <th class="text-center align-middle h4 bg-dark-subtle fw-bold additem">VEÍCULO(S)<img src="img/plus2.png" alt="adicionar item" class="add" data-clone="cloneveic" data-caixa="vcls" title="ADICIONAR NOVO ITEM DE SERVIÇO."></th>                
+                
+            </tr>            
+        </thead>
+    </table>
+    
+    <form class="form-control  bg-dark-subtle">
+        
+        <fieldset> 
+           
+
+            <div class="row dados" id="vcls">
+
+                <div class="row" id="cloneveic">
+
+                    <div class="col text-center">            
+                        <label for="vcl" class="fw-bold"><img src="img/delete3.png" alt="deletar" class="del" title="DELETAR ITEM.">DESCRIÇÃO VEÍCULO</label>
+                        <select name="vcl" id="vcl" class="form-control text-center border-0 w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME A DESCRIÇÃO DO VEÍCULO, EX.: RETROESCAVADEIRA.">
+                            <option selected></option>                        
+                        </select>
+                    </div>
+                    <div class="col-auto text-center"> 
+                        <label for="ptv" class="fw-bold">PROPRIETÁRIO</label>
+                        <select name="ptv" id="ptv" class="form-control text-center border-0 w-100 fw-bold h-50" aria-label="Default select example" title="INFORME O PROPRIETÁRIO DO VEÍCULO, EX.: CONSÓRCIO.">
+                            <option selected></option>
+                            <option>CONSÓRCIO</option> 
+                            <option>CPTM</option>                         
+                        </select>
+                    </div>
+                    <div class="col-auto text-center">            
+                        <label for="vch" class="fw-bold">HORAS</label><input type="time" class="form-control text-center fw-bold h-50" name="vch" id="vch" size="1" title="INFORME O TEMPO DE UTILIZAÇÃO DO VEÍCULO, EX.: 02:30.">
+                    </div> 
+                
+                </div>
+                
+            </div>
+
+        </fieldset>  
+
+    </form>
+
+    <hr class="m-2">
+
+    <!-- DADOS: EQUIPAMENTO(S) -->
+
+    <table id="equip"class="table table-bordered mb-0">
+        <thead>
+            <tr class="border bg-dark-subtle">
+                
+                <th class="text-center align-middle h4 bg-dark-subtle fw-bold additem">EQUIPAMENTO(S)<img src="img/plus2.png" alt="adicionar item" class="add" data-clone="cloneeqps" data-caixa="eqps" title="ADICIONAR NOVO ITEM DE SERVIÇO."></th>                
+                
+            </tr>            
+        </thead>
+    </table>
+    
+    <form class="form-control  bg-dark-subtle">
+        
+        <fieldset> 
+           
+
+            <div class="row dados" id="eqps">
+
+                <div class="row" id="cloneeqps">
+
+                    <div class="col text-center">            
+                        <label for="eqp" class="fw-bold"><img src="img/delete3.png" alt="deletar" class="del" title="DELETAR ITEM.">DESCRIÇÃO EQUIPAMENTO</label>
+                        <select name="eqp" id="eqp" class="form-control text-center border-0 w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME A DESCRIÇÃO DO EQUIPAMENTO, EX.: TIREFONADEIRA.">
+                            <option selected></option>                        
+                        </select>
+                    </div>
+                    <div class="col-auto text-center"> 
+                        <label for="pte" class="fw-bold">PROPRIETÁRIO</label>
+                        <select name="pte" id="pte" class="form-control text-center border-0 w-100 fw-bold h-50" aria-label="Default select example" title="INFORME O PROPRIETÁRIO DO EQUIPAMENTO, EX.: CONSÓRCIO.">
+                            <option selected></option>
+                            <option>CONSÓRCIO</option> 
+                            <option>CPTM</option>                         
+                        </select>
+                    </div>
+                    <div class="col-auto text-center">            
+                        <label for="eqq" class="fw-bold">QTDE</label><input type="text" class="form-control text-center fw-bold h-50" name="eqq" id="eqq" size="1" title="INFORME A QUANTIDADE DE EQUIPAMENTO(S) UTLIZADO(S), EX.: 10.">
+                    </div>
+                    <div class="col-auto text-center">            
+                        <label for="eqh" class="fw-bold">HORAS</label><input type="time" class="form-control text-center fw-bold h-50" name="eqh" id="eqh" size="1" title="INFORME O TEMPO DE UTILIZAÇÃO DO EQUIPAMENTO, EX.: 02:30.">
+                    </div>
+                    <div class="col-auto text-center">            
+                        <label for="eqt" class="fw-bold">TOTAL</label><input type="text" class="form-control text-center fw-bold h-50" name="eqt" id="eqt" size="1" title="INFORME O TOTAL DE HORA(S) DO(S) EQUIPAMENTO(S) UTLIZADO(S), EX.: 25:00.">
+                    </div>
+                
+                </div>
+                
+            </div>
+
+        </fieldset>  
+
+    </form>
+
+    <hr class="m-2">
+
+    <!-- DADOS: MATERIAL(IS) -->
+
+    <table id="mater"class="table table-bordered mb-0">
+        <thead>
+            <tr class="border bg-dark-subtle">
+                
+                <th class="text-center align-middle h4 bg-dark-subtle fw-bold additem">MATERIAL(IS)<img src="img/plus2.png" alt="adicionar item" class="add" data-clone="clonemtrs" data-caixa="mtrs" title="ADICIONAR NOVO ITEM."></th>                
+                
+            </tr>            
+        </thead>
+    </table>
+    
+    <form class="form-control  bg-dark-subtle">
+        
+        <fieldset> 
+           
+
+            <div class="row dados" id="mtrs">
+
+                <div class="row" id="clonemtrs">
+
+                    <div class="col-auto text-center">            
+                        <label for="mtr" class="fw-bold"><img src="img/delete3.png" alt="deletar" class="del" title="DELETAR ITEM.">CÓDIGO</label>
+                        <select name="mtr" id="mtr" class="form-control text-center border-0 w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME O CÓDIGO DO MATERIAL APLICADO, EX.: 363.">
+                            <option selected></option>                        
+                        </select>
+                    </div>
+                    <div class="col text-center"> 
+                        <label for="mdc" class="fw-bold">DESCRIÇÃO MATERIAL</label><input type="text" class="form-control text-center fw-bold h-50" name="mdc" id="mdc" size="1" title="INFORME DESCRIÇÃO DO MATERIAL, EX.: TIREFON.">
+                    </div>
+                    <div class="col-auto text-center">            
+                        <label for="mtu" class="fw-bold">UN</label><input type="text" class="form-control text-center fw-bold h-50" name="mtu" id="mtu" size="1" title="INFORME A UNIDADE DE MEDIDA DO MATERIAL, EX.: UN.">
+                    </div>
+                    <div class="col-auto text-center">            
+                        <label for="mtq" class="fw-bold">QTDE</label><input type="text" class="form-control text-center fw-bold h-50" name="mtq" id="mtq" size="1" title="INFORME A QUANTIDADE Do MATERIAL(IS) UTLIZADO(S), EX.: 10.">
+                    </div>
+                    <div class="col-auto text-center">            
+                        <label for="mts" class="fw-bold">ESTADO</label>
+                        <select name="mts" id="mts" class="form-control text-center border-0 w-100 fw-bold h-50" aria-label="Default select example" title="INFORME O ESTADO DO MATERIAL APLICADO, EX.: NOVO.">
+                            <option selected></option>
+                            <option>NOVO</option> 
+                            <option>RECONDICIONADO</option>                         
+                        </select>
+                    </div>
+
+                </div>
+                                        
+                
+            </div>
+
+        </fieldset>  
+
+    </form>
+
+
+    <hr class="m-2">
+
+    <!-- DADOS: MÃO DE OBRA -->
+
+    <table id="mbr"class="table table-bordered mb-0">
+        <thead>
+            <tr class="border bg-dark-subtle">
+                
+                <th class="text-center align-middle h4 bg-dark-subtle fw-bold additem">MÃO DE OBRA<img src="img/plus2.png" alt="adicionar item" class="add" data-clone="clonemobs" data-caixa="mobs" title="ADICIONAR NOVO ITEM DE SERVIÇO."></th>                
+                
+            </tr>            
+        </thead>
+    </table>
+    
+    <form class="form-control  bg-dark-subtle">
+        
+        <fieldset> 
+           
+
+            <div class="row dados" id="mobs">
+
+                <div class="row" id="clonemobs">
+
+                    <div class="col text-center">            
+                        <label for="mob" class="fw-bold"><img src="img/delete3.png" alt="deletar" class="del" title="DELETAR ITEM.">FUNÇÃO/CARGO</label>
+                        <select name="mob" id="mob" class="form-control text-center border-0 w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME O FUNÇÃO/CARGO, EX.: AJUDANTE.">
+                            <option selected></option>                        
+                        </select>
+                    </div>                
+                    <div class="col-auto text-center">            
+                        <label for="moq" class="fw-bold">QTDE</label><input type="text" class="form-control text-center fw-bold h-50" name="moq" id="moq" size="1" title="INFORME A QUANTIDADE DE FUNÇÃO/CARGO, EX.: 10.">
+                    </div>
+                    <div class="col-auto text-center">            
+                        <label for="moh" class="fw-bold">HORAS</label><input type="time" class="form-control text-center fw-bold h-50" name="moh" id="moh" size="1" title="INFORME O TEMPO DE TRABALHO DA FUNÇÃO/CARGO, EX.: 02:30.">
+                    </div>
+                    <div class="col-auto text-center">            
+                        <label for="mot" class="fw-bold">TOTAL</label><input type="text" class="form-control text-center fw-bold h-50" name="mot" id="mot" size="1" title="INFORME O TOTAL DE HORA(S) TRABALHADA(S), EX.: 25:00.">
+                    </div>
+
+                </div>                        
+                
+            </div>
+
+        </fieldset>  
+
+    </form>
+
+
+     <!-- DADOS: FISCALIZAÇÃO -->
+
+     <table id="fiscal"class="table table-bordered mb-0">
+        <thead>
+            <tr class="border bg-dark-subtle">
+                
+                <th class="text-center align-middle h4 bg-dark-subtle fw-bold additem">FISCALIZAÇÃO<img src="img/plus2.png" alt="adicionar item" class="add" title="ADICIONAR NOVO ITEM DE SERVIÇO."></th>                
+                
+            </tr>            
+        </thead>
+    </table>
+    
+    <form class="form-control  bg-dark-subtle">
+        
+        <fieldset> 
+           
+
+            <div class="row" id="fcls" item="1">
+
+                <div class="col-auto text-center">            
+                    <label for="beq" class="fw-bold">EQUIPE</label><input type="text" class="form-control text-center fw-bold" name="moq" id="moq" size="1" title="INFORME A EQUIPE, EX.: CVN.">
+                </div>
+                <div class="col text-center" id="coddel">            
+                    <label for="fsc" class="fw-bold">FISCAL CONSÓRCIO</label>
+                    <select name="fsc" id="fsc" class="form-control text-center border-0 w-100 fw-bold h-25 pt-1" aria-label="Default select example" title="INFORME O FISCAL CONSÓRCIO.">
+                        <option selected></option>                        
+                    </select>
+                    <label for="mfcs" class="fw-bold">MATRÍCULA</label><input type="text" class="h-25 form-control text-center fw-bold" name="mfcs" id="mfcs" size="1" title="INFORME A MATRÍCULA/DOCUMENTO.">
+                </div> 
+                <div class="col text-center" id="coddel">            
+                    <label for="fsc" class="fw-bold">FISCAL CPTM</label>
+                    <select name="fsc" id="fsc" class="form-control text-center border-0 w-100 fw-bold h-25 pt-1" aria-label="Default select example" title="INFORME O FISCAL CONSÓRCIO.">
+                        <option selected></option>                        
+                    </select>
+                    <label for="mfc" class="fw-bold">MATRÍCULA</label><input type="text" class="h-25 form-control text-center fw-bold" name="mfc" id="mfc" size="1" title="INFORME A MATRÍCULA.">
+                </div>
+                <div class="col text-center" id="coddel">            
+                    <label for="fsc" class="fw-bold">SUPERVISOR CPTM</label>
+                    <select name="fsc" id="fsc" class="form-control text-center border-0 w-100 fw-bold h-25 pt-1" aria-label="Default select example" title="INFORME O FISCAL CONSÓRCIO.">
+                        <option selected></option>                        
+                    </select>
+                    <label for="msc" class="fw-bold">MATRÍCULA</label><input type="text" class="h-25 form-control text-center fw-bold" name="msc" id="msc" size="1" title="INFORME A MATRÍCULA.">
+                </div>           
+            </div>
+
+            <div class="row" id="inf">                
+                
+                <div class="col text-center"> 
+                    <label for="inf" class="fw-bold">OBS.</label><textarea class="form-control fw-bold h-50" name="inf" id="inf" size="1" title="INFORMAÇÕES COMPLEMENTARES." cols="30" rows="1"></textarea>
+                </div>
+            </div>
+
+        </fieldset>  
+
+    </form>
+    
+
+
+</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="filejs/main.js"></script>
+</html>
