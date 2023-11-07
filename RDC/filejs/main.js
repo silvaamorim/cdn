@@ -59,7 +59,7 @@ $("#linhas").change(function() {
 
     fetch("filejson/equipeconsorcio.json").then((response) => {
         response.json().then((Dados) => {
-
+            $("#fsc").empty();           
             let fiscalcconsorcio = document.getElementById("fsc");            
             let consorcio = document.getElementById("scs").value;
 
@@ -76,6 +76,9 @@ $("#linhas").change(function() {
 
     fetch("filejson/estacoes.json").then((response) => {
         response.json().then((Dados) => {
+            $("#esti").empty();
+            $("#estf").empty();
+            $("#mun").empty();
 
             let estacaoi = document.getElementById("esti");            
             let estacaof = document.getElementById("estf");
