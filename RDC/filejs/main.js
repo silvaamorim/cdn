@@ -90,6 +90,9 @@ $("#linhas").change(function() {
             let estacaoinicial =[];
             let estacaofinal =[];
             let nunicpio =[];
+            let testeestacaoinicial = ""
+            let testeestacaofinal = ""
+            let testenunicpio = ""
 
             estacaoi.options[0] = new Option("", "");
             estacaof.options[0] = new Option("", "");
@@ -97,16 +100,19 @@ $("#linhas").change(function() {
 
             for (let i = 0; i < Dados.length; i++){
                 if(linhaatual.value === Dados[i].Linha_Nome ){
+                     testeestacaoinicial = estacaoinicial.find((element) => element == Dados[i].Estacoes_inicial)
+                     testeestacaofinal = estacaofinal.find((element) => element == Dados[i].Estaces_Final)
+                     testenunicpio = nunicpio.find((element) => element == Dados[i].Municipios)
 
-                    if(estacaoinicial.find((element) => element == Dados[i].Estacoes_inicial)=="undefined"){                    
+                    if(testeestacaoinicial=="undefined"){                    
                         estacaoinicial.push(Dados[i].Estacoes_inicial);
                         estacaoi.options[estacaoi.options.length] = new Option(Dados[i].Estacoes_inicial,  Dados[i].Estacoes_inicial);
                     }
-                    if(estacaofinal.find((element) => element == Dados[i].Estaces_Final)=="undefined"){                    
+                    if(testeestacaofinal=="undefined"){                    
                         estacaofinal.push(Dados[i].Estaces_Final);
                         estacaof.options[estacaof.options.length] = new Option(Dados[i].Estaces_Final,  Dados[i].Estaces_Final);
                     }
-                    if(nunicpio.find((element) => element == Dados[i].Municipios)=="undefined"){                    
+                    if(testenunicpio=="undefined"){                    
                         estacaofinal.push(Dados[i].Municipios);
                         mun.options[mun.options.length] = new Option(Dados[i].Municipios,  Dados[i].Municipios);
                     } 
