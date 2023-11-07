@@ -63,7 +63,7 @@ $("#linhas").change(function() {
             let fiscalcconsorcio = document.getElementById("fsc");            
             let consorcio = document.getElementById("scs").value;
 
-             fiscalcconsorcio.options[0] = new Option"",  "");
+             fiscalcconsorcio.options[0] = new Option("",  "");
 
             for (let i = 0; i < Dados.length; i++){
                 if(consorcio === Dados[i].Consorcio.toUpperCase()){
