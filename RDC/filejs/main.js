@@ -113,7 +113,7 @@ $("#linhas").change(function() {
                         estacaof.options[estacaof.options.length] = new Option(Dados[i].Estaces_Final,  Dados[i].Estaces_Final);
                     }
                     if(testenunicpio == undefined){                    
-                        estacaofinal.push(Dados[i].Municipios);
+                        nunicpio.push(Dados[i].Municipios);
                         mun.options[mun.options.length] = new Option(Dados[i].Municipios,  Dados[i].Municipios);
                     } 
                     
