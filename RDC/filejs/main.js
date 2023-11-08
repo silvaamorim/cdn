@@ -315,13 +315,13 @@ $(document).ready(function(){
 
              fetch("filejson/itenscontrato.json").then((response) => {
         response.json().then((Dados) => {                 
-            let descricao = document.getElementById("desc");            
+            let descricao = document.getElementById("dsc");            
             let unidade = document.getElementById("und").value;             
 
             for (let i = 0; i < Dados.length; i++){
                 if(codvp === Dados[i].Codigo_VP){
-                    descricao.innerHTML= Dados[i].Descricao;
-                    unidade.innerHTML= Dados[i].Unid;                    
+                    descricao.value= Dados[i].Descricao;
+                    unidade.value= Dados[i].Unid;                    
                 }
             }
         })
