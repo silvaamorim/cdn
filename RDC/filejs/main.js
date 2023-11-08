@@ -308,7 +308,24 @@ $(document).ready(function(){
 
     ///Função para adiconar descrição e unidade para o item Serviço
 
-     $(".dados").on("click",".delete",function(){
+     $(".dados").on("click",".servico",function(){
+
+         let id = this.getAttribute('id');
+         let codvp = document.getElementById(id).value;
+
+             fetch("filejson/itenscontrato.json").then((response) => {
+        response.json().then((Dados) => {                 
+            let descricao = document.getElementById("desc");            
+            let unidade = document.getElementById("und").value;             
+
+            for (let i = 0; i < Dados.length; i++){
+                if(codvp === Dados[i].Codigo_VP){
+                    descricao.value= Dados[i].Descricao;
+                    unidade.value= Dados[i].Unid;                    
+                }
+            }
+        })
+    });
 
 
 
