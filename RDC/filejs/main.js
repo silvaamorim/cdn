@@ -152,7 +152,8 @@ $("#linhas").change(function() {
 });
 
 $(document).ready(function(){
-  
+    
+  ///preencher select Consorcios
     fetch("filejson/consorcios.json").then((response) => {
         response.json().then((Dados) => {
             let consorcios = document.getElementById("scs");
@@ -169,6 +170,80 @@ $(document).ready(function(){
         })
     });
 
+///preencher select Veículo
+    fetch("filejson/veiculoconsorcio.json").then((response) => {
+        response.json().then((Dados) => {
+            let veiculos = document.getElementById("vcl");
+            let texto = "";
+            let valor = "";
+                       
+
+            for (let i = 0; i < Dados.length; i++){
+                texto = Dados[i].Veiculo;
+                valor = Dados[i].Veiculo;
+                veiculos.options[veiculos.options.length] = new Option(texto,  valor);
+               
+            }
+        })
+    });
+
+
+    ///preencher select Equipamento
+    fetch("filejson/equipamentoconsorcio.json").then((response) => {
+        response.json().then((Dados) => {
+            let equipamentos = document.getElementById("eqp");
+            let texto = "";
+            let valor = "";
+                       
+
+            for (let i = 0; i < Dados.length; i++){
+                texto = Dados[i].Equipamento;
+                valor = Dados[i].Equipamento;
+                equipamentos.options[equipamentos.options.length] = new Option(texto,  valor);
+               
+            }
+        })
+    });
+
+
+    ///preencher select Material
+    fetch("filejson/materialconsorcio.json").then((response) => {
+        response.json().then((Dados) => {
+            let materiais = document.getElementById("mtr");
+            let texto = "";
+            let valor = "";
+                       
+
+            for (let i = 0; i < Dados.length; i++){
+                texto = Dados[i].Codigo;
+                valor = Dados[i].Codigo;
+                materiais.options[materiais.options.length] = new Option(texto,  valor);
+               
+            }
+        })
+    });
+
+
+    ///preencher select Mão de Obras
+    fetch("filejson/funcaoconsorcio.json").then((response) => {
+        response.json().then((Dados) => {
+            let funcoes = document.getElementById("mob");
+            let texto = "";
+            let valor = "";
+                       
+
+            for (let i = 0; i < Dados.length; i++){
+                texto = Dados[i].Funcao;
+                valor = Dados[i].Funcao;
+                funcoes.options[funcoes.options.length] = new Option(texto,  valor);
+               
+            }
+        })
+    });
+
+
+    
+///preencher select equipe CPTM
     fetch("filejson/equipecptm.json").then((response) => {
         response.json().then((Dados) => {
             let fiscalcptm = document.getElementById("fcm");
@@ -183,7 +258,8 @@ $(document).ready(function(){
             }
         })
     });
-  
+
+    ///Função para adicionr novos campos para os itens Serviço, Veículo, Equipamento e Mão de Obra
     $(".add").click(function(){
 
       if(confirm("Deseja mesmo criar um novo item?")){
@@ -213,6 +289,9 @@ $(document).ready(function(){
     }
       
     });
+
+
+    ///Função para remover campos para os itens Serviço, Veículo, Equipamento e Mão de Obra
 
     $(".dados").on("click",".delete",function(){
       if(confirm("Deseja mesmo excluir o item?")){
