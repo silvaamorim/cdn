@@ -311,7 +311,7 @@ $(document).ready(function(){
      $(".dados").on("change",".servico",function(){
 
          let id = this.getAttribute('id');
-         let ids = $(this).closest("div")[0].parentElement.class; 
+         let ids = $(this).closest("div")[1].id; 
          let codvp = document.getElementById(id).value;
 
              fetch("filejson/itenscontrato.json").then((response) => {
