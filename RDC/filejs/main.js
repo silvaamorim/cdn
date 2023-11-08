@@ -304,6 +304,16 @@ $(document).ready(function(){
 
       
     });
+
+
+    ///Função para adiconar descrição e unidade para o item Serviço
+
+     $(".dados").on("click",".delete",function(){
+
+
+
+
+    });
   
   
   });
