@@ -320,8 +320,8 @@ $(document).ready(function(){
 
             for (let i = 0; i < Dados.length; i++){
                 if(codvp === Dados[i].Codigo_VP){
-                    descricao.value= Dados[i].Descricao;
-                    unidade.value= Dados[i].Unid;                    
+                    descricao.innerHTML= Dados[i].Descricao;
+                    unidade.innerHTML= Dados[i].Unid;                    
                 }
             }
         })
