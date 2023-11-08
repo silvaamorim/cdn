@@ -32,13 +32,7 @@
             padding: 5px;
         }
 
-       select{
-            -webkit-appearance: none;
-    -moz-appearance : none;
-    border:1px solid #ccc;
-    border-radius:3px;
-    padding:5px 3px;
-        }
+       
 
     </style>
 
@@ -108,18 +102,18 @@
 
             <div class="row" id="idt">
 
-                <div class="col-1 text-center">            
+                <div class="col-1 text-center" style="padding: 0 5px 0 5px; width: auto;">            
                     <label for="med" class="fw-bold">MEDIÇÃO</label><input type="text" class="form-control text-center fw-bold h-50" name="med" id="med" size="1" title="INFORME O NUMERO DA MEDIÇÃO EX.: 123.">
                 </div>
-                <div class="col text-center">
+                <div class="col text-center" style="padding: 0 5px 0 5px; width: auto;">
                     <label for="sa" class="fw-bold">SA/ANO</label><input type="text" class="form-control text-center fw-bold h-50" name="sa" id="sa" title="INFORME O NUMERO E ANO DA SA, EX.: 1234/2023.">
                 </div>
-                <div class="col text-center">
+                <div class="col text-center" style="padding: 0 5px 0 5px; width: auto;">
                     <label for="fal" class="fw-bold">FALHA/ANO</label><input type="text" class="form-control text-center fw-bold h-50" name="fal" id="fal" title="INFORME O NUMERO E ANO DA FALHA, EX.: 1234/2023.">
                 </div>
-                <div class="col-auto text-center">
+                <div class="col-auto text-center" style="padding: 0 5px 0 5px; width: auto;">
                     <label for="nvl" class="fw-bold">NÍVEL</label>
-                    <select name="nvl" id="nvl" class="form-control text-center w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME O NÍVEL DA FALHA, EX.: 3.">
+                    <select style="padding: 3px;" name="nvl" id="nvl" class="form-control text-center w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME O NÍVEL DA FALHA, EX.: 3.">
                         <option selected></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -128,9 +122,9 @@
                     </select>
                 </div>
 
-                <div class="col-auto text-center">
+                <div class="col-auto text-center" style="padding: 0 5px 0 5px; width: auto;">
                     <label for="oco" class="fw-bold">OCORRÊNCIA</label>
-                    <select name="oco" id="oco" class="form-control text-center w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME A OCORRÊNCIA DA FALHA, EX.: JIC QUEBRADA.">
+                    <select style="padding: 3px;" name="oco" id="oco" class="form-control text-center w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME A OCORRÊNCIA DA FALHA, EX.: JIC QUEBRADA.">
                         <option selected></option>
                         <option value="AGULHA DANIFICADA">AGULHA DANIFICADA</option>
                         <option value="AMV DANIFICADA">AMV DANIFICADA</option>
@@ -152,12 +146,12 @@
                     </select>
                 </div>
 
-                <div class="col text-center">
+                <div class="col text-center" style="padding: 0 5px 0 5px; width: auto;">
                     <label for="osm" class="fw-bold">OSM/ANO</label><input type="text" class="form-control text-center fw-bold h-50" name="osm" id="osm" title="INFORME O NUMERO E ANO DA OSM, EX.: 1234/2023.">
                 </div>
 
-                <div class="col-auto text-center">
-                    <label for="dat" class="fw-bold">DATA</label><input type="date" class="form-control text-center fw-bold h-50" name="dat" id="dat" title="INFORME A DATA DO SERVIÇO.">
+                <div class="col-auto text-center" style="padding: 0 5px 0 5px; width: auto;">
+                    <label for="dat" class="fw-bold">DATA</label><input style="padding: 3px;" type="date" class="form-control text-center fw-bold h-50" name="dat" id="dat" title="INFORME A DATA DO SERVIÇO.">
                 </div>
 
 
@@ -180,28 +174,28 @@
             <div class="row" id="hor">
 
                 <div class="col-2 text-center">            
-                    <label for="dpi" class="fw-bold">PREVISTO INÍCIO</label><input type="datetime-local" class="form-control text-center fw-bold h-50" name="dpi" id="dpi" size="1" title="INFORME A DATA E HORA INÍCIO PREVISTO EX.: 12/12/2023 00:30.">
+                    <label for="dpi" class="fw-bold" style="padding: 0 5px 0 5px; width: auto;">PREVISTO INÍCIO</label><input style="padding: 3px;" type="datetime-local" class="form-control text-center fw-bold h-50" name="dpi" id="dpi" size="1" title="INFORME A DATA E HORA INÍCIO PREVISTO EX.: 12/12/2023 00:30.">
                 </div>
-                <div class="col-2 text-center"> 
-                    <label for="dpt" class="fw-bold">PREVISTO TERMINO</label><input type="datetime-local" class="form-control text-center fw-bold h-50" name="dpt" id="dpt" size="1" title="INFORME A DATA E HORA TERMINO PREVISTO EX.: 12/12/2023 05:30.">
+                <div class="col-2 text-center" style="padding: 0 5px 0 5px; width: auto;"> 
+                    <label for="dpt" class="fw-bold">PREVISTO TERMINO</label><input style="padding: 3px;" type="datetime-local" class="form-control text-center fw-bold h-50" name="dpt" id="dpt" size="1" title="INFORME A DATA E HORA TERMINO PREVISTO EX.: 12/12/2023 05:30.">
                 </div>
-                <div class="col-2 text-center">            
-                    <label for="dei" class="fw-bold">EXECUÇÃO INÍCIO</label><input type="datetime-local" class="form-control text-center fw-bold h-50" name="dei" id="dei" size="1" title="INFORME A DATA E HORA INÍCIO EXECUÇÃO EX.: 12/12/2023 00:45.">
+                <div class="col-2 text-center" style="padding: 0 5px 0 5px; width: auto;">            
+                    <label for="dei" class="fw-bold">EXECUÇÃO INÍCIO</label><input style="padding: 3px;" type="datetime-local" class="form-control text-center fw-bold h-50" name="dei" id="dei" size="1" title="INFORME A DATA E HORA INÍCIO EXECUÇÃO EX.: 12/12/2023 00:45.">
                 </div>
-                <div class="col-2 text-center">            
-                    <label for="det" class="fw-bold">EXECUÇÃO TERMINO</label><input type="datetime-local" class="form-control text-center fw-bold h-50" name="det" id="det" size="1" title="INFORME A DATA E HORA TERMINO EXECUÇÃO EX.: 12/12/2023 04:22.">
+                <div class="col-2 text-center" style="padding: 0 5px 0 5px; width: auto;">            
+                    <label for="det" class="fw-bold">EXECUÇÃO TERMINO</label><input style="padding: 3px;" type="datetime-local" class="form-control text-center fw-bold h-50" name="det" id="det" size="1" title="INFORME A DATA E HORA TERMINO EXECUÇÃO EX.: 12/12/2023 04:22.">
                 </div>
-                <div class="col text-center">
-                    <label for="prd" class="fw-bold">PERÍODO</label><select name="prd" id="prd" class="form-control text-center border-0 w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME O PERÍODO DO SERVIÇO, EX.: NOTURNO.">
+                <div class="col text-center" style="padding: 0 5px 0 5px; width: auto;">
+                    <label for="prd" class="fw-bold">PERÍODO</label><select style="padding: 3px;" name="prd" id="prd" class="form-control text-center border-0 w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME O PERÍODO DO SERVIÇO, EX.: NOTURNO.">
                         <option selected></option>
                         <option value="DIURNO">DIURNO</option>
                         <option value="NOTURNO">NOTURNO</option>
                         <option value="LONGO">LONGO</option>                                      
                     </select>
                 </div>                
-                <div class="col-auto text-center">
+                <div class="col-auto text-center" style="padding: 0 5px 0 5px; width: auto;">
                     <label for="clm" class="fw-bold">CLIMA</label>
-                    <select name="clm" id="clm" class="form-control text-center w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME O CLIMA, EX.: BOM.">
+                    <select style="padding: 3px;" name="clm" id="clm" class="form-control text-center w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME O CLIMA, EX.: BOM.">
                         <option selected></option>
                         <option value="BOM">BOM</option>
                         <option value="CHUVOSO">CHUVOSO</option>
@@ -209,7 +203,7 @@
                     </select>
                 </div>               
 
-                <div class="col text-center">
+                <div class="col text-center" style="padding: 0 5px 0 5px; width: auto;">
                     <label for="tpr" class="fw-bold">TEMPERATURA</label><input type="text" class="form-control text-center fw-bold h-50" name="tpr" id="tpr" title="INFORME A TEMPERATURA, EX.: 20.">
                 </div>              
 
@@ -284,7 +278,7 @@
 
             <div class="row" id="comp">
 
-                <div class="col-1 text-center" style="padding: 0 5px 0 5px; width: auto;">
+                <div class="col-sm-1 text-center" style="padding: 0 5px 0 5px;">
                     <label for="mod" class="fw-bold">MÓDULO</label><input type="text" class="form-control text-center fw-bold h-50" name="mod" id="mod" title="INFORME O MÓDULO.">
                 </div>
                 
