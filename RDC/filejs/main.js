@@ -316,11 +316,11 @@ $(document).ready(function(){
              fetch("filejson/itenscontrato.json").then((response) => {
         response.json().then((Dados) => {                 
             let descricao = document.getElementById("dsc");            
-            let unidade = document.getElementById("und").value;             
+            let unidade = document.getElementById("und");             
 
             for (let i = 0; i < Dados.length; i++){
                 if(codvp === Dados[i].Codigo_VP){
-                    descricao.value= Dados[i].Descricao;
+                    descricao.value= Dados[i].Codigo + "-" + Dados[i].Descricao;
                     unidade.value= Dados[i].Unid;                    
                 }
             }
