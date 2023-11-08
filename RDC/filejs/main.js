@@ -308,7 +308,7 @@ $(document).ready(function(){
 
     ///Função para adiconar descrição e unidade para o item Serviço
 
-     $(".dados").on("click",".servico",function(){
+     $(".dados").on("change",".servico",function(){
 
          let id = this.getAttribute('id');
          let ids = this.closest("input")[0].parentElement.id; 
