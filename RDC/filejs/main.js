@@ -51,6 +51,7 @@ $("#linhas").change(function() {
                 if(linha === Dados.Linhas[i].Linha){
                     contrato.value=Dados.Linhas[i].Contrato;
                     consorcio.value=Dados.Linhas[i].Consorcio;
+                    break;
 
                 }
                 else{
