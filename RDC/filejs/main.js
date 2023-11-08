@@ -57,6 +57,8 @@ $("#linhas").change(function() {
         })
     });
 
+    ///Equipe Especifica do Consórcio
+
     fetch("filejson/equipeconsorcio.json").then((response) => {
         response.json().then((Dados) => {
             $("#fsc").empty();           
@@ -68,6 +70,25 @@ $("#linhas").change(function() {
             for (let i = 0; i < Dados.length; i++){
                 if(consorcio === Dados[i].Consorcio.toUpperCase()){
                     fiscalcconsorcio.options[fiscalcconsorcio.options.length] = new Option(Dados[i].Nome,  Dados[i].Nome);
+                    
+                }
+            }
+        })
+    });
+
+    ///Item Especifico do Consórcio
+
+    fetch("filejson/itenscontrato.json").then((response) => {
+        response.json().then((Dados) => {
+            $("#cod").empty();           
+            let itenscontrato = document.getElementById("cod");            
+            let consorcio = document.getElementById("scs").value;
+
+             itenscontrato.options[0] = new Option("",  "");
+
+            for (let i = 0; i < Dados.length; i++){
+                if(consorcio === Dados[i].Consorcio.toUpperCase()){
+                    itenscontrato.options[itenscontrato.options.length] = new Option(Dados[i].Nome,  Dados[i].Nome);
                     
                 }
             }
