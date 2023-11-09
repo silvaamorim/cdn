@@ -329,8 +329,30 @@ $(document).ready(function(){
         })
     });
 
+    });
 
+     ///Função para adiconar descrição e unidade para o item Material
 
+     $(".dados").on("change",".material",function(){
+
+         let id = this.getAttribute('id');
+         let iddesc = this.form[2].id + id.substring(3, );
+         let idund = this.form[3].id + id.substring(3, );
+         let codmat = document.getElementById(id).value;
+
+             fetch("filejson/materialconsorcio.json").then((response) => {
+        response.json().then((Dados) => {                 
+            let descricao = document.getElementById(iddesc);            
+            let unidade = document.getElementById(idund);             
+
+            for (let i = 0; i < Dados.length; i++){
+                if(codmat === Dados[i].Codigo){
+                    descricao.value= Dados[i].Material;
+                    unidade.value= Dados[i].Un;                    
+                }
+            }
+        })
+    });
 
     });
   
