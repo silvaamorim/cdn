@@ -379,7 +379,7 @@ $(".dados").on("change",".tempo",function(){
     let tm = ((Number(heqp.substring(0,2))*60) + Number(heqp.substring(3,)))* Number(qtdeqp);
     let hr = Math.trunc(tm/60);
     let mt = Math.trunc(((tm/60)-hr)*60)
-    qtdth.value=hr.toString() + ":" + mt.toString();    
+    qtdth.value=hr.toString() + ":" + mt.toString()+"h";    
 
     });
     
