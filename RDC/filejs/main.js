@@ -378,7 +378,7 @@ $(".dados").on("change",".tempo",function(){
     let hr = Math.trunc(tm/60);
     let mt = Math.trunc(((tm/60)-hr)*60)
 
-    alert(hr + ":" + mt;
+    alert(hr.toString() + ":" + mt.toString());
 
     });
     
