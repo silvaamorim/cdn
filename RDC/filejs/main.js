@@ -425,7 +425,48 @@ $("#fcls").on("change","#fsc",function(){
 
     });
     
+///Função para carregar documento/matricula Fiscal CPTM
 
+$("#fcls").on("change","#fcm",function(){
+    
+    let FiscalCPTM = this.value;
+    let MatriculaCPTM = document.getElementById("mfc");   
+
+    fetch("filejson/equipecptm.json").then((response) => {
+        response.json().then((Dados) => {               
+                       
+            for (let i = 0; i < Dados.length; i++){
+                if(FiscalCPTM === Dados[i].Nome){
+                    MatriculaCPTM.value= Dados[i].Matricula;
+                    
+                }
+            }
+        });
+     });
+
+    });
+
+    ///Função para carregar documento/matricula Supervisor CPTM
+
+$("#fcls").on("change","#fsm",function(){
+    
+    let SupervisorCPTM = this.value;
+    let MatriculaCPTM = document.getElementById("msc");   
+
+    fetch("filejson/equipecptm.json").then((response) => {
+        response.json().then((Dados) => {               
+                       
+            for (let i = 0; i < Dados.length; i++){
+                if(SupervisorCPTM === Dados[i].Nome){
+                    MatriculaCPTM.value= Dados[i].Matricula;
+                    
+                }
+            }
+        });
+     });
+
+    });
+    
     
   
   
