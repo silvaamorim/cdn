@@ -503,9 +503,9 @@ $("#fcls").on("change","#fsm",function(){
 
     const opt = {
         
-        margin:[5, 5, 5, 5],
+        margin:2,
         filename:"teste.pdf",
-        html2canvas: {scale: 1},
+        html2canvas: {scale: 2},
         jsPDF: {unit: "mm", format: "a4", orientation: "portrait"}
 
     }
