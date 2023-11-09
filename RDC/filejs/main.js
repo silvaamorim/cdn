@@ -356,7 +356,7 @@ $(document).ready(function(){
 
     });
 
-    ///Função para o total de tempo de uso do equipamento
+    ///Função para o total de tempo de uso do equipamento/mão de obra
 
 $(".dados").on("change",".tempo",function(){
     
@@ -380,6 +380,30 @@ $(".dados").on("change",".tempo",function(){
     let hr = Math.trunc(tm/60);
     let mt = Math.trunc(((tm/60)-hr)*60)
     qtdth.value=hr.toString() + ":" + mt.toString()+"h";    
+
+    });
+
+
+
+    ///Função para carregar documento/matricula Fiscal Contratada
+
+$(".dados").on("change","#fsc",function(){
+    
+    let FiscalContratada = this.value;
+    let MatriculaContratada = document.getElementById("mfcs");
+    let consorcio = document.getElementById("scs").value;
+
+    fetch("filejson/equipeconsorcio.json").then((response) => {
+        response.json().then((Dados) => {               
+                       
+            for (let i = 0; i < Dados.length; i++){
+                if(consorcio === Dados[i].Consorcio.toUpperCase() & FiscalContratada === Nome[i].){
+                    MatriculaContratada.value= Dados[i].Matricula;
+                    
+                }
+            }
+        });
+     
 
     });
     
