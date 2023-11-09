@@ -154,6 +154,25 @@ $("#linhas").change(function() {
     
 });
 
+///Mudar rotulo Fiscal CPTM para Colaborador CPTM, e, vice-versa
+
+    $("#fiscalcptm").click(function(){
+    
+    let labelfcptm = this.value;
+
+        if(labelfcptm == "FISCAL CPTM"){
+
+            labelfcptm = "COLABORADOR CPTM";
+        }
+        else{
+
+             labelfcptm ="FISCAL CPTM";
+        }
+
+    
+
+    });
+
 $(document).ready(function(){
     
   ///preencher select Consorcios
@@ -468,28 +487,7 @@ $("#fcls").on("change","#fsm",function(){
         });
      });
 
-    });
-
-
-
-    ///Mudar rotulo Fiscal CPTM para Colaborador CPTM, e, vice-versa
-
-    $("#fiscalcptm").click(function(){
-    
-    let labelfcptm = this.value;
-
-        if(labelfcptm == "FISCAL CPTM"){
-
-            labelfcptm = "COLABORADOR CPTM";
-        }
-        else{
-
-             labelfcptm ="FISCAL CPTM";
-        }
-
-    
-
-    });
+    });   
 
   
   
