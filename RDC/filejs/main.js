@@ -470,7 +470,32 @@ $("#fcls").on("change","#fsm",function(){
 
     });
 
-    ///imprimir PDF
+
+
+    ///Mudar rotulo Fiscal CPTM para Colaborador CPTM, e, vice-versa
+
+    $("#fiscalcptm").click(function(){
+    
+    let labelfcptm = this.value;
+
+        if(labelfcptm == "FISCAL CPTM"){
+
+            labelfcptm = "COLABORADOR CPTM";
+        }
+        else{
+
+             labelfcptm ="FISCAL CPTM";
+        }
+
+    
+
+    });
+
+  
+  
+  });
+
+ ///imprimir PDF
 
     const btnpdf = document.querySelector("#logo");
 
@@ -489,9 +514,4 @@ $("#fcls").on("change","#fsm",function(){
 
     html2pdf().set(options).from(conteudopdf).save();
 
-  });
-    
-    
-  
-  
   });
