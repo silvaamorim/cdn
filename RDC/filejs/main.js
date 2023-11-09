@@ -499,9 +499,9 @@ $("#fcls").on("change","#fsm",function(){
 
   btnpdf.addEventListener("click", () => {
 
-    const conteudopdf = document.querySelector("#conteudopdf");
+    const conteudo = document.querySelector("#conteudopdf");
 
-    const options = {
+    const opt = {
         
         margin:[5, 5, 5, 5],
         filename:"teste.pdf",
@@ -510,6 +510,6 @@ $("#fcls").on("change","#fsm",function(){
 
     }
 
-    html2pdf().set(options).from(conteudopdf).save();
+    html2pdf().set(opt).from(conteudo).save();
 
   });
