@@ -4,6 +4,7 @@ $("#linhas").change(function() {
     let linhacel = document.getElementById("linha");
     let consorcio = document.getElementById("scs");
     let contrato = document.getElementById("ncontrato");
+    let logo = document.getElementById("logo");
     if(linhaatual.value == "7 (Rubi)"){
         
         linhacel.style.backgroundColor = "#F62217";
@@ -51,12 +52,14 @@ $("#linhas").change(function() {
                 if(linha === Dados.Linhas[i].Linha){
                     contrato.value=Dados.Linhas[i].Contrato;
                     consorcio.value=Dados.Linhas[i].Consorcio;
+                    logo.src="img/"+Linhas[i].Logo;
                     break;
 
                 }
                 else{
                     contrato.value="";
                     consorcio.value="";
+                    logo.src="img/Brasao.png";
                 }
             }
         })
