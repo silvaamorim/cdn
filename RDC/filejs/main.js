@@ -363,6 +363,8 @@ $(".dados").on("change",".tempo",function(){
     let id = this.getAttribute('id');
     let idqtd = ""
     let idtotalh="";
+    let hrt = ""
+    let mtt = ""
 
     if("eqh" == id.substring(0,3)) {
         idqtd = this.form[3].id + id.substring(3, );
@@ -379,7 +381,23 @@ $(".dados").on("change",".tempo",function(){
     let tm = ((Number(heqp.substring(0,2))*60) + Number(heqp.substring(3,)))* Number(qtdeqp);
     let hr = Math.trunc(tm/60);
     let mt = Math.trunc(((tm/60)-hr)*60)
-    qtdth.value=hr.toString() + ":" + mt.toString()+"h";    
+
+    if(hr < 10){
+        hrt = "0" + hr.toString();
+    }
+    else
+    {
+        hrt = hr.toString();
+    };
+
+     if(mt < 10){
+        mtt = "0" + mt.toString();
+    }
+    else
+    {
+        mtt = mt.toString();
+    };
+    qtdth.value=hrt + ":" + mtt;    
 
     });
 
