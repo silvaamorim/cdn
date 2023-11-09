@@ -405,7 +405,7 @@ $(".dados").on("change",".tempo",function(){
 
     ///Função para carregar documento/matricula Fiscal Contratada
 
-$(".dados").on("change","#fsc",function(){
+$("#fcls").on("change","#fsc",function(){
     
     let FiscalContratada = this.value;
     let MatriculaContratada = document.getElementById("mfcs");
