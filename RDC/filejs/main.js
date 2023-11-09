@@ -158,15 +158,15 @@ $("#linhas").change(function() {
 
     $("#fiscalcptm").click(function(){
     
-    let labelfcptm = this.value;
+    let labelfcptm = this;
 
-        if(labelfcptm == "FISCAL CPTM"){
+        if(labelfcptm.innerHTML == "FISCAL CPTM"){
 
-            labelfcptm = "COLABORADOR CPTM";
+            labelfcptm.innerHTML = "COLABORADOR CPTM";
         }
         else{
 
-             labelfcptm ="FISCAL CPTM";
+             labelfcptm.innerHTML ="FISCAL CPTM";
         }
 
     
