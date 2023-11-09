@@ -361,14 +361,15 @@ $(document).ready(function(){
 $(".dados").on("change",".tempo",function(){
     
     let id = this.getAttribute('id');
-    let idqtd = this.form[3].id + id.substring(3, );
-     let idtotalh="";
+    let idqtd = ""
+    let idtotalh="";
 
     if("eqh" == id.substring(0,3)) {
-
+        idqtd = this.form[3].id + id.substring(3, );
         idtotalh = "eqt" + id.substring(3, );        
     }
     else{
+        idqtd = this.form[2].id + id.substring(3, );
         idtotalh = "mot" + id.substring(3, );
     }
     
