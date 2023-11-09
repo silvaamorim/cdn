@@ -311,8 +311,8 @@ $(document).ready(function(){
      $(".dados").on("change",".servico",function(){
 
          let id = this.getAttribute('id');
-         let iddesc = this.form[2].id;
-         let idund = this.form[3].id;
+         let iddesc = this.form[2].id + id.substring(5, );
+         let idund = this.form[3].id + id.substring(5, );
          let codvp = document.getElementById(id).value;
 
              fetch("filejson/itenscontrato.json").then((response) => {
