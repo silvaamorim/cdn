@@ -469,6 +469,27 @@ $("#fcls").on("change","#fsm",function(){
      });
 
     });
+
+    ///imprimir PDF
+
+    const btnpdf = document.querySelector("#logo");
+
+  btnpdf.addEventListener("click", () => {
+
+    const conteudopdf = document.querySelector("#conteudopdf");
+
+    const options = {
+        
+        margin:[5, 5, 5, 5],
+        filename:"teste.pdf",
+        html2canvas: {scale: 1},
+        jsPDF: {unit: "mm", format: "a4", orientation: "portrait"}
+
+    }
+
+    html2pdf().set(options).from(conteudopdf).save();
+
+  });
     
     
   
