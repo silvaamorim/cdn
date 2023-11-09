@@ -311,13 +311,14 @@ $(document).ready(function(){
      $(".dados").on("change",".servico",function(){
 
          let id = this.getAttribute('id');
-         let ids = this.form[2].id;
+         let iddesc = this.form[2].id;
+         let idund = this.form[3].id;
          let codvp = document.getElementById(id).value;
 
              fetch("filejson/itenscontrato.json").then((response) => {
         response.json().then((Dados) => {                 
-            let descricao = document.getElementById("dsc");            
-            let unidade = document.getElementById("und");             
+            let descricao = document.getElementById(iddesc);            
+            let unidade = document.getElementById(idund);             
 
             for (let i = 0; i < Dados.length; i++){
                 if(codvp === Dados[i].Codigo_VP){
