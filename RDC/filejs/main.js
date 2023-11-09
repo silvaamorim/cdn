@@ -52,7 +52,7 @@ $("#linhas").change(function() {
                 if(linha === Dados.Linhas[i].Linha){
                     contrato.value=Dados.Linhas[i].Contrato;
                     consorcio.value=Dados.Linhas[i].Consorcio;
-                    logo.src="img/"+Linhas[i].Logo;
+                    logo.src="img/"+Dados.Linhas[i].Logo;
                     break;
 
                 }
