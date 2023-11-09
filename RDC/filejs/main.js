@@ -505,8 +505,8 @@ $("#fcls").on("change","#fsm",function(){
         
         margin:2,
         filename:"teste.pdf",
-        html2canvas: {scale: 0.5},
-        jsPDF: {unit: "mm", format: "a4", orientation: "portrait"}
+        html2canvas: {scale: 2},
+        jsPDF: {unit: "mm", format: "a3", orientation: "portrait"}
 
     }
 
