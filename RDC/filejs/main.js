@@ -415,7 +415,7 @@ $(".dados").on("change","#fsc",function(){
         response.json().then((Dados) => {               
                        
             for (let i = 0; i < Dados.length; i++){
-                if(consorcio === Dados[i].Consorcio.toUpperCase() & FiscalContratada === Nome[i].){
+                if(consorcio === Dados[i].Consorcio.toUpperCase() & FiscalContratada === Dados[i].Nome){
                     MatriculaContratada.value= Dados[i].Matricula;
                     
                 }
