@@ -355,6 +355,35 @@ $(document).ready(function(){
     });
 
     });
+
+    ///Função para o total de tempo de uso do equipamento
+
+$(".dados").on("change",".tempo",function(){
+    
+    let id = this.getAttribute('id');
+    let idqtd = this.form[3].id + id.substring(3, );
+
+    if("eqh") == id.substring(0,3){
+
+        let idtotalh = "eqt" + id.substring(3, );        
+    }
+    else{
+        let idtotalh = "mot" + id.substring(3, );
+    }
+    
+    let qtdeqp = document.getElementById(idqtd).value;
+    let qtdth = document.getElementById(idtotalh);
+    let heqp = document.getElementById(id).value;
+    let tm = ((Number(heqp.substring(0,2))*60) + Number(heqp.substring(3,)))* Number(qtdeqp);
+    let hr = Math.trunc(tm/60);
+    let mt = Math.trunc(((tm/60)-hr)*60)
+
+    alert(hr + ":" + mt;
+
+    });
+    
+
+    
   
   
   });
