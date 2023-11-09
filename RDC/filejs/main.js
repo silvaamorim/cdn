@@ -421,7 +421,7 @@ $(".dados").on("change","#fsc",function(){
                 }
             }
         });
-     
+     });
 
     });
     
