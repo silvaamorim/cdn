@@ -493,7 +493,7 @@ $("#fcls").on("change","#fsm",function(){
   
   });
 
- ///imprimir PDF
+ /*imprimir PDF
 
     const btnpdf = document.querySelector("#logo");
 
@@ -512,4 +512,4 @@ $("#fcls").on("change","#fsm",function(){
 
     html2pdf().set(opt).from(conteudo).save();
 
-  });
+  });*/
