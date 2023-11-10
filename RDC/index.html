@@ -244,7 +244,7 @@
                     </select>
                 </div>
                 <div class="col text-center" style="padding: 0 5px 0 5px; width: auto;"> 
-                    <label for="via" class="fw-bold">VIA(S)</label><input type="text" class="form-control text-center fw-bold h-50" name="via" id="via" size="1" title="INFORME A(S) VIA(S) DO SERVIÇO, EX.: 1, TERMINAL.">
+                    <label for="via" class="fw-bold">VIA(S)</label><input type="text" class="form-control text-center fw-bold h-50" style="font-size:1vw;" name="via" id="via" size="1" title="INFORME A(S) VIA(S) DO SERVIÇO, EX.: 1, TERMINAL." oninput="this.value = this.value.toUpperCase()">
                 </div>
                 <div class="col-1 text-center" style="padding: 0 5px 0 5px; width: auto;">            
                     <label for="kmi" class="fw-bold">KM/PT I</label><input type="text" class="form-control text-center fw-bold h-50" name="kmi" id="kmi" size="1" title="INFORME O KM/POSTE INÍCIAL DO SERVIÇO EX.: 14/01.">
@@ -253,10 +253,10 @@
                     <label for="kmf" class="fw-bold">KM/PT F</label><input type="text" class="form-control text-center fw-bold h-50" name="kmf" id="kmf" size="1" title="INFORME O KM/POSTE FINAL DO SERVIÇO EX.: 14/06.">
                 </div>            
                 <div class="col-sm-1 text-center" style="padding: 0 5px 0 5px;">
-                    <label for="uri" class="fw-bold">UR/LOC I</label><input type="text" class="form-control text-center fw-bold h-50" name="uri" id="uri" title="INFORME A UR/LOCAÇÃO INÍCIAL, EX.: UR-03.">
+                    <label for="uri" class="fw-bold">UR/LOC I</label><input type="text" class="form-control text-center fw-bold h-50" name="uri" id="uri" title="INFORME A UR/LOCAÇÃO INÍCIAL, EX.: UR-03." oninput="this.value = this.value.toUpperCase()">
                 </div>
                 <div class="col-sm-1 text-center" style="padding: 0 5px 0 5px;">
-                    <label for="urf" class="fw-bold">UR/LOC F</label><input type="text" class="form-control text-center fw-bold h-50" name="urf" id="urf" title="INFORME A UR/LOCAÇÃO FINAL, EX.: UR-04.">
+                    <label for="urf" class="fw-bold">UR/LOC F</label><input type="text" class="form-control text-center fw-bold h-50" name="urf" id="urf" title="INFORME A UR/LOCAÇÃO FINAL, EX.: UR-04." oninput="this.value = this.value.toUpperCase()">
                 </div>
                 <div class="col-auto text-center" style="padding: 0 5px 0 5px; width: auto;">
                     <label for="esti" class="fw-bold">ESTAÇÃO I</label>
@@ -284,11 +284,11 @@
             <div class="row" id="comp">
 
                 <div class="col-sm-1 text-center" style="padding: 0 5px 0 5px;">
-                    <label for="mod" class="fw-bold">MÓDULO</label><input type="text" class="form-control text-center fw-bold h-50" name="mod" id="mod" title="INFORME O MÓDULO.">
+                    <label for="mod" class="fw-bold">MÓDULO</label><input type="text" class="form-control text-center fw-bold h-50" style="font-size:1vw;" name="mod" id="mod" title="INFORME O MÓDULO.">
                 </div>
                 
                 <div class="col text-center" style="padding: 0 5px 0 5px; width: auto;"> 
-                    <label for="compl" class="fw-bold">COMPLEMENTO</label><input type="text" class="form-control text-center fw-bold h-50" name="compl" id="comp" size="1" title="INFORMAÇÕES COMPLEMENTARES DE INDENTIFIÇÃO DO SERVIÇO E LOCAL." oninput="this.value = this.value.toUpperCase()">
+                    <label for="compl" class="fw-bold">COMPLEMENTO</label><input type="text" class="form-control text-center fw-bold h-50" style="font-size:1vw;" name="compl" id="comp" size="1" title="INFORMAÇÕES COMPLEMENTARES DE INDENTIFIÇÃO DO SERVIÇO E LOCAL." oninput="this.value = this.value.toUpperCase()">
                 </div>
             </div>
 
@@ -319,7 +319,7 @@
             <div class="row dados" id="srv">
 
                 <div id="cloneserv" class="row">
-                    <div class="col text-center align-middle" style="padding: 0 5px 0 5px;width: auto;">            
+                    <div class="col-auto text-center align-middle" style="padding: 0 5px 0 5px;width: auto;">            
                         <label for="cod" class="fw-bold"><img src="img/delete3.png" alt="deletar" class="del" title="DELETAR ITEM.">CÓD</label>
                         <select style="padding: 3px;" name="cod" id="cod" class="form-control servico text-center border-0 w-70 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME O CÓDIGO REDUZIDO DO ITEM EX.: 698.">
                             <option selected></option>                        
@@ -328,17 +328,17 @@
                     <div class="col-6 text-center" style="padding: 0 5px 0 5px;"> 
                         <label for="dsc" class="fw-bold">DESCRIÇÃO</label><input type="text" class="form-control text-center fw-bold h-50 w-100" style="font-size:1vw;" name="dsc" id="dsc" size="1" title="INFORME O CÓDIGO COMPLEMENTO E A DESCRIÇÃO DO ITEM, EX.: 698 - CARDA DE MATERIAIS.">
                     </div>
-                    <div class="col text-center" style="padding: 0 5px 0 5px; width: auto;">            
+                    <div class="col-1 text-center" style="padding: 0 5px 0 5px; width: auto;">            
                         <label for="und" class="fw-bold">UN</label><input type="text" class="form-control text-center fw-bold h-50" name="und" id="und" size="1" title="INFORME A UNIDADE DE MEDIDA DO ITEM, EX.: M³.">
                     </div>
-                    <div class="col text-center" style="padding: 0 5px 0 5px; width: auto;">            
+                    <div class="col-1 text-center" style="padding: 0 5px 0 5px; width: auto;">            
                         <label for="qtd" class="fw-bold">QTDE</label><input type="text" class="form-control text-center fw-bold h-50" name="qtd" id="qtd" size="1" title="INFORME A QUANTIDADE DO ITEM, EX.: 10.">
                     </div>            
                     <div class="col-1 text-center" style="padding: 0 5px 0 5px; width: auto;">
-                        <label for="pos" class="fw-bold">POSIÇÃO</label><input type="text" class="form-control text-center fw-bold h-50" style="font-size:1vw;" name="pos" id="pos" title="INFORME A POSIÇÃO DA REALIZAÇÃO DO SERVIÇO, EX.: LV-1 12/10 12/13. LV SIGNIFICA LATERAL VIA 1.">
+                        <label for="pos" class="fw-bold">POSIÇÃO</label><input type="text" class="form-control text-center fw-bold h-50" style="font-size:1vw;" name="pos" id="pos" title="INFORME A POSIÇÃO DA REALIZAÇÃO DO SERVIÇO, EX.: LV-1 12/10 12/13. LV SIGNIFICA LATERAL VIA 1." oninput="this.value = this.value.toUpperCase()">
                     </div>
                     <div class="col-3 text-center" style="padding: 0 5px 0 5px;">
-                        <label for="obs" class="fw-bold">OBS</label><input type="text" class="form-control text-center fw-bold h-50" name="obs" id="obs" title="INFORME DETALHES DA EXECUÇÃO DO SERVIÇO.">
+                        <label for="obs" class="fw-bold">OBS</label><input type="text" class="form-control text-center fw-bold h-50" style="font-size:1vw;" name="obs" id="obs" title="INFORME DETALHES DA EXECUÇÃO DO SERVIÇO." oninput="this.value = this.value.toUpperCase()">
                     </div>
                 </div>              
                 
@@ -607,7 +607,7 @@
             <div class="row" id="inf">                
                 
                 <div class="col text-center"> 
-                    <label for="info" class="fw-bold">OBS.</label><textarea class="form-control fw-bold h-50" name="info" id="inf" size="1" title="INFORMAÇÕES COMPLEMENTARES." cols="30" rows="1"></textarea>
+                    <label for="info" class="fw-bold">OBS.</label><textarea class="form-control fw-bold h-50" style="font-size:1vw;" name="info" id="inf" size="1" title="INFORMAÇÕES COMPLEMENTARES." cols="30" rows="1" oninput="this.value = this.value.toUpperCase()"></textarea>
                 </div>
             </div>
 
