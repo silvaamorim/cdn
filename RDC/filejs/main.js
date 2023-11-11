@@ -344,7 +344,7 @@ $(document).ready(function(){
 
             for (let i = 0; i < Dados.length; i++){
                 if(codvp === Dados[i].Codigo_VP){
-                    descricao.value= Dados[i].Codigo + "-" + Dados[i].Descricao;
+                    descricao.value= Dados[i].Codigo + "-" + Dados[i].Descricao.toUpperCase();
                     unidade.value= Dados[i].Unid;                    
                 }
             }
