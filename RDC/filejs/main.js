@@ -5,6 +5,7 @@ $("#linhas").change(function() {
     let consorcio = document.getElementById("scs");
     let contrato = document.getElementById("ncontrato");
     let logo = document.getElementById("logo");
+    let rotulolinha = document.getElementById("llinha");
     if(linhaatual.value == "7 (Rubi)"){
         
         linhacel.style.backgroundColor = "#F62217";
@@ -53,6 +54,10 @@ $("#linhas").change(function() {
                     contrato.value=Dados.Linhas[i].Contrato;
                     consorcio.value=Dados.Linhas[i].Consorcio;
                     logo.src="img/"+Dados.Linhas[i].Logo;
+                    linhaatual.classList.remove("text-black");
+                    linhaatual.classList.add("text-white");
+                    rotulolinha.classList.remove("text-black");
+                    rotulolinha.classList.add("text-white");
                     break;
 
                 }
@@ -60,6 +65,10 @@ $("#linhas").change(function() {
                     contrato.value="";
                     consorcio.value="";
                     logo.src="img/Brasao.png";
+                    linhaatual.classList.remove("text-white");
+                    linhaatual.classList.add("text-black");
+                    rotulolinha.classList.remove("text-white");
+                    rotulolinha.classList.add("text-black");
                 }
             }
         })
