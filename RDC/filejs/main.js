@@ -316,9 +316,9 @@ $(document).ready(function(){
         clonado.classList.add("deletar");
         clonado.getElementsByTagName("img")[0].setAttribute("class", "delete");
         document.getElementById(caixa).appendChild(clonado);
-        let div = "div."+num
-        $(div).find('textarea').val('');
-        $(div).find('input').val('');
+        
+        clonado.find('textarea').val('');
+        clonado.find('input').val('');
 
     }
       
