@@ -206,7 +206,7 @@ $("#linhas").change(function() {
     let falha = dadoosm.substring(0, dadofalha.length-5);
     let anofalha = dadoosm.substring(dadofalha.length-4,dadofalha.length);
 
-    if(linha.Number() > 10){
+    if(Number(linha) > 10){
         cco= "2";        
     }
     else{
