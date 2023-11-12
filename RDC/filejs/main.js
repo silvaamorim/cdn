@@ -194,6 +194,11 @@ $("#linhas").change(function() {
         if(this.value != "" || this.value != null){
 
             linksa..href = "https://appintranet.cptm.sp.gov.br/manutencao/sim/consultar/popCSSA.asp?valor=" + data + "|" + sa + "|" + ano
+            linksa.target = "_blank"
+        }
+        else{
+            linksa..href ="#"
+            linksa.target=""
         }
             
 
