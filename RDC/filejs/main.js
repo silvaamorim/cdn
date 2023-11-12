@@ -190,9 +190,9 @@ $("#linhas").change(function() {
     let data = document.getElementById("dat");
     let dadosa = document.getElementById("sa").value;
     let sa = dadosa.substring(0, dadosa.length-5);
-    let ano = dadosa.substring(dadosa.length-4, 4);    
+    let ano = dadosa.substring(dadosa.length-4, dadosa.length);   
 
-        if(dadosa.value != "" & dadosa.value != null){
+        if(dadosa != "" & dadosa != null){
 
             linksa.href = "https://appintranet.cptm.sp.gov.br/manutencao/sim/consultar/popCSSA.asp?valor=" + data + "|" + sa + "|" + ano
             linksa.target = "_blank"
