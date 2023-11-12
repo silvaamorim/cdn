@@ -187,15 +187,18 @@ $("#linhas").change(function() {
     $("#dat").change(function(){
 
     linksa = document.getElementById("linksa");
-    let data2 = document.getElementById("dat");    
-    let data = document.getElementById("dat").innerText;
+    let data = document.getElementById("dat").value;    
+    let dia = data.substring(8,);
+    let mes = data.substring(5,7);
+    let anoserv = data.substring(0,4);
+    let dataservico = dia +"/"+mes+"/"+anoserv
     let dadosa = document.getElementById("sa").value;
     let sa = dadosa.substring(0, dadosa.length-5);
     let ano = dadosa.substring(dadosa.length-4, dadosa.length);   
 
         if(dadosa != "" & dadosa != null){
 
-            linksa.href = "https://appintranet.cptm.sp.gov.br/manutencao/sim/consultar/popCSSA.asp?valor=" + data + "|" + sa + "|" + ano
+            linksa.href = "https://appintranet.cptm.sp.gov.br/manutencao/sim/consultar/popCSSA.asp?valor=" + dataservico + "|" + sa + "|" + ano
             linksa.target = "_blank"
         }
         else{
