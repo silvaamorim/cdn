@@ -332,7 +332,7 @@
                     </div>
                     <div class="col-5 text-center" style="padding: 0 2px 0 2px;  width: 590px;"> 
                         <label for="dsc" class="fw-bold">DESCRIÇÃO</label><textarea class=" form-control text-center fw-bold w-100 tdesc" name="dsc" id="dsc"  rows="1" cols="40"
-                                                style="padding: 0px 0px 0px 0px; width:auto;font-size:1.1vw;resize: none;overflow-y: hidden;" title="INFORME O CÓDIGO COMPLEMENTO E A DESCRIÇÃO DO ITEM, EX.: 698 - CARDA DE MATERIAIS."></textarea>
+                                                style="padding: 0px 0px 0px 0px; width:auto;font-size:1vw;resize: none;overflow-y: hidden;" title="INFORME O CÓDIGO COMPLEMENTO E A DESCRIÇÃO DO ITEM, EX.: 698 - CARDA DE MATERIAIS."></textarea>
 
                     </div>
                     <div class="col-1 text-center" style="padding: 0 2px 0 2px; width: auto;">            
@@ -586,7 +586,7 @@
             <div class="row" id="fcls">
 
                 <div class="col-auto text-center" style="padding: 0 5px 0 5px; width: auto;">            
-                    <label for="beq" class="fw-bold">EQUIPE</label><input type="text" class="form-control text-center fw-bold" name="beq" id="beq" size="1" title="INFORME A EQUIPE, EX.: CVN.">
+                    <label for="beq" class="fw-bold">EQUIPE</label><input type="text" class="form-control text-center fw-bold" name="beq" id="beq" size="1" title="INFORME A EQUIPE, EX.: CVN." oninput="this.value = this.value.toUpperCase()">
                 </div>
                 <div class="col text-center" id="coddel" style="padding: 0 5px 0 5px; width: auto;">            
                     <label for="fsc" class="fw-bold">FISCAL CONSÓRCIO</label>
