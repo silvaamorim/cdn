@@ -189,8 +189,8 @@ $("#linhas").change(function() {
     let linha  = document.getElementById("linhas").value.substring(0, 2).trim()
     let cco = "";
     let linksa = document.getElementById("linksa");
-    let linkfalha = document.getElementById("linksa");
-    let linkosm = document.getElementById("linksa");
+    let linkfalha = document.getElementById("linkfalha");
+    let linkosm = document.getElementById("linkosm");
     let data = document.getElementById("dat").value;    
     let dia = data.substring(8,);
     let mes = data.substring(5,7);
