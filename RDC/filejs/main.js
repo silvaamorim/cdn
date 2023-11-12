@@ -198,7 +198,7 @@ $("#linhas").change(function() {
             linksa.target = "_blank"
         }
         else{
-            linksa..href ="#"
+            linksa.href ="#"
             linksa.target=""
         }
             
