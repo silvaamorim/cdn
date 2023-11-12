@@ -182,6 +182,23 @@ $("#linhas").change(function() {
 
     });
 
+///incluir link na sa
+
+    $("#sa").change(function(){
+
+    linksa = document.getElementById("linksa");
+    let data = document.document.getElementById("dat");
+    let sa = this.substring(0, this.length-5);
+    let ano = this.substring(this.length-4, 4);    
+
+        if(this.value != "" || this.value != null){
+
+            linksa..href = "https://appintranet.cptm.sp.gov.br/manutencao/sim/consultar/popCSSA.asp?valor=" + data + "|" + sa + "|" + ano
+        }
+            
+
+    });
+
 $(document).ready(function(){
     
   ///preencher select Consorcios
