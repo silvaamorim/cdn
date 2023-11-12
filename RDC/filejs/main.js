@@ -202,6 +202,9 @@ $("#linhas").change(function() {
     let dadoosm = document.getElementById("osm").value;
     let osm = dadoosm.substring(0, dadoosm.length-5);
     let anoosm = dadoosm.substring(dadoosm.length-4,dadoosm.length);
+    let dadofalha = document.getElementById("falha").value;
+    let falha = dadoosm.substring(0, dadofalha.length-5);
+    let anofalha = dadoosm.substring(dadofalha.length-4,dadofalha.length);
 
     if(linha.Number() > 10){
         cco= "2";        
@@ -234,7 +237,19 @@ $("#linhas").change(function() {
             linkosm.href ="#"
             linkosm.target=""
         }
-            https://appintranet.cptm.sp.gov.br/Manutencao/sicom/OsGeral.asp?id=50865&id_anosaf=2023&idcco=2
+
+         ///falha
+
+        if(falha != "" & falha != null){
+
+            linkfalha.href = "https://appintranet.cptm.sp.gov.br/Manutencao/sicom/OsGeral.asp?id=" + falha + "&id_anosaf=" + anofalha + "&idcco=" + cco
+            linkfalha.target = "_blank"
+        }
+        else{
+            linkfalha.href ="#"
+            linkfalha.target=""
+        }
+            
 
     });
 
