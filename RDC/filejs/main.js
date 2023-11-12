@@ -187,8 +187,8 @@ $("#linhas").change(function() {
     $("#dat").change(function(){
 
     linksa = document.getElementById("linksa");
-    let data = document.document.getElementById("dat");
-    let dadosa = document.document.getElementById("sa").value;
+    let data = document.getElementById("dat");
+    let dadosa = document.getElementById("sa").value;
     let sa = dadosa.substring(0, dadosa.length-5);
     let ano = dadosa.substring(dadosa.length-4, 4);    
 
