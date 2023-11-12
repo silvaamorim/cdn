@@ -86,7 +86,7 @@ $("#linhas").change(function() {
 
             for (let i = 0; i < Dados.length; i++){
                 if(consorcio === Dados[i].Consorcio.toUpperCase()){
-                    fiscalcconsorcio.options[fiscalcconsorcio.options.length] = new Option(Dados[i].Nome,  Dados[i].Nome);
+                    fiscalcconsorcio.options[fiscalcconsorcio.options.length] = new Option(Dados[i].Nome.toUpperCase(),  Dados[i].Nome.toUpperCase());
                     
                 }
             }
@@ -127,7 +127,7 @@ $("#linhas").change(function() {
             let mun = document.getElementById("mun");
             let estacaoinicial =[];
             let estacaofinal =[];
-            let nunicpio =[];
+            let municipio =[];
             let testeestacaoinicial = ""
             let testeestacaofinal = ""
             let testenunicpio = ""
@@ -143,20 +143,42 @@ $("#linhas").change(function() {
                      testenunicpio = nunicpio.find((element) => element == Dados[i].Municipios)
 
                     if(testeestacaoinicial == undefined){                    
-                        estacaoinicial.push(Dados[i].Estacoes_inicial);
-                        estacaoi.options[estacaoi.options.length] = new Option(Dados[i].Estacoes_inicial,  Dados[i].Estacoes_inicial);
+                        estacaoinicial.push(Dados[i].Estacoes_inicial);                       
+                         
+                        ///estacaoi.options[estacaoi.options.length] = new Option(Dados[i].Estacoes_inicial,  Dados[i].Estacoes_inicial);
                     }
                     if(testeestacaofinal == undefined){                    
                         estacaofinal.push(Dados[i].Estaces_Final);
-                        estacaof.options[estacaof.options.length] = new Option(Dados[i].Estaces_Final,  Dados[i].Estaces_Final);
+                        ///estacaof.options[estacaof.options.length] = new Option(Dados[i].Estaces_Final,  Dados[i].Estaces_Final);
                     }
                     if(testenunicpio == undefined){                    
-                        nunicpio.push(Dados[i].Municipios);
-                        mun.options[mun.options.length] = new Option(Dados[i].Municipios,  Dados[i].Municipios);
-                    } 
+                        municipio.push(Dados[i].Municipios);
+                        ///mun.options[mun.options.length] = new Option(Dados[i].Municipios,  Dados[i].Municipios);
+                    }                      
                     
                 }
             }
+                    estacaoinicial.sort();
+                     estacaofinal.sort();
+                     municipio.sort();
+
+                    for(let i = 0; i< estacaoinicia.length; i++){
+
+                        estacaoi.options[estacaoi.options.length] = new Option(estacaoinicial[i].toUpperCase(), estacaoinicial[i].toUpperCase());
+                        
+                    }
+
+                    for(let i = 0; i< estacaofinal.length; i++){
+
+                        estacaof.options[estacaof.options.length] = new Option(estacaofinal[i].toUpperCase(), estacaofinal[i].toUpperCase());
+                        
+                    }
+
+                    for(let i = 0; i< municipio.length; i++){
+
+                        mun.options[mun.options.length] = new Option(municipio[i].toUpperCase(), municipio[i].toUpperCase());
+                        
+                    }
         })
     });
     
@@ -299,8 +321,8 @@ $(document).ready(function(){
                        
 
             for (let i = 0; i < Dados.length; i++){
-                texto = Dados[i].Equipamento;
-                valor = Dados[i].Equipamento;
+                texto = Dados[i].Equipamento.toUpperCase();
+                valor = Dados[i].Equipamento.toUpperCase();
                 equipamentos.options[equipamentos.options.length] = new Option(texto,  valor);
                
             }
@@ -335,8 +357,8 @@ $(document).ready(function(){
                        
 
             for (let i = 0; i < Dados.length; i++){
-                texto = Dados[i].Funcao;
-                valor = Dados[i].Funcao;
+                texto = Dados[i].Funcao.toUpperCase();
+                valor = Dados[i].Funcao.toUpperCase();
                 funcoes.options[funcoes.options.length] = new Option(texto,  valor);
                
             }
@@ -354,8 +376,8 @@ $(document).ready(function(){
 
             for (let i = 0; i < Dados.length; i++){
                 
-                fiscalcptm.options[fiscalcptm.options.length] = new Option(Dados[i].Nome,  Dados[i].Nome);
-                supervisorcptm.options[supervisorcptm.options.length] = new Option(Dados[i].Nome,  Dados[i].Nome);
+                fiscalcptm.options[fiscalcptm.options.length] = new Option(Dados[i].Nome.toUpperCase(),  Dados[i].Nome.toUpperCase());
+                supervisorcptm.options[supervisorcptm.options.length] = new Option(Dados[i].Nome.toUpperCase(),  Dados[i].Nome.toUpperCase());
                
             }
         })
@@ -452,7 +474,7 @@ $(document).ready(function(){
 
             for (let i = 0; i < Dados.length; i++){
                 if(codmat === Dados[i].Codigo){
-                    descricao.value= Dados[i].Material;
+                    descricao.value= Dados[i].Material.toUpperCase();
                     unidade.value= Dados[i].Un;                    
                 }
             }
