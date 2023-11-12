@@ -203,8 +203,8 @@ $("#linhas").change(function() {
     let osm = dadoosm.substring(0, dadoosm.length-5);
     let anoosm = dadoosm.substring(dadoosm.length-4,dadoosm.length);
     let dadofalha = document.getElementById("fal").value;
-    let falha = dadoosm.substring(0, dadofalha.length-5);
-    let anofalha = dadoosm.substring(dadofalha.length-4,dadofalha.length);
+    let falha = dadofalha.substring(0, dadofalha.length-5);
+    let anofalha = dadofalha.substring(dadofalha.length-4,dadofalha.length);
 
     if(Number(linha) > 10){
         cco= "2";        
