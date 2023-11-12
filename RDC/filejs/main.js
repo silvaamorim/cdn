@@ -162,7 +162,7 @@ $("#linhas").change(function() {
                      estacaofinal.sort();
                      municipio.sort();
 
-                    for(let i = 0; i< estacaoinicia.length; i++){
+                    for(let i = 0; i< estacaoinicial.length; i++){
 
                         estacaoi.options[estacaoi.options.length] = new Option(estacaoinicial[i].toUpperCase(), estacaoinicial[i].toUpperCase());
                         
