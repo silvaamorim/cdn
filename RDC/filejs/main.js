@@ -303,8 +303,8 @@ $(document).ready(function(){
                        
 
             for (let i = 0; i < Dados.length; i++){
-                texto = Dados[i].Veiculo;
-                valor = Dados[i].Veiculo;
+                texto = Dados[i].Veiculo.toUpperCase();
+                valor = Dados[i].Veiculo.toUpperCase();
                 veiculos.options[veiculos.options.length] = new Option(texto,  valor);
                
             }
