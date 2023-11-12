@@ -140,7 +140,7 @@ $("#linhas").change(function() {
                 if(linhaatual.value === Dados[i].Linha_Nome ){
                      testeestacaoinicial = estacaoinicial.find((element) => element == Dados[i].Estacoes_inicial)
                      testeestacaofinal = estacaofinal.find((element) => element == Dados[i].Estaces_Final)
-                     testenunicpio = nunicpio.find((element) => element == Dados[i].Municipios)
+                     testenunicpio = municipio.find((element) => element == Dados[i].Municipios)
 
                     if(testeestacaoinicial == undefined){                    
                         estacaoinicial.push(Dados[i].Estacoes_inicial);                       
