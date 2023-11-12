@@ -184,16 +184,17 @@ $("#linhas").change(function() {
 
 ///incluir link na sa
 
-    $("#sa").change(function(){
+    $("#dat").change(function(){
 
     linksa = document.getElementById("linksa");
     let data = document.document.getElementById("dat");
-    let sa = this.substring(0, this.length-5);
-    let ano = this.substring(this.length-4, 4);    
+    let dadosa = document.document.getElementById("sa").value;
+    let sa = dadosa.substring(0, dadosa.length-5);
+    let ano = dadosa.substring(dadosa.length-4, 4);    
 
-        if(this.value != "" || this.value != null){
+        if(dadosa.value != "" & dadosa.value != null){
 
-            linksa..href = "https://appintranet.cptm.sp.gov.br/manutencao/sim/consultar/popCSSA.asp?valor=" + data + "|" + sa + "|" + ano
+            linksa.href = "https://appintranet.cptm.sp.gov.br/manutencao/sim/consultar/popCSSA.asp?valor=" + data + "|" + sa + "|" + ano
             linksa.target = "_blank"
         }
         else{
