@@ -182,11 +182,15 @@ $("#linhas").change(function() {
 
     });
 
-///incluir link na sa
+///incluir link na sa, falha e osm
 
     $("#dat").change(function(){
 
-    linksa = document.getElementById("linksa");
+    let linha  = document.getElementById("linhas").value.substring(0, 2).trim()
+    let cco = "";
+    let linksa = document.getElementById("linksa");
+    let linkfalha = document.getElementById("linksa");
+    let linkosm = document.getElementById("linksa");
     let data = document.getElementById("dat").value;    
     let dia = data.substring(8,);
     let mes = data.substring(5,7);
@@ -194,8 +198,21 @@ $("#linhas").change(function() {
     let dataservico = dia +"/"+mes+"/"+anoserv
     let dadosa = document.getElementById("sa").value;
     let sa = dadosa.substring(0, dadosa.length-5);
-    let ano = dadosa.substring(dadosa.length-4, dadosa.length);   
+    let ano = dadosa.substring(dadosa.length-4, dadosa.length);
+    let dadoosm = document.getElementById("osm").value;
+    let osm = dadoosm.substring(0, dadoosm.length-5);
+    let anoosm = dadoosm.substring(dadoosm.length-4,dadoosm.length);
 
+    if(linha.Number() > 10){
+        cco= "2";        
+    }
+    else{
+
+        cco = "1"
+    }
+        
+    
+        ///sa
         if(dadosa != "" & dadosa != null){
 
             linksa.href = "https://appintranet.cptm.sp.gov.br/manutencao/sim/consultar/popCSSA.asp?valor=" + dataservico + "|" + sa + "|" + ano
@@ -205,7 +222,19 @@ $("#linhas").change(function() {
             linksa.href ="#"
             linksa.target=""
         }
-            
+
+        ///osm
+
+        if(osm != "" & osm != null){
+
+            linkosm.href = "https://appintranet.cptm.sp.gov.br/Manutencao/sicom/osm/Msic_ListOsm_1.asp?parametro=5&id_osm=" + osm + "&id_ano=" + anoosm
+            linkosm.target = "_blank"
+        }
+        else{
+            linkosm.href ="#"
+            linkosm.target=""
+        }
+            https://appintranet.cptm.sp.gov.br/Manutencao/sicom/OsGeral.asp?id=50865&id_anosaf=2023&idcco=2
 
     });
 
