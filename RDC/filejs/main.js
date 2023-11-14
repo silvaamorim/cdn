@@ -14,6 +14,8 @@ $("#linhas").change(function() {
         linhaatual.classList.add("text-white");
         rotulolinha.classList.remove("text-black");
         rotulolinha.classList.add("text-white");
+        contrato.value="";
+        logo.src="img/Brasao.png";
 
     }
     else if(linhaatual.value == "10 (Turquesa)"){
@@ -24,6 +26,8 @@ $("#linhas").change(function() {
         linhaatual.classList.add("text-white");
         rotulolinha.classList.remove("text-black");
         rotulolinha.classList.add("text-white");
+        contrato.value="";
+        logo.src="img/Brasao.png";
 
     }
     else if(linhaatual.value == "11 (Coral)"){
@@ -34,6 +38,8 @@ $("#linhas").change(function() {
         linhaatual.classList.add("text-white");
         rotulolinha.classList.remove("text-black");
         rotulolinha.classList.add("text-white");
+        contrato.value="";
+        logo.src="img/Brasao.png";
 
     }
     else if(linhaatual.value == "12 (Safira)"){
@@ -44,6 +50,8 @@ $("#linhas").change(function() {
         linhaatual.classList.add("text-white");
         rotulolinha.classList.remove("text-black");
         rotulolinha.classList.add("text-white");
+        contrato.value="";
+        logo.src="img/Brasao.png";
 
     }
 
@@ -55,6 +63,8 @@ $("#linhas").change(function() {
         linhaatual.classList.add("text-white");
         rotulolinha.classList.remove("text-black");
         rotulolinha.classList.add("text-white");
+        contrato.value="";
+        logo.src="img/Brasao.png";
 
     }
     else {
