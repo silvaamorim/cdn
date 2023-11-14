@@ -168,7 +168,7 @@ $("#linhas").change(function() {
 
 
 ///Número contrato, Itens de Constrato e Equipe da Contratada
- $("#fiscalcptm").change(function(){
+ $("#scs").change(function(){
 
      let consorcio = document.getElementById("scs").value;
      let contrato = document.getElementById("ncontrato");
