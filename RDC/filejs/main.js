@@ -64,7 +64,11 @@ $("#linhas").change(function() {
         linhaatual.classList.remove("text-white");
         linhaatual.classList.add("text-black");
         rotulolinha.classList.remove("text-white");
-        rotulolinha.classList.add("text-black");
+        rotulolinha.classList.add("text-black");     
+        contrato.value="";
+        logo.src="img/Brasao.png";
+                    
+            
 
     }
 
@@ -169,7 +173,7 @@ $("#linhas").change(function() {
 
 ///Número contrato, Itens de Constrato e Equipe da Contratada
  $("#scs").change(function(){
-
+    let logo = document.getElementById("logo");
      let consorcio = document.getElementById("scs").value;
      let contrato = document.getElementById("ncontrato");
  fetch("filejson/contrato.json").then((response) => {
