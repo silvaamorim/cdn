@@ -68,6 +68,26 @@ $("#linhas").change(function() {
 
     }
 
+
+    ///preencher select Consorcios
+    fetch("filejson/contrato.json").then((response) => {
+        response.json().then((Dados) => {
+            let consorcios = document.getElementById("scs");
+            let texto = "";
+            let valor = "";
+                       
+
+            for (let i = 0; i < Dados.Linhas.length; i++){
+                 if(linha === Dados.Linhas[i].Linha){
+                texto = Dados.Linhas[i].Consorcio;
+                valor = Dados.Linhas[i].Consorcio;
+                consorcios.options[consorcios.options.length] = new Option(texto,  valor);
+               
+            }
+            }
+        })
+    });
+
     fetch("filejson/contrato.json").then((response) => {
         response.json().then((Dados) => {
 
@@ -294,22 +314,7 @@ $("#linhas").change(function() {
 
 $(document).ready(function(){
     
-  ///preencher select Consorcios
-    fetch("filejson/consorcios.json").then((response) => {
-        response.json().then((Dados) => {
-            let consorcios = document.getElementById("scs");
-            let texto = "";
-            let valor = "";
-                       
-
-            for (let i = 0; i < Dados.length; i++){
-                texto = Dados[i].Consorcio;
-                valor = Dados[i].Consorcio;
-                consorcios.options[consorcios.options.length] = new Option(texto,  valor);
-               
-            }
-        })
-    });
+  
 
 ///preencher select Veículo
     fetch("filejson/veiculoconsorcio.json").then((response) => {
