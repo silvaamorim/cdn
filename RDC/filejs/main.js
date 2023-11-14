@@ -206,7 +206,7 @@ $("#linhas").change(function() {
 
 ///incluir link na sa, falha e osm
 
-    $("#dat, #sa, #osm. #fal").change(function(){
+    $("#dat, #sa, #osm, #fal").change(function(){
 
     let linha  = document.getElementById("linhas").value.substring(0, 2).trim()
     let cco = "";
