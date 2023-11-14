@@ -67,7 +67,8 @@ $("#linhas").change(function() {
         rotulolinha.classList.add("text-black");     
         contrato.value="";
         logo.src="img/Brasao.png";
-                    
+         $("#fsc").empty(); 
+        $("#cod").empty();                    
             
 
     }
