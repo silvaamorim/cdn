@@ -81,8 +81,8 @@ $("#linhas").change(function() {
 
             for (let i = 0; i < Dados.Linhas.length; i++){
                  if(linha === Dados.Linhas[i].Linha){
-                texto = Dados.Linhas[i].Consorcio;
-                valor = Dados.Linhas[i].Consorcio;
+                texto = Dados.Linhas[i].Consorcio.toUpperCase();
+                valor = Dados.Linhas[i].Consorcio.toUpperCase();
                 consorcios.options[consorcios.options.length] = new Option(texto,  valor);
                
             }
@@ -90,66 +90,7 @@ $("#linhas").change(function() {
         })
     });
 
-    fetch("filejson/contrato.json").then((response) => {
-        response.json().then((Dados) => {
-
-            
-
-            for (let i = 0; i < Dados.Linhas.length; i++){
-                if(linha === Dados.Linhas[i].Linha){
-                    contrato.value=Dados.Linhas[i].Contrato;
-                    consorcio.value=Dados.Linhas[i].Consorcio;
-                    logo.src="img/"+Dados.Linhas[i].Logo;                    
-                    break;
-
-                }
-                else{
-                    contrato.value="";
-                    consorcio.value="";
-                    logo.src="img/Brasao.png";
-                    
-                }
-            }
-        })
-    });
-
-    ///Equipe Especifica do Consórcio
-
-    fetch("filejson/equipeconsorcio.json").then((response) => {
-        response.json().then((Dados) => {
-            $("#fsc").empty();           
-            let fiscalcconsorcio = document.getElementById("fsc");            
-            let consorcio = document.getElementById("scs").value;
-
-             fiscalcconsorcio.options[0] = new Option("",  "");
-
-            for (let i = 0; i < Dados.length; i++){
-                if(consorcio === Dados[i].Consorcio.toUpperCase()){
-                    fiscalcconsorcio.options[fiscalcconsorcio.options.length] = new Option(Dados[i].Nome.toUpperCase(),  Dados[i].Nome.toUpperCase());
-                    
-                }
-            }
-        })
-    });
-
-    ///Item Especifico do Consórcio
-
-    fetch("filejson/itenscontrato.json").then((response) => {
-        response.json().then((Dados) => {
-            $("#cod").empty();           
-            let itenscontrato = document.getElementById("cod");            
-            let consorcio = document.getElementById("scs").value;
-
-             itenscontrato.options[0] = new Option("",  "");
-
-            for (let i = 0; i < Dados.length; i++){
-                if(consorcio === Dados[i].Consorcio.toUpperCase()){
-                    itenscontrato.options[itenscontrato.options.length] = new Option(Dados[i].Codigo_VP,  Dados[i].Codigo_VP);
-                    
-                }
-            }
-        })
-    });
+   
 
 ///Estações Inicial e Final
 
@@ -223,6 +164,74 @@ $("#linhas").change(function() {
     
     
 });
+
+
+
+///Número contrato, Itens de Constrato e Equipe da Contratada
+ $("#fiscalcptm").change(function(){
+
+     let consorcio = document.getElementById("scs").value;
+     let contrato = document.getElementById("ncontrato");
+ fetch("filejson/contrato.json").then((response) => {
+        response.json().then((Dados) => {          
+
+            for (let i = 0; i < Dados.Linhas.length; i++){
+                if(consorcio === Dados.Linhas[i].Consorcio.toUpperCase()){
+                    contrato.value=Dados.Linhas[i].Contrato;                    
+                    logo.src="img/"+Dados.Linhas[i].Logo;                    
+                    break;
+
+                }
+                else{
+                    contrato.value="";
+                    
+                    logo.src="img/Brasao.png";
+                    
+                }
+            }
+        })
+    });
+
+    ///Equipe Especifica do Consórcio
+
+    fetch("filejson/equipeconsorcio.json").then((response) => {
+        response.json().then((Dados) => {
+            $("#fsc").empty();           
+            let fiscalcconsorcio = document.getElementById("fsc");            
+            let consorcio = document.getElementById("scs").value;
+
+             fiscalcconsorcio.options[0] = new Option("",  "");
+
+            for (let i = 0; i < Dados.length; i++){
+                if(consorcio === Dados[i].Consorcio.toUpperCase()){
+                    fiscalcconsorcio.options[fiscalcconsorcio.options.length] = new Option(Dados[i].Nome.toUpperCase(),  Dados[i].Nome.toUpperCase());
+                    
+                }
+            }
+        })
+    });
+
+    ///Item Especifico do Consórcio
+
+    fetch("filejson/itenscontrato.json").then((response) => {
+        response.json().then((Dados) => {
+            $("#cod").empty();           
+            let itenscontrato = document.getElementById("cod");            
+            let consorcio = document.getElementById("scs").value;
+
+             itenscontrato.options[0] = new Option("",  "");
+
+            for (let i = 0; i < Dados.length; i++){
+                if(consorcio === Dados[i].Consorcio.toUpperCase()){
+                    itenscontrato.options[itenscontrato.options.length] = new Option(Dados[i].Codigo_VP,  Dados[i].Codigo_VP);
+                    
+                }
+            }
+        })
+    });
+
+ });
+////------------------------
 
 ///Mudar rotulo Fiscal CPTM para Colaborador CPTM, e, vice-versa
 
