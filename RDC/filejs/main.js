@@ -10,24 +10,40 @@ $("#linhas").change(function() {
         
         linhacel.style.backgroundColor = "#F62217";
         linhaatual.style.backgroundColor = "#F62217";
+        linhaatual.classList.remove("text-black");
+        linhaatual.classList.add("text-white");
+        rotulolinha.classList.remove("text-black");
+        rotulolinha.classList.add("text-white");
 
     }
     else if(linhaatual.value == "10 (Turquesa)"){
         
         linhacel.style.backgroundColor = "#40E0D0";
         linhaatual.style.backgroundColor = "#40E0D0";
+        linhaatual.classList.remove("text-black");
+        linhaatual.classList.add("text-white");
+        rotulolinha.classList.remove("text-black");
+        rotulolinha.classList.add("text-white");
 
     }
     else if(linhaatual.value == "11 (Coral)"){
         
         linhacel.style.backgroundColor = "#FF7F50";
         linhaatual.style.backgroundColor = "#FF7F50";
+        linhaatual.classList.remove("text-black");
+        linhaatual.classList.add("text-white");
+        rotulolinha.classList.remove("text-black");
+        rotulolinha.classList.add("text-white");
 
     }
     else if(linhaatual.value == "12 (Safira)"){
         
         linhacel.style.backgroundColor = "#385f8f";
         linhaatual.style.backgroundColor = "#385f8f";
+        linhaatual.classList.remove("text-black");
+        linhaatual.classList.add("text-white");
+        rotulolinha.classList.remove("text-black");
+        rotulolinha.classList.add("text-white");
 
     }
 
@@ -35,12 +51,20 @@ $("#linhas").change(function() {
         
         linhacel.style.backgroundColor = "#00a86b";
         linhaatual.style.backgroundColor = "#00a86b";
+        linhaatual.classList.remove("text-black");
+        linhaatual.classList.add("text-white");
+        rotulolinha.classList.remove("text-black");
+        rotulolinha.classList.add("text-white");
 
     }
     else {
         
         linhacel.style.backgroundColor = "#FFFFFF";
         linhaatual.style.backgroundColor = "#FFFFFF";
+        linhaatual.classList.remove("text-white");
+        linhaatual.classList.add("text-black");
+        rotulolinha.classList.remove("text-white");
+        rotulolinha.classList.add("text-black");
 
     }
 
@@ -53,11 +77,7 @@ $("#linhas").change(function() {
                 if(linha === Dados.Linhas[i].Linha){
                     contrato.value=Dados.Linhas[i].Contrato;
                     consorcio.value=Dados.Linhas[i].Consorcio;
-                    logo.src="img/"+Dados.Linhas[i].Logo;
-                    linhaatual.classList.remove("text-black");
-                    linhaatual.classList.add("text-white");
-                    rotulolinha.classList.remove("text-black");
-                    rotulolinha.classList.add("text-white");
+                    logo.src="img/"+Dados.Linhas[i].Logo;                    
                     break;
 
                 }
@@ -65,10 +85,7 @@ $("#linhas").change(function() {
                     contrato.value="";
                     consorcio.value="";
                     logo.src="img/Brasao.png";
-                    linhaatual.classList.remove("text-white");
-                    linhaatual.classList.add("text-black");
-                    rotulolinha.classList.remove("text-white");
-                    rotulolinha.classList.add("text-black");
+                    
                 }
             }
         })
