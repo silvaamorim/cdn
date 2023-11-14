@@ -72,9 +72,11 @@ $("#linhas").change(function() {
     ///preencher select Consorcios
     fetch("filejson/contrato.json").then((response) => {
         response.json().then((Dados) => {
+            $("#scs").empty();
             let consorcios = document.getElementById("scs");
             let texto = "";
-            let valor = "";
+            let valor = "";           
+            consorcios.options[0] = new Option("",  "");
                        
 
             for (let i = 0; i < Dados.Linhas.length; i++){
