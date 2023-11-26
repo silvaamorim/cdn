@@ -71,7 +71,7 @@ $("#dados").click(function () {
         cache: "no-cache",
         credentials: "same-origin",
         headers: {
-            //'Accept': 'Application/json',
+            'Accept': 'Application/json',
             'Content-Type': 'Application/json',
         },
         redirect: "follow",
