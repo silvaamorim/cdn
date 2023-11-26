@@ -65,22 +65,6 @@ $("#linhas").change(function() {
 });
 $("#dados").click(function () {
 
-    fetch("filejson/dados.json", {
-        method: 'POST',
-        mode: "cors",
-        cache: "no-cache",
-        credentials: "same-origin",
-        headers: {
-            'Accept': 'Application/json',
-            'Content-Type': 'Application/json',
-        },
-        redirect: "follow",
-        referrer: "no-referrer",
-        body: JSON.stringify({
-            "usuario": "Usuario_1",
-            "email": "usuario1gamil.com",
-            "data": "01/01/2020",
-        })
-    })
+    fetch("filejson/dados.json")
         .then((response) => {return response.json();}).then((data) =>{console.log(data)})})
 
