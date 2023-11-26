@@ -63,3 +63,24 @@ $("#linhas").change(function() {
         })
     })
 });
+$("#dados").click(function () {
+
+    fetch("JSON/dados.json", {
+        method: 'POST',
+        mode: "cors",
+        cache: "no-cache",
+        credentials: "same-origin",
+        headers: {
+            //'Accept': 'Application/json',
+            'Content-Type': 'Application/json',
+        },
+        redirect: "follow",
+        referrer: "no-referrer",
+        body: JSON.stringify({
+            "usuario": "Usuario_1",
+            "email": "usuario1gamil.com",
+            "data": "01/01/2020",
+        })
+    })
+        .then((response) => (console.log(response)))
+})
