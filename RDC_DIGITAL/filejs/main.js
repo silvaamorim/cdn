@@ -82,4 +82,5 @@ $("#dados").click(function () {
             "data": "01/01/2020",
         })
     })
-        .then((response) => {return response.json();}).then((data) =>{console.log(data)})
+        .then((response) => {return response.json();}).then((data) =>{console.log(data)})})
+
