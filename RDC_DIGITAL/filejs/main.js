@@ -65,7 +65,7 @@ $("#linhas").change(function() {
 });
 $("#dados").click(function () {
 
-    fetch("JSON/dados.json", {
+    fetch("filejson/dados.json", {
         method: 'POST',
         mode: "cors",
         cache: "no-cache",
