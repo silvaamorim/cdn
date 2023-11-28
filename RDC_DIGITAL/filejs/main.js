@@ -64,11 +64,11 @@ $("#linhas").change(function() {
     })
 });
 $("#dados").click(function() {
-
+const JWT = 'Whatever-token'
     fetch("https://silvaamorim.github.io/cdn/RDC_DIGITAL/filejson/dados.json", {
         method: 'POST',        
         headers: {
-            'Authorization': 'Bearer $(1234)',
+            'Authorization': 'Bearer $(JWT)',
             'Accept': 'Application/json',
             'Content-Type': 'Application/json',
         },
