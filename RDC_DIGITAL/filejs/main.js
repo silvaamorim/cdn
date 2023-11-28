@@ -68,6 +68,7 @@ $("#dados").click(function() {
     fetch("https://silvaamorim.github.io/cdn/RDC_DIGITAL/filejson/dados.json", {
         method: 'POST',        
         headers: {
+            'auth': '1234',
             'Accept': 'Application/json',
             'Content-Type': 'Application/json',
         },
