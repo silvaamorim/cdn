@@ -65,7 +65,7 @@ $("#linhas").change(function() {
 });
 $("#dados").click(function() {
 
-    fetch("https://silvaamorim.github.io/cdn/RDC_DIGITAL/filejson/dados", {
+    fetch("https://silvaamorim.github.io/cdn/RDC_DIGITAL/filejson/dados.json", {
         method: 'POST',        
         headers: {
             'Accept': 'Application/json',
