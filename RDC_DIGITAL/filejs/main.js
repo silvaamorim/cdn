@@ -63,7 +63,7 @@ $("#linhas").change(function() {
         })
     })
 });
-$("#dados").click(function () {
+$("#dados").click(function() {
 
     fetch("https://silvaamorim.github.io/cdn/RDC_DIGITAL/filejson/dados.json", {
         method: 'POST',        
@@ -75,7 +75,7 @@ $("#dados").click(function () {
         body: JSON.stringify({
             "username": "Usuario_1",
             "email": "usuario1gamil.com",
-            "password": "01/01/2020",
+            "password": "01/01/2020"
         })
     })
             .then((response) => {return response.json();}).then((data) =>{console.log(data)})})
