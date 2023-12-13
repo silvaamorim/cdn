@@ -2434,5 +2434,348 @@
         "Codigo": "09.03.06.187.24",
         "Descricao": "Descarga de acessórios metálicos e fixações de veículo CPTM",
         "Unid": "T"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "10",
+        "Codigo": "01.11.01.100.01",
+        "Descricao": "Administração local.",
+        "Unid": "un"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "11",
+        "Codigo": "02.01.03.100.06",
+        "Descricao": "Placa de identificação de instalações e/ou serviço",
+        "Unid": "m²"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "12",
+        "Codigo": "02.01.03.110.20",
+        "Descricao": "Mobilização e desmobilização de container para Canteiro, incluindo equipe e equipamento",
+        "Unid": "un"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "13",
+        "Codigo": "02.01.00.100.11",
+        "Descricao": "Limpeza manual do terreno (com raspagem superficial)",
+        "Unid": "m²"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "14",
+        "Codigo": "02.01.03.210.01",
+        "Descricao": "Ligação provisória de água e instalação sanitária provisória - instalação mínima",
+        "Unid": "un"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "15",
+        "Codigo": "02.01.03.220.01",
+        "Descricao": "Ligação provisória de energia elétrica - instalação mínima",
+        "Unid": "un"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "16",
+        "Codigo": "02.01.03.210.10",
+        "Descricao": "Execução de reservatório elevado de água (1000 litros) em canteiro, apoiado em estrutura de madeira",
+        "Unid": "un"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "17",
+        "Codigo": "02.01.03.110.16",
+        "Descricao": "Locação container depósito com dimensão: 2,30 x 4,00m e altura de 2,50m",
+        "Unid": "un x mês"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "18",
+        "Codigo": "02.01.03.110.17",
+        "Descricao": "Locação de container Escritório com dimensão: 2,30 x 6,00m e altura de 2,50m, com ar condicionado e divisória ",
+        "Unid": "un x mês"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "19",
+        "Codigo": "02.01.03.110.15",
+        "Descricao": "Locação de container 2,30 x 4,30 m, alt. 2,50 m, para sanitário, com 3 bacias, 4 chuveiros, 1 lavatório e 1 mictório.",
+        "Unid": "un x mês"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "20",
+        "Codigo": "09.03.00.100.04",
+        "Descricao": "Levantamento e cálculo de correção geométrica de via e AMV",
+        "Unid": "m"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "21",
+        "Codigo": "02.01.00.110.20",
+        "Descricao": "Levantamento planialtimétrico Cadastral, Classe llPAC, georreferenciado em área operacional",
+        "Unid": "m²"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "22",
+        "Codigo": "09.03.06.180.16",
+        "Descricao": "Fixação de trilho para amarração de ponto nótavel de curva",
+        "Unid": "un"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "23",
+        "Codigo": "02.01.01.110.06",
+        "Descricao": "Transporte de solo com caminhão basculante, em via urbana pavimentada, adicional para dmt excedente a 30km",
+        "Unid": "m³ x km"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "24",
+        "Codigo": "02.01.00.130.10",
+        "Descricao": "Retirada de gradil metálico",
+        "Unid": "m²"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "25",
+        "Codigo": "02.01.00.130.11",
+        "Descricao": "Recolocação de gradil metálico",
+        "Unid": "m²"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "26",
+        "Codigo": "03.03.02.100.09",
+        "Descricao": "Demolição da grade de AMV Nº 08 em dormente de concreto",
+        "Unid": "cj"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "28",
+        "Codigo": "09.03.06.140.86",
+        "Descricao": "Montagem de máquina de chave.",
+        "Unid": "cj"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "29",
+        "Codigo": "09.03.06.140.85",
+        "Descricao": "Desmontagem de máquina de chave.",
+        "Unid": "un"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "30",
+        "Codigo": "02.01.01.110.11",
+        "Descricao": "Transporte de resíduos classe IIA - não perigosos - não inertes ou classe IIB - não perigosos - inertes até o local de armazenamento ou disposição final",
+        "Unid": "TXKM"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "31",
+        "Codigo": "09.03.06.180.15",
+        "Descricao": "Corte de Trilho a Maçarico",
+        "Unid": "un"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "32",
+        "Codigo": "03.03.05.100.32",
+        "Descricao": "Montagem e instalação de cruzamento duplo (AMV em X) com jacarés padrão AREMA Nº 5 e Nº 10, sobre dormentes de madeira e bitola de 1600mm.",
+        "Unid": "cj"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "146",
+        "Codigo": "02.01.01.110.05",
+        "Descricao": "Carga e descarga mecanizada de solo e transporte até o 1° km",
+        "Unid": "m³"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "191",
+        "Codigo": "02.01.01.200.13",
+        "Descricao": "Regularização mecanizada do solo",
+        "Unid": "m²"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "341",
+        "Codigo": "09.03.06.130.14",
+        "Descricao": "Corte de Trilho a Frio",
+        "Unid": "un"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "342",
+        "Codigo": "09.03.06.130.15",
+        "Descricao": "Furação de Trilho a Frio",
+        "Unid": "un"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "412",
+        "Codigo": "09.03.06.160.03",
+        "Descricao": "Substituição de Junta Isolante Colada (JIC) TR-57",
+        "Unid": "m"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "420",
+        "Codigo": "03.03.04.100.30",
+        "Descricao": "Soldagem Aluminotérmica para TR-57 Via Corrida e AMVs, cadinho descartável",
+        "Unid": "un"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "425",
+        "Codigo": "09.03.06.170.01",
+        "Descricao": "Substituição de Rail-Bond fixado por parafuso",
+        "Unid": "un"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "473",
+        "Codigo": "03.03.01.100.03",
+        "Descricao": "Demolição da grade de via corrida em Dormente de Concreto em TR50,TR 57, UIC60 ou TR-68",
+        "Unid": "m"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "501",
+        "Codigo": "09.03.06.187.06",
+        "Descricao": "Carga de dormentes de madeira em Veículo CPTM",
+        "Unid": "m³"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "503",
+        "Codigo": "09.03.06.187.08",
+        "Descricao": "Descarga de dormentes de madeira de veículo da CPTM",
+        "Unid": "m³"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "509",
+        "Codigo": "09.03.06.187.14",
+        "Descricao": "Carga de Dormentes de Concreto em Veículo CPTM",
+        "Unid": "m³"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "511",
+        "Codigo": "09.03.06.187.16",
+        "Descricao": "Descarga de dormentes de concreto de veículo CPTM",
+        "Unid": "m³"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "514",
+        "Codigo": "09.03.06.187.18",
+        "Descricao": "Carga e descarga de acessórios metálicos fixações e transporte rodoviário até o 1º km",
+        "Unid": "T"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "517",
+        "Codigo": "09.03.06.187.21",
+        "Descricao": "Carga de Trilho em Veículo CPTM",
+        "Unid": "T"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "519",
+        "Codigo": "09.03.06.187.23",
+        "Descricao": "Descarga de Trilho de Veículo CPTM",
+        "Unid": "T"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "523",
+        "Codigo": "09.03.06.187.27",
+        "Descricao": "Carga de Componente de AMV (jacaré, agulha e/ou contratrilho) em Veículo CPTM",
+        "Unid": "T"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "524",
+        "Codigo": "09.03.06.187.28",
+        "Descricao": "Descarga de Componente de AMV (jacaré, agulha e/ou contratrilho) de Veículo CPTM",
+        "Unid": "T"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "538",
+        "Codigo": "09.03.06.187.42",
+        "Descricao": "Transporte de acessórios metálicos e fixações, em veículo rodoviário",
+        "Unid": "TXKM"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "548",
+        "Codigo": "09.03.06.190.03",
+        "Descricao": "Estaleiramento de Dormentes de Concreto (2,80m)",
+        "Unid": "un"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "549",
+        "Codigo": "09.03.06.190.04",
+        "Descricao": "Estaleiramento de Dormentes Especiais de Concreto para AMV",
+        "Unid": "m³"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "550",
+        "Codigo": "09.03.06.190.05",
+        "Descricao": "Estaleiramento de acessórios metálicos e fixações",
+        "Unid": "T"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "551",
+        "Codigo": "09.03.06.190.06",
+        "Descricao": "Estaleiramento de Trilho",
+        "Unid": "T"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "552",
+        "Codigo": "09.03.06.190.07",
+        "Descricao": "Estaleiramento de Componentes de AMV (jacaré agulha e/ou contratrilho)",
+        "Unid": "T"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "694",
+        "Codigo": "02.01.01.600.06",
+        "Descricao": "Destinação de resíduos classe IIB - não perigoso - inerte",
+        "Unid": "T"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "694",
+        "Codigo": "02.01.01.600.06",
+        "Descricao": "Destinação de resíduos classe IIB - não perigoso - inerte",
+        "Unid": "T"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "697",
+        "Codigo": "09.03.05.000.15",
+        "Descricao": "Carga mecanizada (solo, terra, lastro com terra, entulho, turfa, material brejoso) em veículo rodoviário",
+        "Unid": "m³"
+    },
+    {
+        "Consorcio": "CASTILHO ENGENHARIA E EMPREENDIMENTOS S/A",
+        "Codigo_VP": "736",
+        "Codigo": "03.03.04.100.26",
+        "Descricao": "Instalação e Montagem da Via Corrida com Trilho, Fixação Elásticas e com Dormente de madeira",
+        "Unid": "m"
     }
 ]
