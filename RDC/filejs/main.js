@@ -256,7 +256,7 @@ $("#linhas").change(function() {
 
         if(labelfcptm.innerHTML == "FISCAL CPTM"){
 
-            labelfcptm.innerHTML = "COLABORADOR CPTM";
+            labelfcptm.innerHTML = "ACOMPANHAMENTO CPTM";
         }
         else{
 
