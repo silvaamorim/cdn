@@ -349,6 +349,14 @@
                         <label for="qtd" class="fw-bold">QTDE</label><input type="text" class="form-control text-center fw-bold h-50" name="qtd" id="qtd" size="1" title="INFORME A QUANTIDADE DO ITEM, EX.: 10.">
                     </div>
                     <div class="col-auto text-center" style="padding: 0 5px 0 5px; width: auto;">            
+                        <label for="chv" class="fw-bold">CHAVE</label>
+                        <select name="chv" id="chv" class="form-control text-center border-0 w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME O LOCAL DO SERVIÇO EX.: VIA PRINCIPAL.">
+                            <option selected></option>
+                            <option value="MCE-002A">MCE-002A</option>
+                            <option value="MCE-005B">MCE-005B</option>                            
+                        </select>
+                    </div>
+                    <div class="col-auto text-center" style="padding: 0 5px 0 5px; width: auto;">            
                         <label for="prn" class="fw-bold">PERNA</label>
                         <select name="prn" id="prn" class="form-control text-center border-0 w-100 fw-bold h-50 pt-1" aria-label="Default select example" title="INFORME O LOCAL DO SERVIÇO EX.: VIA PRINCIPAL.">
                             <option selected></option>
@@ -371,7 +379,7 @@
                     <div class="col-auto text-center" style="padding: 0 2px 0 2px; width: 50px;">
                         <label for="posptf" class="fw-bold">PTi</label><input type="text" class="form-control text-center fw-bold h-50" style="font-size:1vw;" name="posptf" id="posptf" title="INFORME O POSTE FINAL ONDE O SERVIÇO FOI EXCEUTADO." oninput="this.value = this.value.toUpperCase()">
                     </div>
-                    <div class="col-3 text-center" style="padding: 0 2px 0 2px; width: 380px;">
+                    <div class="col-3 text-center" style="padding: 0 2px 0 2px; width: 300px;">
                         <label for="obs" class="fw-bold">OBS</label><input type="text" class="form-control text-center fw-bold h-50" style="font-size:1vw;" name="obs" id="obs" title="INFORME DETALHES DA EXECUÇÃO DO SERVIÇO." oninput="this.value = this.value.toUpperCase()">
                     </div>
                 </div>              
