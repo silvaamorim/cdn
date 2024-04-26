@@ -222,12 +222,12 @@ $("#linhas, #kmi, #kmf").change(function(){
 
     if(linha!= "" && kmi != "" && pti !="" && kmf != "" && ptf !=""){
 
-        fetch("JSON/estacoes.json").then((response) => {
+        fetch("filejson/estacoes.json").then((response) => {
             response.json().then((Dados) => {                                           
                                                  
                 for (let i = 0; i < Dados.length; i++){
     
-                    if(trechoi == Dados[i]. KM-POSTE){
+                    if(trechoi == Dados[i].KM-POSTE){
         
                     estacai.value =Dados[i].Estacoes_inicial;
                     municipio.value =Dados[i].Municipios;                
