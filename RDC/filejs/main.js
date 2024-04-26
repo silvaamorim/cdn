@@ -308,8 +308,9 @@ $("#linhas, #kmi, #kmf").change(function(){
 
             for (let i = 0; i < Dados.length; i++){
                 if(consorcio === Dados[i].Consorcio.toUpperCase()){
-                     itenscontrato.title=Dados[i].Descricao;
+                     
                     itenscontrato.options[itenscontrato.options.length] = new Option(Dados[i].Codigo_VP,  Dados[i].Codigo_VP);
+                    itenscontrato.title=Dados[i].Descricao;
                     
                 }
             }
