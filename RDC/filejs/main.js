@@ -210,10 +210,10 @@ $("#linhas, #kmi, #kmf").change(function(){
 
     let linha = document.getElementById("linhas").value;
     let via = "1";
-    let kmi = document.getElementById("kmi").substring(0,2);
-    let kmf = document.getElementById("kmf").substring(0,2);
-    let pti = document.getElementById("kmi").substring(3,);
-    let ptf = document.getElementById("kmf").substring(3,);
+    let kmi = document.getElementById("kmi").value.substring(0,2);
+    let kmf = document.getElementById("kmf").value.substring(0,2);
+    let pti = document.getElementById("kmi").value.substring(3,);
+    let ptf = document.getElementById("kmf").value.substring(3,);
     let estacai = document.getElementById("esti");
     let estacaf = document.getElementById("estf");
     let municipio = document.getElementById("mun");
