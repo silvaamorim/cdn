@@ -1,0 +1,1922 @@
+﻿[
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-025A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-025B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-027A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-027B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-120A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-120B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-114A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-114B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-031"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-023A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-023B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-009B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-009A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-013A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-013B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-017"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-019"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-021B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-021A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-025A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-025B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-031"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "ABR-MCE-003A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "ABR-MCE-003B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "ABR-MCE-007A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "ABR-MCE-007B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "ABR-MCE-027"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LPA-MCE-009A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LPA-MCE-009B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LPA-MCE-019A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LPA-MCE-019B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LPA-MCE-025A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LPA-MCE-025B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LPA-MCE-047A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LPA-MCE-047B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "PRT-MCE-005A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "PRT-MCE-005B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "PRT-MCE-TVD"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "PRT-MCE-023A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "PRT-MCE-023B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "PRT-MCE-031A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "PRT-MCE-031B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JRG-MCE-005A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JRG-MCE-005B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JRG-MCE-013"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JRG-MCE-023A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JRG-MCE-023B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "PRU-MCE-005A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "PRU-MCE-005B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "PRU-MCE-007A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "PRU-MCE-007B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "CAI-MCE-TVD"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "CAI-MCE-005A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "CAI-MCE-005B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "CAI-MCE-007"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "CAI-MCE-017"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "CAI-MCE-019A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "CAI-MCE-019B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "FDR-MCE-005A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "FDR-MCE-005B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "FDR-MCE-021"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "FDR-MCE-023A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "FDR-MCE-023B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "FMO-MCE-003A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "FMO-MCE-003B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "FMO-MCE-005"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "FMO-MCE-007A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "FMO-MCE-007B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "FMO-MCE-013A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "FMO-MCE-013B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "FMO-MCE-011A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "FMO-MCE-011B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "FMO-MCE-015A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "FMO-MCE-015B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "FMO-MCE-017"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BTJ-MCE-005A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BTJ-MCE-005B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BTJ-MCE-013A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BTJ-MCE-013B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "CLP-MCE-005A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "CLP-MCE-005B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "CLP-MCE-013"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "CLP-MCE-021"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "CLP-MCE-023A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "CLP-MCE-023B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "CLP-MCE-TVD"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-005A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-005B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-007A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-007B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-009"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-017"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-019A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-019B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-025A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-025B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-51A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-51B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-063A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-063B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-021"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-023A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-023B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-047"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-049A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-049B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "JUN-MCE-061"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-029A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-029B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-039A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-039B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-005A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-005B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "ABR-MCE-009A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "ABR-MCE-009B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "ABR-MCE-011"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LPA-MCE-007A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LPA-MCE-007B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LPA-MCE-021A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LPA-MCE-021B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LPA-MCE-023B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LPA-MCE-023A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LPA-MCE-043"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LPA-MCE-053A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LPA-MCE-053B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "PRT-MCE-007A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "PRT-MCE-007B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "PRT-MCE-009"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "PRT-MCE-025"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-015A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-015B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-021A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-021B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-017"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-038"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "LUZ-MCE-037"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-001A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-001B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-003A"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-003B"
+    },
+    {
+        "LINHA": "7",
+        "CHAVE": "BFU-MCE-TVD"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "LUZ-MCE-047A"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "LUZ-MCE-047B"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "LUZ-MCE-043A"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "LUZ-MCE-043B"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "LUZ-MCE-011A"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "LUZ-MCE-011B"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "LUZ-MCE-003A"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "LUZ-MCE-003B"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "BAS-MCE-049A"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "BAS-MCE-049B"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "BAS-MCE-043A"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "BAS-MCE-043B"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "BAS-MCE-037A"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "BAS-MCE-037B"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "BAS-MCE-035A"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "BAS-MCE-035B"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "BAS-MCE-033"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MOC-MCE-053N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MOC-MCE-053S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MOC-MCE-033N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MOC-MCE-033S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MOC-MCE-025S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MOC-MCE-025N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MOC-MCE-021N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MOC-MCE-021S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "IPG-MCE-039S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "IPG-MCE-039N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "IPG-MCE-037"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "IPG-MCE-033S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "IPG-MCE-033N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "IPG-MCE-015N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "IPG-MCE-015S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "TMD-MCE-023N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "TMD-MCE-023S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-043S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-043N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-041"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-029"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-023S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-023N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-019N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-019S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-003S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-003N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "UTG-MCE-005S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "UTG-MCE-005N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-TVD"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-043N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-043S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-027S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-027N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-025N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-025S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-011S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-011N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-005S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-005N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "CPV-MCE-021N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "CPV-MCE-021S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "CPV-MCE-019N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "CPV-MCE-019S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "CPV-MCE-007"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "CPV-MCE-005S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "CPV-MCE-005N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MAU-MCE-029S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MAU-MCE-029N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MAU-MCE-026S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MAU-MCE-026N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MAU-MCE-027N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MAU-MCE-027S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MAU-MCE-025"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MAU-MCE-025"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MAU-MCE-013N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MAU-MCE-013S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MAU-MCE-005S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MAU-MCE-005N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "RPI-MCE-013N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "RPI-MCE-013S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "RPI-MCE-005S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "RPI-MCE-005N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "RGS-MCE-021N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "RGS-MCE-021S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "RGS-MCE-017"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "RGS-MCE-051"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "RGS-MCE-009S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "RGS-MCE-009N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "RGS-MCE-011"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "RGS-MCE-007S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "RGS-MCE-007N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "LUZ-MCE-009A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "LUZ-MCE-009B"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "LUZ-MCE-007A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "LUZ-MCE-007B"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "BAS-MCE-047A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-047B"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "BAS-MCE-039A"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "BAS-MCE-039B"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MOC-MCE-051S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MOC-MCE-051N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MOC-MCE-047"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MOC-MCE-037N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MOC-MCE-037S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MOC-MCE-017N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MOC-MCE-017S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MOC-MCE-013"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MOC-MCE-005S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "MOC-MCE-005N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "IPG-MCE-051S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "IPG-MCE-051N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "IPG-MCE-035S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "IPG-MCE-035N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "TMD-MCE-019N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "TMD-MCE-019S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-045S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-045N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-027S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-027N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-025"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-013N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-013S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-005N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SCT-MCE-005S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "UTG-MCE-009"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "UTG-MCE-007S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "UTG-MCE-007N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-041N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-041S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-029S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-029N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-031N"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-031S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-009"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-007S"
+    },
+    {
+        "LINHA": "10",
+        "CHAVE": "SAN-MCE-007N"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "LUZ-MCE-049A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "LUZ-MCE-049B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "LUZ-MCE-045A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "LUZ-MCE-045B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "LUZ-MCE-013A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "LUZ-MCE-013B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "LUZ-MCE-005A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "LUZ-MCE-005B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-053A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-053B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-051A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-051A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-001"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-021A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-021B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-017"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-015"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-011"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-025A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-019A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-013B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-005A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-005B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-003B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-003A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "TAT-MCE-013"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "TAT-MCE-011"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "TAT-MCE-09A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "TAT-MCE-09B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "TAT-MCE-07A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "SGA-MCE-013B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L19-MCE-001B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L19-MCE-001A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L20-MCE-001A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L20-MCE-001B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L21-MCE-001A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L21-MCE-001B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L22-MCE-4849"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L23-MCE-003A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L23-MCE-003B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L23-MCE-001B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L23-MCE-001A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L26-MCE-009A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L26-MCE-009B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L26-MCE-007B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L26-MCE-007A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L26-MCE-005"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L26-MCE-001B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L26-MCE-001A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L26-MCE-003A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L26-MCE-003B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L27-MCE-009A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L27-MCE-009B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L27-MCE-007B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L27-MCE-007A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L27-MCE-005"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L27-MCE-003A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L27-MCE-003B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L27-MCE-001B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L27-MCE-001A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L28-MCE-001B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L28-MCE-001A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L29-MCE-001A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L29-MCE-001B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L31-MCE-009"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L31-MCE-007B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L31-MCE-007A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L31-MCE-005B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L31-MCE-005A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L31-MCE-003"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L31-MCE-001"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L31-MCE-4037"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L31-MCE-4038"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L32-MCE-003"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L32-MCE-001A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L32-MCE-001B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L33-MCE-6270B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L33-MCE-6270A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L33-MCE-4628"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L33-MCE-001B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L33-MCE-001A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L33-MCE-003"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L34-MCE-003A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L34-MCE-003B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L34-MCE-001A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L34-MCE-001B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L35-MCE-001B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L35-MCE-001A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L35-MCE-003A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L35-MCE-003B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L35-MCE-4575"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L36-MCE-4570"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L36-MCE-003"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L36-MCE-001B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L36-MCE-001A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L37-MCE-009A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L37-MCE-009B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L37-MCE-007B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L37-MCE-007A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L37-MCE-005"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L37-MCE-003A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L37-MCE-003B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L37-MCE-001"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L38-MCE-001"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L38-MCE-4502"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L38-MCE-005A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L38-MCE-005B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L38-MCE-003B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "L38-MCE-003A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-029A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-029B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-027A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-027B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-031"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-025B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-023A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-023B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-019B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-013A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-009B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "BAS-MCE-009A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "TAT-MCE-07B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "TAT-MCE-03A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "TAT-MCE-03B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "TAT-MCE-017B"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "TAT-MCE-017A"
+    },
+    {
+        "LINHA": "11",
+        "CHAVE": "SGA-MCE-013A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L18-MCE-9430"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L18-MCE-001B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L18-MCE-001A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L02-MCE-001A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L02-MCE-001B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L02-MCE-4949"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L03-MCE-001B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L03-MCE-001A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L04-MCE-019B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L04-MCE-019A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L04-MCE-017"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L05-MCE-013A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L05-MCE-011B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L05-MCE-011A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L06-MCE-001B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L06-MCE-001A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L06-MCE-4864"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L07-MCE-4859"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L07-MCE-001A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L07-MCE-001B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L08-MCE-001B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L08-MCE-001A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L09-MCE-001B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L09-MCE-001A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L10-MCE-001B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L10-MCE-001A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L10-MCE-003"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L10-MCE-005"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L11-MCE-003"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L11-MCE-005"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L11-MCE-001B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L11-MCE-001A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L12-MCE-005W"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L12-MCE-001B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L12-MCE-001A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L12-MCE-003A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L12-MCE-003B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L12-MCE-4741"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L13-MCE-001"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L13-MCE-003B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L13-MCE-003A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L13-MCE-4734"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L14-MCE-003A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L14-MCE-003B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L14-MCE-007"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L14-MCE-001B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L14-MCE-001A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L15-MCE-003B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L15-MCE-003A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L16-MCE-003B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L16-MCE-003A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L30-MCE-005A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L30-MCE-005B"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L30-MCE-HT-3"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L30-MCE-001A"
+    },
+    {
+        "LINHA": "12",
+        "CHAVE": "L30-MCE-001B"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "L04-MCE-015"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "L04-MCE-035A"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "L04-MCE-035B"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "L04-MCE-039"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "L04-MCE-037"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "L05-MCE-013B"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "L05-MCE-033B"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "L05-MCE-033A"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "L05-MCE-031A"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "L05-MCE-031B"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "GCE-MCE-029A"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "GCE-MCE-027B"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "GCE-MCE-027B"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "GCE-MCE-027A"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "AGU-MCE-025B"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "AGU-MCE-025A"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "AGU-MCE-023A"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "AGU-MCE-023B"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "AGU-MCE-021A"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "AGU-MCE-021B"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "AGU-MCE-019B"
+    },
+    {
+        "LINHA": "13",
+        "CHAVE": "AGU-MCE-019A"
+    }
+]
