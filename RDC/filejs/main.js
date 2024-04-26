@@ -204,6 +204,53 @@ $("#linhas").change(function() {
         });
 });
 
+//Aplicar as estações e municipio
+
+$("#ln, #kmi, #kmf").change(function(){
+
+    let linha = document.getElementById("ln").value;
+    let via = "1";
+    let kmi = document.getElementById("kmi").substring(0,2);
+    let kmf = document.getElementById("kmf").substring(0,2);
+    let pti = document.getElementById("kmi").substring(3,);
+    let ptf = document.getElementById("kmf").substring(3,);
+    let estacai = document.getElementById("esti");
+    let estacaf = document.getElementById("estf");
+    let municipio = document.getElementById("mun");
+    let trechoi = linha+via+kmi+pti;
+    let trechof = linha+via+kmf+ptf;
+
+    if(linha!= "" && kmi != "" && pti !="" && kmf != "" && ptf !=""){
+
+        fetch("JSON/localizacao.json").then((response) => {
+            response.json().then((Dados) => {                                           
+                                                 
+                for (let i = 0; i < Dados.length; i++){
+    
+                    if(trechoi == Dados[i]. KM-POSTE){
+        
+                    estacai.value =Dados[i].Estacoes_inicial;
+                    municipio.value =Dados[i].Municipios;                
+    
+                    }
+
+                    if(trechof == Dados[i].KM_VIA_POSTE){
+        
+                        estacaf.value =Dados[i].Estacoes_final;
+                                        
+        
+                        }
+                              
+                
+                }
+            })
+                });
+
+    }
+
+ });
+
+
 
 ///Número contrato, Itens de Constrato e Equipe da Contratada
  $("#scs").change(function(){
@@ -261,6 +308,7 @@ $("#linhas").change(function() {
 
             for (let i = 0; i < Dados.length; i++){
                 if(consorcio === Dados[i].Consorcio.toUpperCase()){
+                     itenscontrato.title=Dados[i].Descricao;
                     itenscontrato.options[itenscontrato.options.length] = new Option(Dados[i].Codigo_VP,  Dados[i].Codigo_VP);
                     
                 }
