@@ -206,9 +206,9 @@ $("#linhas").change(function() {
 
 //Aplicar as estações e municipio
 
-$("#ln, #kmi, #kmf").change(function(){
+$("#linhas, #kmi, #kmf").change(function(){
 
-    let linha = document.getElementById("ln").value;
+    let linha = document.getElementById("linhas").value;
     let via = "1";
     let kmi = document.getElementById("kmi").substring(0,2);
     let kmf = document.getElementById("kmf").substring(0,2);
