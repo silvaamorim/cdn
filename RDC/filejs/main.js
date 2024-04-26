@@ -229,14 +229,14 @@ $("#linhas, #kmi, #kmf").change(function(){
     
                     if(trechoi == Dados[i].KM_POSTE){
         
-                    estacai.value =Dados[i].Estacoes_inicial;
+                    estacai.value =Dados[i].toUpperCase().Estacoes_inicial;
                     municipio.value =Dados[i].Municipios;                
     
                     }
 
                     if(trechof == Dados[i].KM_POSTE){
         
-                        estacaf.value =Dados[i].Estacoes_final;
+                        estacaf.value =Dados[i].toUpperCase().Estacoes_final;
                                         
         
                         }
