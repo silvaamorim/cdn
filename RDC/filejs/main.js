@@ -227,7 +227,7 @@ $("#linhas, #kmi, #kmf").change(function(){
                                                  
                 for (let i = 0; i < Dados.length; i++){
     
-                    if(trechoi == Dados[i].KM-POSTE){
+                    if(trechoi == Dados[i]."KM-POSTE"){
         
                     estacai.value =Dados[i].Estacoes_inicial;
                     municipio.value =Dados[i].Municipios;                
