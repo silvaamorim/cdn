@@ -204,11 +204,6 @@ $("#linhas").change(function() {
         });
 });
 
-    
-    
-});
-
-
 
 ///Número contrato, Itens de Constrato e Equipe da Contratada
  $("#scs").change(function(){
