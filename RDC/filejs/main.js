@@ -236,7 +236,7 @@ $("#linhas, #kmi, #kmf").change(function(){
 
                     if(trechof == Dados[i].KM_POSTE){
         
-                        estacaf.value =Dados[i].Estacoes_final.toUpperCase();
+                        estacaf.value =Dados[i].Estaces_Final.toUpperCase();
                                         
         
                         }
