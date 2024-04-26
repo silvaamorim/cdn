@@ -185,7 +185,7 @@ $("#linhas").change(function() {
         //let texto = "";
         //let valor = "";
                   
-        //amvs.options[0] = new Option("",  "");    
+        amvs.options[0] = new Option("",  "");    
                    
 
         for (let i = 0; i < Dados.length; i++){
