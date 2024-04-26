@@ -176,6 +176,34 @@ $("#linhas").change(function() {
                     }
         })
     });
+
+    fetch("filejson/Chaves.json").then((response) => {
+    response.json().then((Dados) => {
+        $("#chv").empty();
+               
+        let amvs = document.getElementById("chv");        
+        //let texto = "";
+        //let valor = "";
+                  
+        //amvs.options[0] = new Option("",  "");    
+                   
+
+        for (let i = 0; i < Dados.length; i++){
+             if(linha === Dados[i].LINHA){
+            let option = document.createElement('option'); 
+            //texto = Dados[i].CHAVE;
+            //valor = Dados[i].CHAVE;
+            //amvs.options[amvs.options.length] = new Option(texto,  valor); 
+            option.value =Dados[i].CHAVE;
+            option.innerText =Dados[i].CHAVE;
+            amvs.appendChild(option);
+                      
+        }
+        }
+    })
+        });
+});
+
     
     
 });
