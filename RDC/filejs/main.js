@@ -208,7 +208,7 @@ $("#linhas").change(function() {
 
 $("#linhas, #kmi, #kmf").change(function(){
 
-    let linha = document.getElementById("linhas").value.substring(0,2);
+    let linha = document.getElementById("linhas").value.substring(0,2).trim();
     let via = "1";
     let kmi = document.getElementById("kmi").value.substring(0,2);
     let kmf = document.getElementById("kmf").value.substring(0,2);
