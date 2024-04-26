@@ -222,7 +222,7 @@ $("#linhas, #kmi, #kmf").change(function(){
 
     if(linha!= "" && kmi != "" && pti !="" && kmf != "" && ptf !=""){
 
-        fetch("JSON/localizacao.json").then((response) => {
+        fetch("JSON/estacoes.json").then((response) => {
             response.json().then((Dados) => {                                           
                                                  
                 for (let i = 0; i < Dados.length; i++){
