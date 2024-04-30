@@ -363,21 +363,27 @@
                         </select>
                     </div>
                     <div class="col-auto text-center" style="padding: 0 2px 0 2px; width: 50px;">
-                        <label for="pos" class="fw-bold">VIA</label><input type="text" class="form-control text-center fw-bold h-50" style="font-size:1vw;" name="pos" id="pos" title="INFORME A POSIÇÃO DA REALIZAÇÃO DO SERVIÇO. &#013; &#013; ORIENTAÇÕES: &#013; V (VIA). EX.: V-1 12/01 12/03. &#013; LV (LATERAL VIA). EX.: LV-1 14/15 14/16. &#013; EV (ENTREVIAS). EX.: EV-1/2 20/05 20/06 &#013; TD (TRILHO DIREITO). EX.: V-2 20/05 20/06 TD &#013; TE (TRILHO ESQUERDO). EX.: V-3 20/05 20/06 TE" oninput="this.value = this.value.toUpperCase()">
+                        <label for="pos" class="fw-bold">VIA</label><input type="text" class="form-control text-center fw-bold h-50" style="font-size:1vw;" name="pos" id="pos" title="INFORME A VIA DO SERVIÇO" oninput="this.value = this.value.toUpperCase()">
                     </div>
                     <div class="col-auto text-center" style="padding: 0 2px 0 2px; width: 50px;">
                         <label for="poskmi" class="fw-bold">KMi</label><input type="text" class="form-control text-center fw-bold h-50" style="font-size:1vw;" name="poskmi" id="poskmi" title="INFORME O KM INICIAL ONDE O SERVIÇO FOI EXCEUTADO." oninput=" this.value = this.value.toUpperCase()">
                     </div>
                     <div class="col-auto text-center" style="padding: 0 2px 0 2px; width: 50px;">
+                        <label for="posmi" class="fw-bold">M</label><input type="text" class="form-control text-center fw-bold h-50" style="font-size:1vw;" name="posmi" id="posmi" title="INFORME OS METROS INICIAIS ONDE INICIA O SERVIÇO." oninput=" this.value = this.value.toUpperCase()">
+                    </div>
+                    <div class="col-auto text-center" style="padding: 0 2px 0 2px; width: 50px;">
                         <label for="pospti" class="fw-bold">PTi</label><input type="text" class="form-control text-center fw-bold h-50" style="font-size:1vw;" name="pospti" id="pospti" title="INFORME O POSTE INICIAL ONDE O SERVIÇO FOI EXCEUTADO." oninput=" this.value = this.value.toUpperCase()">
                     </div>
                     <div class="col-auto text-center" style="padding: 0 2px 0 2px; width: 50px;">
-                        <label for="poskmf" class="fw-bold">KMi</label><input type="text" class="form-control text-center fw-bold h-50" style="font-size:1vw;" name="poskmf" id="poskmf" title="INFORME O KM FINAL ONDE O SERVIÇO FOI EXCEUTADO." oninput=" this.value = this.value.toUpperCase()">
+                        <label for="poskmf" class="fw-bold">KMF</label><input type="text" class="form-control text-center fw-bold h-50" style="font-size:1vw;" name="poskmf" id="poskmf" title="INFORME O KM FINAL ONDE O SERVIÇO FOI EXCEUTADO." oninput=" this.value = this.value.toUpperCase()">
                     </div>
                     <div class="col-auto text-center" style="padding: 0 2px 0 2px; width: 50px;">
-                        <label for="posptf" class="fw-bold">PTi</label><input type="text" class="form-control text-center fw-bold h-50" style="font-size:1vw;" name="posptf" id="posptf" title="INFORME O POSTE FINAL ONDE O SERVIÇO FOI EXCEUTADO." oninput="this.value = this.value.toUpperCase()">
+                        <label for="posmf" class="fw-bold">M</label><input type="text" class="form-control text-center fw-bold h-50" style="font-size:1vw;" name="posmf" id="posmf" title="INFORME OS METROS FINAIS ONDE TERMINA O SERVIÇO." oninput=" this.value = this.value.toUpperCase()">
                     </div>
-                    <div class="col-4 text-center" style="padding: 0 2px 0 2px; width: 300px;">
+                    <div class="col-auto text-center" style="padding: 0 2px 0 2px; width: 50px;">
+                        <label for="posptf" class="fw-bold">PTF</label><input type="text" class="form-control text-center fw-bold h-50" style="font-size:1vw;" name="posptf" id="posptf" title="INFORME O POSTE FINAL ONDE O SERVIÇO FOI EXCEUTADO." oninput="this.value = this.value.toUpperCase()">
+                    </div>
+                    <div class="col-4 text-center" style="padding: 0 2px 0 2px; width: 200px;">
                         <label for="obs" class="fw-bold">OBS</label> <textarea class=" form-control text-center fw-bold w-100 tdesc" name="obs" id="obs"  rows="1" cols="40"
                                                 style="padding: 0px 0px 0px 0px; width:auto;font-size:0.9vw;resize: none;overflow-y: hidden;" title="INFORME DETALHES DA EXECUÇÃO DO SERVIÇO." oninput="this.value = this.value.toUpperCase()"></textarea>
                     
