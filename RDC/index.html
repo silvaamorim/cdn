@@ -698,9 +698,20 @@
 
             <div class="row" id="info">                
                 
-                <div class="col text-center"> 
+                <div class="row">
+   
+                    <div class="col-auto text-center" style="padding: 0 5px 0 5px; width: auto;">            
+                        <label for="iji" class="fw-bold">INTRAJORNADA INÍCIO</label><input type="time" class="form-control tempo text-center fw-bold h-50" name="iji" id="iji" size="1" title="INFORME O INÍCIO DA INTRAJORNADA.">
+                    </div>
+            <div class="col-auto text-center" style="padding: 0 5px 0 5px; width: auto;">            
+                        <label for="ijt" class="fw-bold">INTRAJORNADA TERMÍNO</label><input type="time" class="form-control tempo text-center fw-bold h-50" name="ijt" id="ijt" size="1" title=" INFORME O TERMÍNO DA INTRAJORNADA.">
+                   </div> 
+            <div class="col text-center"> 
                     <label for="inf" class="fw-bold">OBS. GERAL</label><textarea class="form-control fw-bold h-50" style="font-size:1vw;" name="inf" id="inf" size="1" title="INFORMAÇÕES COMPLEMENTARES." cols="30" rows="1" oninput="this.value = this.value.toUpperCase()"></textarea>
                 </div>
+
+        <h1 class="text-center align-middle h4 bg-dark-subtle fw-bold">IMAGENS</h1>
+
 
                 <div class="container">
                     <div class="myDiv" data-index="0">Inserir imagem, clique aqui</div>
