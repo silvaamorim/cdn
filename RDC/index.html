@@ -671,7 +671,17 @@
             <div class="row" id="fcls">
 
                 <div class="col-auto text-center" style="padding: 0 5px 0 5px; width: auto;">            
-                    <label for="beq" class="fw-bold">EQUIPE</label><input type="text" class="form-control text-center fw-bold" name="beq" id="beq" size="1" title="INFORME A EQUIPE, EX.: CVN." oninput="this.value = this.value.toUpperCase()">
+                    <label for="beq" class="fw-bold">EQUIPE</label><select style="padding: 3px;" name="beq" id="beq" class="form-control text-center border-0 w-100 fw-bold h-50" aria-label="Default select example" title="INFORME A BASE DA EQUIPE. EX.: CVN">
+                            <option selected=""></option>
+                            <option tilte="BRÁS">BAS</option> 
+                            <option tilte="CAIEIRAS">CAI</option> 
+                            <option tilte="CALMON VIANA">CVN</option>
+                            <option tilte="FRANCISCO MORATO">FMO</option> 
+                            <option tilte="LAPA">LPA</option> 
+                            <option tilte="LUZ">LUZ</option> 
+                            <option tilte="SÃO CAETANO">SCT/option>
+                            <option tilte="ENG SÃO PAULO">ISP</option> 
+                        </select>
                 </div>
                 <div class="col text-center" id="coddel" style="padding: 0 5px 0 5px; width: auto;">            
                     <label for="fsc" class="fw-bold">FISCAL CONSÓRCIO</label>
@@ -701,10 +711,10 @@
                 <div class="row">
    
                     <div class="col-auto text-center" style="padding: 0 5px 0 5px; width: auto;">            
-                        <label for="iji" class="fw-bold">INTRAJORNADA INÍCIO</label><input type="time" class="form-control tempo text-center fw-bold h-50" name="iji" id="iji" size="1" title="INFORME O INÍCIO DA INTRAJORNADA.">
+                        <label for="iji" class="fw-bold">INTRAJORNADA INÍCIO</label><input type="time" class="form-control tempo text-center fw-bold h-50" name="iji" id="iji" size="1" title="INFORME O INÍCIO DA INTRAJORNADA (ALMOÇO/JANTA).">
                     </div>
             <div class="col-auto text-center" style="padding: 0 5px 0 5px; width: auto;">            
-                        <label for="ijt" class="fw-bold">INTRAJORNADA TERMÍNO</label><input type="time" class="form-control tempo text-center fw-bold h-50" name="ijt" id="ijt" size="1" title=" INFORME O TERMÍNO DA INTRAJORNADA.">
+                        <label for="ijt" class="fw-bold">INTRAJORNADA TERMÍNO</label><input type="time" class="form-control tempo text-center fw-bold h-50" name="ijt" id="ijt" size="1" title=" INFORME O TERMÍNO DA INTRAJORNADA (ALMOÇO/JANTA).">
                    </div> 
             <div class="col text-center"> 
                     <label for="inf" class="fw-bold">OBS. GERAL</label><textarea class="form-control fw-bold h-50" style="font-size:1vw;" name="inf" id="inf" size="1" title="INFORMAÇÕES COMPLEMENTARES." cols="30" rows="1" oninput="this.value = this.value.toUpperCase()"></textarea>
