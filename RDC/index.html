@@ -7,7 +7,38 @@
     <title>RDC DIGITAL</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <style>     
+    <style>
+
+        .container {
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            gap: 10px; /* Espaço entre as divs */
+            
+        }
+
+        /* CSS para estilizar as divs */
+        .myDiv {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            margin: 5px;
+        }
+        /* Ocultar os inputs file */
+        .fileInput {
+            display: none;
+        }
+        /* Estilizar a imagem para ajustar ao tamanho da div */
+        .myDiv img {
+            max-width: 100%;
+            max-height: 100%;
+        }
 
         .add{
            display: none;
@@ -670,6 +701,20 @@
                 <div class="col text-center"> 
                     <label for="inf" class="fw-bold">OBS. GERAL</label><textarea class="form-control fw-bold h-50" style="font-size:1vw;" name="inf" id="inf" size="1" title="INFORMAÇÕES COMPLEMENTARES." cols="30" rows="1" oninput="this.value = this.value.toUpperCase()"></textarea>
                 </div>
+
+                <div class="container">
+                    <div class="myDiv" data-index="0">Clique aqui</div>
+                    <input type="file" class="fileInput" accept="image/*" data-index="0">
+                    
+                    <div class="myDiv" data-index="1">Clique aqui</div>
+                    <input type="file" class="fileInput" accept="image/*" data-index="1">
+                    
+                    <div class="myDiv" data-index="2">Clique aqui</div>
+                    <input type="file" class="fileInput" accept="image/*" data-index="2">
+                
+                    
+   
+            </div>
             </div>
 
         </fieldset>  
