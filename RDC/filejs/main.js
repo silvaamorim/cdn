@@ -720,6 +720,49 @@ $("#fcls").on("change","#fsm",function(){
   
   });
 
+
+// Seleciona todas as divs e inputs
+const myDivs = document.querySelectorAll('.myDiv');
+const fileInputs = document.querySelectorAll('.fileInput');
+
+// Função para abrir o seletor de arquivos ao clicar na div
+function openFileSelector(event) {
+    const index = event.currentTarget.getAttribute('data-index');
+    const fileInput = document.querySelector(`.fileInput[data-index="${index}"]`);
+    fileInput.click();
+}
+
+// Função para adicionar a imagem selecionada à div correspondente
+function handleFileSelect(event) {
+    const file = event.target.files[0];
+    if (file && file.type.startsWith('image/')) {
+        const index = event.target.getAttribute('data-index');
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const myDiv = document.querySelector(`.myDiv[data-index="${index}"]`);
+            // Remove a imagem anterior, se houver
+            myDiv.innerHTML = '';
+            // Cria um novo elemento de imagem
+            const img = document.createElement('img');
+            img.src = e.target.result;
+            img.alt = 'Imagem selecionada';
+            // Adiciona a imagem à div
+            myDiv.appendChild(img);
+        };
+        reader.readAsDataURL(file);
+    }
+}
+
+// Adiciona event listeners para os cliques nas divs
+myDivs.forEach(div => {
+    div.addEventListener('click', openFileSelector);
+});
+
+// Adiciona event listeners para a seleção de arquivos
+fileInputs.forEach(input => {
+    input.addEventListener('change', handleFileSelect);
+});
+
  /*imprimir PDF
 
     const btnpdf = document.querySelector("#logo");
