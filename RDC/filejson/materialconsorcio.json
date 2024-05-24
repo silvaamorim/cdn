@@ -1,0 +1,257 @@
+﻿[
+    {
+        "Codigo": "567",
+        "Material": "Dormente de concreto monobloco protendido (comprimento 2,80m) para trilho TR 57, bitola 1.600mm - manutenção",
+        "Un": "un"
+    },
+    {
+        "Codigo": "678",
+        "Material": "Dormente de concreto monobloco protendido (comprimento 2,80m) para trilho TR 68, bitola 1.600mm - manutenção",
+        "Un": "un"
+    },
+    {
+        "Codigo": "679",
+        "Material": "Dormente de concreto especial para AMV - manutenção",
+        "Un": "m³"
+    },
+    {
+        "Codigo": "570",
+        "Material": "Dormente de madeira tratado de 2,80m - manutenção",
+        "Un": "un"
+    },
+    {
+        "Codigo": "573",
+        "Material": "Dormente de madeira especial de AMV de 3,00m",
+        "Un": "un"
+    },
+    {
+        "Codigo": "574",
+        "Material": "Dormente de madeira especial de AMV de 3,20m",
+        "Un": "un"
+    },
+    {
+        "Codigo": "575",
+        "Material": "Dormente de madeira especial de AMV de 3,40m",
+        "Un": "un"
+    },
+    {
+        "Codigo": "576",
+        "Material": "Dormente de madeira especial de AMV de 3,60m",
+        "Un": "un"
+    },
+    {
+        "Codigo": "577",
+        "Material": "Dormente de madeira especial de AMV de 3,80m",
+        "Un": "un"
+    },
+    {
+        "Codigo": "578",
+        "Material": "Dormente de madeira especial de AMV de 4,00m",
+        "Un": "un"
+    },
+    {
+        "Codigo": "579",
+        "Material": "Dormente de madeira especial de AMV de 4,20m",
+        "Un": "un"
+    },
+    {
+        "Codigo": "580",
+        "Material": "Dormente de madeira especial de AMV de 4,40m",
+        "Un": "un"
+    },
+    {
+        "Codigo": "581",
+        "Material": "Dormente de madeira especial de AMV de 4,60m",
+        "Un": "un"
+    },
+    {
+        "Codigo": "582",
+        "Material": "Dormente de madeira especial de AMV de 4,80m",
+        "Un": "un"
+    },
+    {
+        "Codigo": "583",
+        "Material": "Dormente de madeira especial de AMV de 5,00m",
+        "Un": "un"
+    },
+    {
+        "Codigo": "584",
+        "Material": "Dormente de madeira especial de AMV de 5,20m",
+        "Un": "un"
+    },
+    {
+        "Codigo": "586",
+        "Material": "Dormente de madeira especial para obra de arte 0,25 m x 0,30 m x 2,80 m",
+        "Un": "un"
+    },
+    {
+        "Codigo": "589",
+        "Material": "Agulha de 5,029m com trilho de encosto para TR-57",
+        "Un": "un"
+    },
+    {
+        "Codigo": "591",
+        "Material": "Agulha de 6,705m com trilho de encosto para TR-57",
+        "Un": "un"
+    },
+    {
+        "Codigo": "594",
+        "Material": "Agulha de 9,144m com trilho de encosto para TR-57",
+        "Un": "un"
+    },
+    {
+        "Codigo": "595",
+        "Material": "Agulha de 9,144M com trilho de encosto para TR-68",
+        "Un": "un"
+    },
+    {
+        "Codigo": "676",
+        "Material": "Agulha de 12m com trilho de encosto para UIC - 60",
+        "Un": "un"
+    },
+    {
+        "Codigo": "596",
+        "Material": "Agulha de 17,60m com trilho de encosto para UIC-60",
+        "Un": "un"
+    },
+    {
+        "Codigo": "748",
+        "Material": "\"Agulha de 6705mm (22\"\") Pta Mn DET5100 UIC-60 - projeto geométrico padrão AREMA confeccionados com trilho UIC-60\"",
+        "Un": "un"
+    },
+    {
+        "Codigo": "749",
+        "Material": "Jacaré para AMV 1:8 para TR-57 com perna alongada de 80 cm",
+        "Un": "un"
+    },
+    {
+        "Codigo": "750",
+        "Material": "Jacaré para AMV 1:10 para TR-57 com perna alongada de 80 cm",
+        "Un": "un"
+    },
+    {
+        "Codigo": "751",
+        "Material": "Jacaré para AMV 1:12 para TR-57 com perna alongada de 80 cm",
+        "Un": "un"
+    },
+    {
+        "Codigo": "752",
+        "Material": "Jacaré para AMV 1:14 para TR-57 com perna alongada de 80 cm",
+        "Un": "un"
+    },
+    {
+        "Codigo": "753",
+        "Material": "Jacaré para AMV 1:14 para TR-68 com perna alongada de 80 cm",
+        "Un": "un"
+    },
+    {
+        "Codigo": "754",
+        "Material": "Jacaré para AMV 1:11,4 para UIC - 60 com perna alongada de 80 cm",
+        "Un": "un"
+    },
+    {
+        "Codigo": "755",
+        "Material": "Jacaré para AMV 1:14 para UIC - 60 com perna alongada de 80 cm",
+        "Un": "un"
+    },
+    {
+        "Codigo": "756",
+        "Material": "Jacaré Nº 10, com núcleo Mn (AREMA 623-09), para dormente de madeira e sem furo na extremidade - projeto geométrico padrão A.R.E.M.A. confeccionados com trilho UIC-60 com perna alongada de 80 cm",
+        "Un": "un"
+    },
+    {
+        "Codigo": "610",
+        "Material": "Contra-Trilho com 10 placas TR-68",
+        "Un": "un"
+    },
+    {
+        "Codigo": "758",
+        "Material": "Contra-Trilho de 4,50m UIC-60",
+        "Un": "un"
+    },
+    {
+        "Codigo": "759",
+        "Material": "Contra-Trilho de 7,20m UIC-60",
+        "Un": "un"
+    },
+    {
+        "Codigo": "760",
+        "Material": "Rolo para rolete JPM (Roller D60 x 60)",
+        "Un": "un"
+    },
+    {
+        "Codigo": "617",
+        "Material": "Aparelho de manobra manual - NEW CENTURY",
+        "Un": "un"
+    },
+    {
+        "Codigo": "619",
+        "Material": "Junta Isolante Colada (JIC) de 45º ou 135º - manutenção",
+        "Un": "un"
+    },
+    {
+        "Codigo": "622",
+        "Material": "Grampo elástico para olhal - manutenção",
+        "Un": "un"
+    },
+    {
+        "Codigo": "623",
+        "Material": "Palmilha amortecedora PAD - manutenção",
+        "Un": "un"
+    },
+    {
+        "Codigo": "624",
+        "Material": "Isolador para dormente de concreto - manutenção",
+        "Un": "un"
+    },
+    {
+        "Codigo": "627",
+        "Material": "Parafusos para juntas TR-57 - manutenção",
+        "Un": "un"
+    },
+    {
+        "Codigo": "761",
+        "Material": "Tirefão para fixação de trilhos nº 21 - manutenção",
+        "Un": "un"
+    },
+    {
+        "Codigo": "629",
+        "Material": "Pedra britada para Lastro - manutenção",
+        "Un": "m³"
+    },
+    {
+        "Codigo": "755",
+        "Material": "Agulha de 16,43m com trilho de encosto para UIC - 60",
+        "Un": "un"
+    },
+    {
+        "Codigo": "756",
+        "Material": "Jacaré para AMV 1:16 para TR-57 com perna alongada de 80 cm",
+        "Un": "un"
+    },
+    {
+        "Codigo": "624",
+        "Material": "Isolador para dormente de concreto",
+        "Un": "un"
+    },
+    {
+        "Codigo": "625",
+        "Material": "Placa de apoio - manutenção",
+        "Un": "un"
+    },
+    {
+        "Codigo": "627",
+        "Material": "Parafusos para juntas TR-57",
+        "Un": "un"
+    },
+    {
+        "Codigo": "626",
+        "Material": "Tirefão para fixação de trilhos  nº 22",
+        "Un": "un"
+    },
+    {
+        "Codigo": "629",
+        "Material": "Pedra britada para Lastro",
+        "Un": "m³"
+    }
+]
