@@ -20,10 +20,16 @@
             //display: flex;
             justify-content: center; /* Centraliza horizontalmente */
             align-items: center; /* Centraliza verticalmente */
-            gap: 10px; /* Espaço entre as divs */
-           
+            gap: 10px; /* Espaço entre as divs */           
             
         }
+
+         @media print {
+            .container {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+         }
 
         /* CSS para estilizar as divs */
         .myDiv {
