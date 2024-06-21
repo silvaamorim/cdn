@@ -1,0 +1,292 @@
+[
+    {
+        "Codigo": "039907",
+        "Material": "AGULHA COMPLETA TR-57, COMP 5029 MM, TRILHO DE ENCOSTO DOBRADO DIREITO",
+        "Un": "cj"
+    },
+    {
+        "Codigo": "039908",
+        "Material": "AGULHA COMPLETA TR-57, COMP 5029 MM, TRILHO DE ENCOSTO DOBRADO ESQUERDO",
+        "Un": "cj"
+    },
+    {
+        "Codigo": "039528",
+        "Material": "AGULHA COMPLETA TR-57, COMP 5029 MM, TRILHO DE ENCOSTO RETO DIREITO",
+        "Un": "un"
+    },
+    {
+        "Codigo": "000257",
+        "Material": "AGULHA COMPLETA TR-57, COMP 5029 MM, TRILHO DE ENCOSTO RETO ESQUERDO",
+        "Un": "un"
+    },
+    {
+        "Codigo": "039905",
+        "Material": "AGULHA COMPLETA TR-57, COMP 6705 MM, TRILHO DE ENCOSTO DOBRADO DIREITO",
+        "Un": "cj"
+    },
+    {
+        "Codigo": "039906",
+        "Material": "AGULHA COMPLETA TR-57, COMP 6705 MM, TRILHO DE ENCOSTO DOBRADO ESQUERDO",
+        "Un": "cj"
+    },
+    {
+        "Codigo": "066598",
+        "Material": "AGULHA COMPLETA TR-57, COMP 6705 MM, TRILHO DE ENCOSTO RETO DIREITO",
+        "Un": "cj"
+    },
+    {
+        "Codigo": "039527",
+        "Material": "AGULHA COMPLETA TR-57, COMP 6705 MM, TRILHO DE ENCOSTO RETO ESQUERDO",
+        "Un": "un"
+    },
+    {
+        "Codigo": "066331",
+        "Material": "AGULHA COMPLETA TR-57, COMP 9144 MM, TRILHO DE ENCOSTO DOBRADO DIREITO",
+        "Un": "cj"
+    },
+    {
+        "Codigo": "000275",
+        "Material": "AGULHA COMPLETA TR-57, COMP 9144,0MM, TRILHO DE ENCOSTO DOBRADO ESQUERDO",
+        "Un": "un"
+    },
+    {
+        "Codigo": "000263",
+        "Material": "AGULHA COMPLETA, TR-57, COMP 9144 MM, TRILHO DE ENCOSTO RETO DIREITO",
+        "Un": "un"
+    },
+    {
+        "Codigo": "040411",
+        "Material": "AGULHA COMPLETA TR-57, COMP 9144 MM, TRILHO DE ENCOSTO RETO ESQUERDO",
+        "Un": "un"
+    },
+    {
+        "Codigo": "068762",
+        "Material": "AGULHA, TR-68, RETA DIREITA, COMP 9144,0MM, TRILHO DE ENCOSTO DOBRADO DIREITO",
+        "Un": "un"
+    },
+    {
+        "Codigo": "071192",
+        "Material": "AGULHA, TR-68, RETA ESQUERDA, COMP 9144,0MM, TRILHO DE ENCOSTO DOBRADO ESQUERDO",
+        "Un": "cj"
+    },
+    {
+        "Codigo": "068761",
+        "Material": "AGULHA, TR-68, RETA ESQUERDA,COMP 9144 MM, TRILHO DE ENCOSTO RETO ESQUERDO",
+        "Un": "cj"
+    },
+    {
+        "Codigo": "068760",
+        "Material": "AGULHA,TR-68, RETA DIREITA, COMP 9144MM, TRILHO DE ENCOSTO RETO DIREITO",
+        "Un": "cj"
+    },
+    {
+        "Codigo": "088307",
+        "Material": "DORMENTE, MADEIRA PRIMEIRA CLASSE TRATADA, COMP 2,80 M, LARG 0,24 M, ALT 0,17 M",
+        "Un": "un"
+    },
+    {
+        "Codigo": "088308",
+        "Material": "DORMENTE, MADEIRA SEGUNDA CLASSE TRATADA, COMP 2,80 M, LARG 0,24 M, ALT 0,17 M",
+        "Un": "un"
+    },
+    {
+        "Codigo": "006210",
+        "Material": "DORMENTE MONOBLOCO DE CONCRETO PROTENDIDO, TR-57, BITOLA LARGA, VIA CORRIDA",
+        "Un": "un"
+    },
+    {
+        "Codigo": "068409",
+        "Material": " DORMENTE MONOBLOCO DE CONCRETO PROTENDIDO, TR-68, BITOLA LARGA, VIA CORRIDA",
+        "Un": "un"
+    },
+    {
+        "Codigo": "006219",
+        "Material": "DORMENTE MADEIRA, COMP 3,00 M, LARG 0,24 M, ALT 0,17 M",
+        "Un": "un"
+    },
+    {
+        "Codigo": "006220",
+        "Material": "DORMENTE MADEIRA, COMP 3,20 M, LARG 0,24 M, ALT 0,17 M",
+        "Un": "un"
+    },
+    {
+        "Codigo": "006221",
+        "Material": "DORMENTE MADEIRA, COMP 3,40 M, LARG 0,24 M, ALT 0,17 M",
+        "Un": "un"
+    },
+    {
+        "Codigo": "006222",
+        "Material": "DORMENTE MADEIRA, COMP 3,60 M, LARG 0,24 M, ALT 0,17 M",
+        "Un": "un"
+    },
+    {
+        "Codigo": "006223",
+        "Material": "DORMENTE MADEIRA, COMP 3,80 M, LARG 0,24 M, ALT 0,17 M",
+        "Un": "un"
+    },
+    {
+        "Codigo": "006224",
+        "Material": "DORMENTE MADEIRA, COMP 4,00 M, LARG 0,24 M, ALT 0,17 M",
+        "Un": "un"
+    },
+    {
+        "Codigo": "006225",
+        "Material": "DORMENTE MADEIRA, COMP 4,20 M, LARG 0,24 M, ALT 0,17 M",
+        "Un": "un"
+    },
+    {
+        "Codigo": "006226",
+        "Material": "DORMENTE MADEIRA, COMP 4,40 M, LARG 0,24 M, ALT 0,17 M",
+        "Un": "un"
+    },
+    {
+        "Codigo": "006227",
+        "Material": "DORMENTE MADEIRA, COMP 4,60 M, LARG 0,24 M, ALT 0,17 M",
+        "Un": "un"
+    },
+    {
+        "Codigo": "006228",
+        "Material": "DORMENTE MADEIRA, COMP 4,80 M, LARG 0,24 M, ALT 0,17 M",
+        "Un": "un"
+    },
+    {
+        "Codigo": "006244",
+        "Material": "DORMENTE PARA AMV, MADEIRA TRATADA, COMP 5,00M, LARG 0,24M, ALT 0,17M",
+        "Un": "un"
+    },
+    {
+        "Codigo": "006245",
+        "Material": "DORMENTE PARA AMV, MADEIRA TRATADA, COMP 5,20M, LARG 0,24M, ALT 0,17M",
+        "Un": "un"
+    },
+    {
+        "Codigo": "006231",
+        "Material": "DORMENTE, P/ AMV, MADEIRA TRATADA, COMP 5,40M, LARG 0,24M, ALT 0,17M",
+        "Un": "un"
+    },
+    {
+        "Codigo": "004620",
+        "Material": "GRAMPO ELASTICO, C/ DISPOSITIVO ANTI-VANDALO, TRILHOS TR-57 E TR-68",
+        "Un": "un"
+    },
+    {
+        "Codigo": "032111",
+        "Material": "ISOLADOR PARA GRAMPO ELASTICO, TIPO OLHAL,TRILHOS TR-57/TR-68, POLIAMIDA",
+        "Un": "un"
+    },
+    {
+        "Codigo": "008574",
+        "Material": "JACARE, TR-57, ABERTURA NR 8, TIPO FIXO, SIMPLES, RETO",
+        "Un": "un"
+    },
+    {
+        "Codigo": "008583",
+        "Material": "JACARE, TR-57, ABERTURA NR 10, TIPO FIXO, SIMPLES, RETO",
+        "Un": "un"
+    },
+    {
+        "Codigo": "008586",
+        "Material": "JACARE, TR-57, ABERTURA NR 12, TIPO FIXO, SIMPLES, RETO",
+        "Un": "un"
+    },
+    {
+        "Codigo": "008587",
+        "Material": "JACARE, TR-57, ABERTURA NR 14, TIPO FIXO, SIMPLES, RETO",
+        "Un": "un"
+    },
+    {
+        "Codigo": "008584",
+        "Material": "JACARE, TR-57, ABERTURA NR 16, TIPO FIXO, SIMPLES, RETO",
+        "Un": "un"
+    },
+    {
+        "Codigo": "008577",
+        "Material": "JACARE, TR-68, ABERTURA NR 14, TIPO FIXO, SIMPLES, RETO",
+        "Un": "un"
+    },
+    {
+        "Codigo": "079110",
+        "Material": "JUNTA ISOLANTE COLADA (JIC), PERFIL TR-57 (115RE), COMP 3MX3M, CORTE BOLETO/ PATIM 45/ 90 GRAUS",
+        "Un": "un"
+    },
+    {
+        "Codigo": "079111",
+        "Material": "JUNTA ISOLANTE COLADA (JIC), PERFIL TR-57 (115RE), COMP 3MX3M, CORTE BOLETO/ PATIM 135/ 90 GRAUS",
+        "Un": "un"
+    },
+    {
+        "Codigo": "079112",
+        "Material": "JUNTA ISOLANTE COLADA (JIC), PERFIL TR-68 (136RE), COMP 3MX3M, CORTE BOLETO/ PATIM 45/ 90 GRAUS",
+        "Un": "un"
+    },
+    {
+        "Codigo": "079113",
+        "Material": "JUNTA ISOLANTE COLADA (JIC), PERFIL TR-68 (136RE), COMP 3MX3M, CORTE BOLETO/ PATIM 135/ 90 GRAUS",
+        "Un": "un"
+    },
+    {
+        "Codigo": "088163",
+        "Material": "JUNTA ISOLANTE COLADA (JIC), PERFIL TR-57 (115RE), COMP 4MX4M, CORTE BOLETO/ PATIM 45/ 90 GRAUS",
+        "Un": "un"
+    },
+    {
+        "Codigo": "088165",
+        "Material": "JUNTA ISOLANTE COLADA (JIC), PERFIL TR-57 (115RE), COMP 4MX4M, CORTE BOLETO/ PATIM 135/ 90 GRAUS",
+        "Un": "un"
+    },
+    {
+        "Codigo": "088867",
+        "Material": "JUNTA ISOLANTE COLADA (JIC), PERFIL UIC60 (60E1), COMP 4MX4M, CORTE BOLETO/ PATIM 45/ 90 GRAUS ",
+        "Un": "un"
+    },
+    {
+        "Codigo": "088868",
+        "Material": "JUNTA ISOLANTE COLADA (JIC), PERFIL UIC60 (60E1), COMP 4MX4M, CORTE BOLETO/ PATIM 135/ 90 GRAUS",
+        "Un": "un"
+    },
+    {
+        "Codigo": "088176",
+        "Material": "JUNTA ISOLANTE COLADA (JIC), PERFIL TR-68 (136RE), COMP 4MX4M, CORTE BOLETO/ PATIM 45/ 90 GRAUS",
+        "Un": "un"
+    },
+    {
+        "Codigo": "088177",
+        "Material": "JUNTA ISOLANTE COLADA (JIC), PERFIL TR-68 (136RE), COMP 4MX4M, CORTE BOLETO/ PATIM 135/ 90 GRAUS",
+        "Un": "un"
+    },
+    {
+        "Codigo": "017262",
+        "Material": "PALMILHA ISOLANTE TIPO PAD P/ DORMENTE DE CONCRETO, TRILHO TR-57, POLIETILENO DE ALTA DENSIDADE, COR PRETA",
+        "Un": "un"
+    },
+    {
+        "Codigo": "012184",
+        "Material": "PLACA DE APOIO TR 57, ANTI VANDALO EM FERRO FUNDIDO NODULAR, C/ 4 FUROS",
+        "Un": "un"
+    },
+    {
+        "Codigo": "015504",
+        "Material": "TIREFAO, CABECA PIRAMIDAL RETANGULAR, DIAM CORPO 21 MM, COMP 149 MM",
+        "Un": "un"
+    },
+    {
+        "Codigo": "015934",
+        "Material": "TRILHO FERROVIARIO, PERFIL TR-57, ACO CARBONO DE RESISTENCIA PADRAO (SS), COMP 12M",
+        "Un": "t"
+    },
+    {
+        "Codigo": "086059",
+        "Material": "TRILHO FERROVIARIO, PERFIL UIC60 (60E1), ACO CARBONO DE RESISTENCIA PADRAO (SS), COMP 12M",
+        "Un": "t"
+    },
+    {
+        "Codigo": "070098",
+        "Material": "TRILHO FERROVIARIO, PERFIL TR-68, ACO DE RESISTENCIA INTERMEDIARIA (IH), COMP 12M",
+        "Un": "t"
+    },
+    {
+        "Codigo": "011732",
+        "Material": "PEDRA BRITADA NR 3, P/ LASTRO PADRAO DE VIAS FERREAS",
+        "Un": "m³"
+    }
+]
