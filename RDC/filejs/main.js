@@ -476,8 +476,6 @@ else{
 
 
 
-}
-
 fetch(materiais).then((response) => {
         response.json().then((Dados) => {
             let materiais = document.getElementById("mtr");
@@ -495,7 +493,7 @@ fetch(materiais).then((response) => {
     });
 
 
-
+}
 
 }
 
