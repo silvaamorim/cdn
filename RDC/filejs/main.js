@@ -453,9 +453,10 @@ $(document).ready(function(){
 
 
     ///preencher select Material
-$("#ptm").change(function() {
+ $(".dados").on("change",".material",function(){
     let id = this.getAttribute('id');
-    let fornecedor = document.getElementById(id).value;
+    let idfornecedor = this.form[5].id + id.substring(3, );
+    let fornecedor = document.getElementById(idfornecedor).value;
     let materiais = "";
 
     if (fornecedor !== "") {
@@ -601,8 +602,9 @@ $("#ptm").change(function() {
          let id = this.getAttribute('id');
          let iddesc = this.form[2].id + id.substring(3, );
          let idund = this.form[3].id + id.substring(3, );
+         let idfornecedor = this.form[5].id + id.substring(3, );
          let codmat = document.getElementById(id).value;
-         let fornecedor = document.getElementById(id).value;
+         let fornecedor = document.getElementById(idfornecedor).value;
 
          if (fornecedor !== "") {
         if (fornecedor === "CPTM") {
