@@ -457,6 +457,11 @@ $(document).ready(function(){
     let id = this.getAttribute('id');
     let idfornecedor = this.form[5].id + id.substring(3, );
     let idcodigo = this.form[1].id + id.substring(3, );
+    let iddesc = this.form[2].id + id.substring(3, );
+    let idund = this.form[3].id + id.substring(3, );
+    let idqtd = this.form[4].id + id.substring(3, );
+    let idstatus = this.form[6].id + id.substring(3, );
+ 
     let fornecedor = document.getElementById(idfornecedor).value;
     let materiais = "";
 
@@ -471,7 +476,18 @@ $(document).ready(function(){
             .then(response => response.json())
             .then(Dados => {
                 let materiaisElement = document.getElementById(idcodigo);
+                let descricao = document.getElementById(iddesc);            
+                let unidade = document.getElementById(idund);  
+                let qtd = document.getElementById(idqtd);  
+                let status = document.getElementById(idstatus);  
+
                 materiaisElement.innerHTML = ""; // Limpiar las opciones anteriores
+                descricao.innerHTML = ""
+                unidade.innerHTML = ""
+                qtd.innerHTML = ""
+                status.innerHTML = ""
+
+                
 
                 let emptyOption = new Option("", "");
                 materiaisElement.options.add(emptyOption);
