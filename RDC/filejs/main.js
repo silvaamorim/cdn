@@ -453,7 +453,32 @@ $(document).ready(function(){
 
 
     ///preencher select Material
-    fetch("filejson/materialconsorcio.json").then((response) => {
+    $("#ptm").change(function() {
+
+let fornecedor = document.getElementById("ptm").value;
+
+let materiais = ""
+
+if( fornecdor != ""){
+
+	if(fornecdor == "CPTM"){
+
+	 materiais = "filejson/materialconsorcio.json";
+
+
+}
+else{
+
+	materiais = "filejson/materialcptm.json";
+
+
+}
+
+
+
+}
+
+fetch(materiais).then((response) => {
         response.json().then((Dados) => {
             let materiais = document.getElementById("mtr");
             let texto = "";
@@ -468,6 +493,11 @@ $(document).ready(function(){
             }
         })
     });
+
+
+
+
+}
 
 
     ///preencher select Mão de Obras
