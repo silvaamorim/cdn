@@ -459,9 +459,9 @@ $("#ptm").change(function() {
 
     if (fornecedor !== "") {
         if (fornecedor === "CPTM") {
-            materiais = "filejson/materialconsorcio.json";
-        } else {
             materiais = "filejson/materialcptm.json";
+        } else {
+            materiais = "filejson/materialconsorcio.json";
         }
 
         fetch(materiais)
@@ -598,8 +598,16 @@ $("#ptm").change(function() {
          let iddesc = this.form[2].id + id.substring(3, );
          let idund = this.form[3].id + id.substring(3, );
          let codmat = document.getElementById(id).value;
+         let fornecedor = document.getElementById("ptm").value;
 
-             fetch("filejson/materialconsorcio.json").then((response) => {
+         if (fornecedor !== "") {
+        if (fornecedor === "CPTM") {
+            materiais = "filejson/materialcptm.json";
+        } else {
+            materiais = "filejson/materialconsorcio.json";
+        }
+
+             fetch(materiais).then((response) => {
         response.json().then((Dados) => {                 
             let descricao = document.getElementById(iddesc);            
             let unidade = document.getElementById(idund);             
@@ -611,7 +619,7 @@ $("#ptm").change(function() {
                 }
             }
         })
-    });
+    });}
 
     });
 
