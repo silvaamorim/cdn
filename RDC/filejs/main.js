@@ -453,7 +453,7 @@ $(document).ready(function(){
 
 
     ///preencher select Material
- $(".dados").on("change",".material",function(){
+ $(".dados").on("change",".fornecedor",function(){
     let id = this.getAttribute('id');
     let idfornecedor = this.form[5].id + id.substring(3, );
     let fornecedor = document.getElementById(idfornecedor).value;
