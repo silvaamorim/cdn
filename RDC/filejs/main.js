@@ -482,10 +482,10 @@ $(document).ready(function(){
                 let status = document.getElementById(idstatus);  
 
                 materiaisElement.innerHTML = ""; // Limpiar las opciones anteriores
-                descricao.innerHTML = ""
-                unidade.innerHTML = ""
-                qtd.innerHTML = ""
-                status.innerHTML = ""
+                descricao.value = ""
+                unidade.value = ""
+                qtd.value = ""
+                status.selectedIndex = -1;
 
                 
 
