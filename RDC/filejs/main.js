@@ -456,6 +456,7 @@ $(document).ready(function(){
  $(".dados").on("change",".fornecedor",function(){
     let id = this.getAttribute('id');
     let idfornecedor = this.form[5].id + id.substring(3, );
+    let idcodigo = this.form[1].id + id.substring(3, );
     let fornecedor = document.getElementById(idfornecedor).value;
     let materiais = "";
 
@@ -469,7 +470,7 @@ $(document).ready(function(){
         fetch(materiais)
             .then(response => response.json())
             .then(Dados => {
-                let materiaisElement = document.getElementById("mtr");
+                let materiaisElement = document.getElementById(idcodigo);
                 materiaisElement.innerHTML = ""; // Limpiar las opciones anteriores
 
                 let emptyOption = new Option("", "");
