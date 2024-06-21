@@ -453,49 +453,31 @@ $(document).ready(function(){
 
 
     ///preencher select Material
-    $("#ptm").change(function() {
+$("#ptm").change(function() {
+    let fornecedor = document.getElementById("ptm").value;
+    let materiais = "";
 
-let fornecedor = document.getElementById("ptm").value;
+    if (fornecedor !== "") {
+        if (fornecedor === "CPTM") {
+            materiais = "filejson/materialconsorcio.json";
+        } else {
+            materiais = "filejson/materialcptm.json";
+        }
 
-let materiais = ""
+        fetch(materiais)
+            .then(response => response.json())
+            .then(Dados => {
+                let materiaisElement = document.getElementById("mtr");
+                materiaisElement.innerHTML = ""; // Limpiar las opciones anteriores
 
-if( fornecdor != ""){
-
-	if(fornecdor == "CPTM"){
-
-	 materiais = "filejson/materialconsorcio.json";
-
-
-}
-else{
-
-	materiais = "filejson/materialcptm.json";
-
-
-}
-
-
-
-fetch(materiais).then((response) => {
-        response.json().then((Dados) => {
-            let materiais = document.getElementById("mtr");
-            let texto = "";
-            let valor = "";
-                       
-
-            for (let i = 0; i < Dados.length; i++){
-                texto = Dados[i].Codigo;
-                valor = Dados[i].Codigo;
-                materiais.options[materiais.options.length] = new Option(texto,  valor);
-               
-            }
-        })
-    });
-
-
-}
-
-}
+                Dados.forEach(dado => {
+                    let option = new Option(dado.Codigo, dado.Codigo);
+                    materiaisElement.options.add(option);
+                });
+            })
+            .catch(error => console.error('Error al obtener los datos:', error));
+    }
+});
 
 
     ///preencher select Mão de Obras
