@@ -470,6 +470,9 @@ $("#ptm").change(function() {
                 let materiaisElement = document.getElementById("mtr");
                 materiaisElement.innerHTML = ""; // Limpiar las opciones anteriores
 
+                let emptyOption = new Option("", "");
+                materiaisElement.options.add(emptyOption);
+
                 Dados.forEach(dado => {
                     let option = new Option(dado.Codigo, dado.Codigo);
                     materiaisElement.options.add(option);
