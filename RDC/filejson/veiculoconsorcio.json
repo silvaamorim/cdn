@@ -2,6 +2,9 @@
     {
         "Veiculo": "Basculante"
     },
+     {
+        "Veiculo": "Carro"
+    },
     {
         "Veiculo": "Caminhão de Linha"
     },
@@ -17,8 +20,17 @@
     {
         "Veiculo": "Desguarnecedora de Lastro"
     },
+     {
+        "Veiculo": "Escavadeira"
+    },
     {
         "Veiculo": "Locomotiva"
+    },
+     {
+        "Veiculo": "Micro-ônibus"
+    },
+     {
+        "Veiculo": "Van"
     },
     {
         "Veiculo": "Reguladora de Lastro"
@@ -28,6 +40,9 @@
     },
     {
         "Veiculo": "Socadora"
+    },
+     {
+        "Veiculo": "Trator de Esteira"
     },
     {
         "Veiculo": "Vagão"
