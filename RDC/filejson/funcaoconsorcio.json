@@ -2,6 +2,10 @@
     {
         "Funcao": "Ajudante"
     },
+
+     {
+        "Funcao": "APONTADOR"
+    },
     {
         "Funcao": "Artíficie de Obra"
     },
@@ -17,6 +21,18 @@
     {
         "Funcao": "Auxiliar"
     },
+     {
+        "Funcao": "CARPINTEIRO"
+    },
+     {
+        "Funcao": "CONSERVADOR DE VIA"
+    },
+     {
+        "Funcao": "CONSERVADOR DE VIA – TAREFEIRO"
+    },
+     {
+        "Funcao": "ELETRICISTA"
+    },
     {
         "Funcao": "Encarregado"
     },
@@ -25,6 +41,9 @@
     },
     {
         "Funcao": "Mestre"
+    },
+    {
+        "Funcao": "MESTRE DE VIA"
     },
     {
         "Funcao": "Motorista"
@@ -44,8 +63,17 @@
     {
         "Funcao": "Operador de Maquinas Leves"
     },
+     {
+        "Funcao": "OPERADOR DE MÁQUINA PESADA"
+    },
+     {
+        "Funcao": "PEDREIRO"
+    },
     {
         "Funcao": "Soldador"
+    },
+      {
+        "Funcao": "TÉCNICO DE SEGURANÇA DO TRABALHO"
     },
     {
         "Funcao": "Topografo"
