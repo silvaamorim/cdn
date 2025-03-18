@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário ART</title>
+    <style>
+		
+		
+        body { font-family: Arial, sans-serif; margin: 1px; width: 100%; overflow: visible;}
+        table { width: 100%; border-collapse: collapse; margin-top: 5px; }
+        th, td { border: 1px solid #000; padding: 2px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .section { margin: 1px;
+				padding: 5px; }
+	canvas {
+            border: 1px solid #000;
+            cursor: crosshair;
+        }
+        .assinatura-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 5px;
+            padding: 2px 3px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+
+	.input-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .full-width-input {
+        flex: 1; /* Faz o input ocupar todo o espaço restante */
+        box-sizing: border-box; /* Evita que padding/border aumentem o tamanho */
+        margin-left: 8px; /* Pequeno espaçamento entre o checkbox e o input */
+    }
+
+@media print {
+    @page {
+        margin: 0;
+    }
+    body {
+	 width: 100%;
+        height: auto;
+        overflow: visible;
+        margin: 0;
+        padding: 0;
+    }
+}
+    </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+    window.jsPDF = window.jspdf.jsPDF; // Garante que jsPDF seja acessível
+</script>
+    <script>
+        function adicionarLinha() {
+            var tabela = document.getElementById("Equipe_CPTM");
+            var novaLinha = tabela.insertRow(-1);
+            var celulas = ["responsavel", "matricula", "assinatura"];
+            celulas.forEach(function(nome) {
+                var celula = novaLinha.insertCell();
+                celula.innerHTML = `<div class="input-container"><input type="text" name="${nome}" style="text-transform:uppercase" class="full-width-input"></div>`;
+            });
+        }
+
+function imprimirPDF() {
+    if (!window.jsPDF) {
+        console.error("jsPDF não carregado corretamente.");
+        return;
+    }
+
+    html2canvas(document.body, {
+        scale: 2
+    }).then(canvas => {
+        const imgData = canvas.toDataURL("image/png");
+        const pdf = new jsPDF({
+            orientation: 'portrait',
+            unit: 'mm',
+            format: 'a4'
+        });
+
+        const imgWidth = 210;
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+        pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+        pdf.save('formulario_ART.pdf');
+    }).catch(error => {
+        console.error("Erro ao capturar tela:", error);
+    });
+}
+
+    </script>
+</head>
+<body>
+    <h2> <img src="https://silvaamorim.github.io/cdn/RDC/img/logocptm.png" alt="logocptm" width="5%" height="5%"> ART - Análise de Risco de Tarefa - Via Permanente</h2>
+    <form>
+        <fieldset class="section">
+            <legend>INFORMAÇÕES GERAIS</legend>
+            <table style="width:100%">
+                <tr style="width:10%">
+                    <th>ART n°</th>
+                    <th>Data</th>
+                    <th>Hora</th>
+                    <th>SA/ANO</th>
+                    <th>FALHA/ANO</th>
+                    <th>OSM/ANO</th>
+                    <th>LOCAL</th>
+                </tr>
+                <tr style="width:10%">
+                    <td style="width:10%"><input type="text" name="art_num"></td>
+                    <td style="width:10%"><input type="date" name="data"></td>
+                    <td style="width:10%"><input type="time" name="hora"></td>
+                    <td style="width:10%"><input type="text" name="SA"></td>
+                    <td style="width:10%"><input type="text" name="FALHA"></td>
+                    <td style="width:10%"><input type="text" name="osm"></td>
+                    <td>
+				<div class="input-container">
+				<input type="text" name="local" style="text-transform:uppercase" class="full-width-input"></td>
+				</div>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset class="section">
+            <legend>LINHA</legend>
+            <table style="width:100%">                
+                <tr style="width:10%">
+                    <td><input type="radio" id="7 - Rubi" name="linha" value="7"><label for="7 - Rubi">7 - Rubi</label></td>
+                    <td><input type="radio" id="10 - Turquesa" name="linha" value="10"><label for="10 - Turquesa">10 - Turquesa</label></td>
+                    <td><input type="radio" id="11 - Coral" name="linha" value="11"><label for="11 - Coral">11 - Coral</label></td>
+                    <td><input type="radio" id="12 - Safira" name="linha" value="12"><label for="12 - Safira">12 - Safira</label></td>
+                    <td><input type="radio" id="13 - Jade" name="linha" value="13"><label for="13 - Jade">13 - Jade</label></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset class="section">
+            <legend>TIPO DE MANUTENÇÃO</legend>
+            <table style="width:100%">                
+                <tr>
+                    <td>
+				<div class="input-container">
+                        <input type="radio" name="tipo" value="corretiva">Corretiva
+                        <input type="text" name="corretiva" placeholder="Faça uma descrição resumida dos serviços" style="text-transform:uppercase" class="full-width-input">
+				</div>
+                    </td>
+                    <td>
+				<div class="input-container">
+                        <input type="radio" name="tipo" value="preventiva">Preventiva
+                        <input type="text" name="preventiva" placeholder="Faça uma descrição resumida dos serviços" style="text-transform:uppercase" class="full-width-input">
+				</div>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset class="section">
+            <legend>ETAPA 1 - PREPARAÇÃO DA ATIVIDADE</legend>
+            <table style="width:100%">
+                <tr>
+                    <td>
+                        <input type="checkbox" name="tipo" value="programação - SSA/OSM/FALHA">programação - SSA/OSM/FALHA<br>
+                        <input type="checkbox" name="tipo" value="meios de comunicação (Testar radio, etc)">meios de comunicação (Testar radio, etc)<br>
+                        <input type="checkbox" name="tipo" value="EPI - equipamentos de proteção individual">EPI - equipamentos de proteção individual<br>
+                        <input type="checkbox" name="tipo" value="Acompanhamento segurança armada">Acompanhamento segurança armada<br>
+                        <input type="checkbox" name="tipo" value="ausência de adornos pessoais (anéis, etc)">ausência de adornos pessoais (anéis, etc)
+                    </td>
+                    <td>
+                        <input type="checkbox" name="tipo" value="Ferramentas manuais">Ferramentas manuais<br>
+                        <input type="checkbox" name="tipo" value="Ferramentas elétricas">Ferramentas elétricas<br>
+                        <input type="checkbox" name="tipo" value="equipamentos">equipamentos<br>
+                        <input type="checkbox" name="tipo" value="peças / acessórios">peças / acessórios<br>
+                        <input type="checkbox" name="tipo" value="Instrução da equipe sobre a tarefa">Instrução da equipe sobre a tarefa<br>
+                        <div class="input-container">
+				<input type="checkbox" name="tipo" value="Outros:">Outros: 
+				<input type="text" name="outros" style="text-transform:uppercase" class="full-width-input">
+				</div>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset class="section">
+            <legend>ETAPA 2 - DESLOCAMENTO / TRANSPORTE</legend>
+            <table style="width:100%">
+                <tr>
+                    <td><input type="checkbox" name="tipo" value="Trem">Trem</td>
+                    <td><input type="checkbox" name="tipo" value="A pé">A pé</td>
+                    <td><input type="checkbox" name="tipo" value="Veículo rodoviário">Veículo rodoviário</td>
+                    <td><input type="checkbox" name="tipo" value="Veículo de manutenção">Veículo de manutenção</td>
+                    <td>
+				<div class="input-container">
+				<input type="checkbox" name="tipo" value="Outro:">Outro: 
+				<input type="text" name="outros" style="text-transform:uppercase" class="full-width-input">
+				</div>
+			</td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset class="section">
+            <legend>ETAPA 3 - EXECUÇÃO</legend>
+            <table style="width:100%">
+                <tr>
+                    <td>
+                        <input type="checkbox" name="tipo" value="deslocamentos no local da tarefa">deslocamentos no local da tarefa<br>
+                        <input type="checkbox" name="tipo" value="posicionamento no local da tarefa">posicionamento no local da tarefa<br>
+                        <input type="checkbox" name="tipo" value="Ocupação do circuito de Via">Ocupação do circuito de Via
+                    </td>
+                    <td>
+                        <input type="checkbox" name="tipo" value="emplacamento / sinalização">emplacamento / sinalização<br>
+                        <input type="checkbox" name="tipo" value="Posicionamento seguro dos veículos rodoferroviários">Posicionamento seguro dos veículos rodoferroviários<br>
+                        <input type="checkbox" name="tipo" value="Posicionamento ferramentas / peças e acessórios">Posicionamento ferramentas / peças e acessórios
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset class="section">
+            <legend>ETAPA 4 - FINALIZAÇÃO</legend>
+            <table style="width:100%">
+                <tr>
+                    <td>
+                        <input type="checkbox" name="tipo" value="Guardar ferramentas / peças / acessórios">Guardar ferramentas / peças / acessórios<br>
+                        <input type="checkbox" name="tipo" value="Manusear / remover resíduos">Manusear / remover resíduos<br>
+                        <input type="checkbox" name="tipo" value="Retirada de emplacamento e sinalização do local">Retirada de emplacamento e sinalização do local
+                    </td>
+                    <td>
+                        <input type="checkbox" name="tipo" value="Desmobilização">Desmobilização<br>
+                        <input type="checkbox" name="tipo" value="Desocupar circuito de via">Desocupar circuito de via<br>
+                        <input type="checkbox" name="tipo" value="Realizar testes">Realizar testes
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+				<div class="input-container">
+                        <input type="checkbox" name="tipo" value="Outro:">Outro: 
+				<input type="text" name="outros" style="text-transform:uppercase" class="full-width-input">
+                    	</div>
+			</td>
+                </tr>
+            </table>
+        </fieldset>      
+
+        <fieldset class="section">
+            <legend>PROCEDIMENTOS SEGURO DE TRABALHO RECOMENDADO</legend>
+            <div style="display: flex; gap: 20px;">
+                <table style="width:100%">
+                    <tr>
+                        <th>Risco</th>
+                        <th>N/A</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                    </tr>
+                    <tr>
+                        <td>Obedecer P.M.CPTM nº <input type="text" name="outros" style="text-transform:uppercase"></td>
+                        <td><input type="radio" name="risco1"></td>
+                        <td><input type="radio" name="risco1"></td>
+                        <td><input type="radio" name="risco1"></td>
+                        <td><input type="radio" name="risco1"></td>
+                        <td><input type="radio" name="risco1"></td>
+                    </tr>
+                    <td>nos deslocamentos</td>
+                        <td><input type="radio" name="risco2"></td>
+                        <td><input type="radio" name="risco2"></td>
+                        <td><input type="radio" name="risco2"></td>
+                        <td><input type="radio" name="risco2"></td>
+                        <td><input type="radio" name="risco2"></td>
+                    </tr>
+                    <tr>
+                        <td>Obedecer normas de trânsito</td>
+                        <td><input type="radio" name="risco3"></td>
+                        <td><input type="radio" name="risco3"></td>
+                        <td><input type="radio" name="risco3"></td>
+                        <td><input type="radio" name="risco3"></td>
+                        <td><input type="radio" name="risco3"></td>
+                    </tr>
+                    <tr>
+                        <td>Usar ferramentas adequadas</td>
+                        <td><input type="radio" name="risco4"></td>
+                        <td><input type="radio" name="risco4"></td>
+                        <td><input type="radio" name="risco4"></td>
+                        <td><input type="radio" name="risco4"></td>
+                        <td><input type="radio" name="risco4"></td>
+                    </tr>
+                    <tr>
+                        <td>Sinalização adequada</td>
+                        <td><input type="radio" name="risco5"></td>
+                        <td><input type="radio" name="risco5"></td>
+                        <td><input type="radio" name="risco5"></td>
+                        <td><input type="radio" name="risco5"></td>
+                        <td><input type="radio" name="risco5"></td>
+                    </tr>
+                    <tr>
+                        <td>Postura Correta</td>
+                        <td><input type="radio" name="risco6"></td>
+                        <td><input type="radio" name="risco6"></td>
+                        <td><input type="radio" name="risco6"></td>
+                        <td><input type="radio" name="risco6"></td>
+                        <td><input type="radio" name="risco6"></td>
+                    </tr>
+                    <tr>
+                        <td>Limpar/organizar local</td>
+                        <td><input type="radio" name="risco7"></td>
+                        <td><input type="radio" name="risco7"></td>
+                        <td><input type="radio" name="risco7"></td>
+                        <td><input type="radio" name="risco7"></td>
+                        <td><input type="radio" name="risco7"></td>
+                    </tr>
+                    <tr>
+                        <td>Atender normas tráfego ferroviário</td>
+                        <td><input type="radio" name="risco8"></td>
+                        <td><input type="radio" name="risco8"></td>
+                        <td><input type="radio" name="risco8"></td>
+                        <td><input type="radio" name="risco8"></td>
+                        <td><input type="radio" name="risco8"></td>
+                    </tr>
+                    <tr>
+                        <td>Iluminação adequada</td>
+                        <td><input type="radio" name="risco9"></td>
+                        <td><input type="radio" name="risco9"></td>
+                        <td><input type="radio" name="risco9"></td>
+                        <td><input type="radio" name="risco9"></td>
+                        <td><input type="radio" name="risco9"></td>
+                    </tr>
+                    <tr>
+                        <td>EPC - Kit de Sinalização</td>
+                        <td><input type="radio" name="risco10"></td>
+                        <td><input type="radio" name="risco10"></td>
+                        <td><input type="radio" name="risco10"></td>
+                        <td><input type="radio" name="risco10"></td>
+                        <td><input type="radio" name="risco10"></td>
+                    </tr>
+                </table>
+                <table style="width:100%">
+                    <tr>
+                        <th>Risco</th>
+                        <th>N/A</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                    </tr>
+                    <tr>
+                        <td>Botina de segurança</td>
+                        <td><input type="radio" name="risco11"></td>
+                        <td><input type="radio" name="risco11"></td>
+                        <td><input type="radio" name="risco11"></td>
+                        <td><input type="radio" name="risco11"></td>
+                        <td><input type="radio" name="risco11"></td>
+                    </tr>
+                    <tr>
+                        <td>Capacete</td>
+                        <td><input type="radio" name="risco12"></td>
+                        <td><input type="radio" name="risco12"></td>
+                        <td><input type="radio" name="risco12"></td>
+                        <td><input type="radio" name="risco12"></td>
+                        <td><input type="radio" name="risco12"></td>
+                    </tr>
+                    <tr>
+                        <td>Avental de raspa/mangote/perneira</td>
+                        <td><input type="radio" name="risco13"></td>
+                        <td><input type="radio" name="risco13"></td>
+                        <td><input type="radio" name="risco13"></td>
+                        <td><input type="radio" name="risco13"></td>
+                        <td><input type="radio" name="risco13"></td>
+                    </tr>
+                    <tr>
+                        <td>Luvas (diversas)</td>
+                        <td><input type="radio" name="risco14"></td>
+                        <td><input type="radio" name="risco14"></td>
+                        <td><input type="radio" name="risco14"></td>
+                        <td><input type="radio" name="risco14"></td>
+                        <td><input type="radio" name="risco14"></td>
+                    </tr>
+                    <tr>
+                        <td>Óculos de proteção</td>
+                        <td><input type="radio" name="risco15"></td>
+                        <td><input type="radio" name="risco15"></td>
+                        <td><input type="radio" name="risco15"></td>
+                        <td><input type="radio" name="risco15"></td>
+                        <td><input type="radio" name="risco15"></td>
+                    </tr>
+                    <tr>
+                        <td>Protetor auricular</td>
+                        <td><input type="radio" name="risco16"></td>
+                        <td><input type="radio" name="risco16"></td>
+                        <td><input type="radio" name="risco16"></td>
+                        <td><input type="radio" name="risco16"></td>
+                        <td><input type="radio" name="risco16"></td>
+                    </tr>
+                    <tr>
+                        <td>Perneira (animais peçonhentos)</td>
+                        <td><input type="radio" name="risco17"></td>
+                        <td><input type="radio" name="risco17"></td>
+                        <td><input type="radio" name="risco17"></td>
+                        <td><input type="radio" name="risco17"></td>
+                        <td><input type="radio" name="risco17"></td>
+                    </tr>
+                    <tr>
+                        <td>Capa/conjunto para chuva</td>
+                        <td><input type="radio" name="risco18"></td>
+                        <td><input type="radio" name="risco18"></td>
+                        <td><input type="radio" name="risco18"></td>
+                        <td><input type="radio" name="risco18"></td>
+                        <td><input type="radio" name="risco18"></td>
+                    </tr>
+                    <tr>
+                        <td>Mascaras diversas</td>
+                        <td><input type="radio" name="risco19"></td>
+                        <td><input type="radio" name="risco19"></td>
+                        <td><input type="radio" name="risco19"></td>
+                        <td><input type="radio" name="risco19"></td>
+                        <td><input type="radio" name="risco19"></td>
+                    </tr>
+                    <tr>
+                        <td>Vestimenta com faixas refletivas</td>
+                        <td><input type="radio" name="risco20"></td>
+                        <td><input type="radio" name="risco20"></td>
+                        <td><input type="radio" name="risco20"></td>
+                        <td><input type="radio" name="risco20"></td>
+                        <td><input type="radio" name="risco20"></td>
+                    </tr>
+                </table>
+            </div>
+        </fieldset>
+
+        <fieldset class="section">
+            <legend>EQUIPE CPTM</legend>
+            <table id="Equipe_CPTM" style="width:100%">
+                <tr>
+                    <th>Nome</th>
+                    <th>Matrícula</th>
+                    <th>Assinatura</th>
+                </tr>
+                <tr>
+                    <td>
+				<div class="input-container">
+				<input type="text" name="responsavel" style="text-transform:uppercase" class="full-width-input">
+				</div>
+			  </td>
+                    <td>
+				<div class="input-container">
+				<input type="text" name="matricula" style="text-transform:uppercase" class="full-width-input">
+				</div>
+			  </td>
+			<td>
+				<div class="input-container">
+                    <input type="text" name="assinatura" style="text-transform:uppercase" class="full-width-input">
+				</div>
+			</td>
+                </tr>
+                <tr>
+                    <td>
+				<div class="input-container">
+				<input type="text" name="responsavel" style="text-transform:uppercase" class="full-width-input">
+				</div>
+			 </td>
+                    <td>
+				<div class="input-container">
+				<input type="text" name="matricula" style="text-transform:uppercase" class="full-width-input">
+				</div>
+			 </td>
+                    <td>
+				<div class="input-container">
+				<input type="text" name="assinatura" style="text-transform:uppercase" class="full-width-input">
+				</div>
+			 </td>
+                </tr>
+            </table>
+            <button type="button" onclick="adicionarLinha()">Adicionar Linha</button>
+        </fieldset>
+
+        <fieldset class="section">
+            <legend>REGRAS BÁSICAS DE SEGURANÇA</legend>
+            <p>Só executar serviços de manutenção em circuitos, sistemas, componentes, dispositivos que forem previamente solicitados, planejados e programados através de SSA, OSM, Falha.</p>
+            <p>Confira, antes de sair, se todos os EPI´s, EPC´s, ferramentas, equipamentos e veículos estão em ordem e em condições seguras. O uso de EPI´s e EPC´s é obrigatório.</p>
+            <p>Sinalize o local de trabalho de forma adequada para condições seguras.</p>
+            <p>Antes de iniciar o serviço, o responsável e a equipe devem preencher a A.R.T. A análise deve apontar todas as situações de risco e as formas de controle. Se durante a atividade a equipe encontrar uma situação não prevista, deve parar e refazer a A.R.T., providenciando as medidas de segurança.</p>
+            <p>Durante toda a atividade, o trabalhador de solo ou de apoio deve acompanhar atentamente o serviço do executante, verificando se ele está seguindo procedimentos seguros. Quando isso não acontecer, deve ordenar a imediata interrupção dos trabalhos.</p>
+            <p>Só inicie a execução de serviços programados ou de emergência após obter a autorização do CIM ou CCO.</p>
+            <p>Em caso de dúvida, sempre peça orientação ao responsável imediato ou à sua chefia. Não tenha medo ou vergonha de pedir esclarecimentos ou ajuda aos seus companheiros.</p>
+            <p>Nas atividades, sempre utilize equipamentos de proteção coletivos ou individuais indicados, em perfeito estado de conservação.</p>
+            <p>Em caso de acidentes com vítimas, a chefia imediata deve viabilizar o socorro para o hospital ou pronto-socorro mais próximo. A chefia imediata deve acompanhar ou indicar um acompanhante para o acidentado ao atendimento médico. O CIM/CCO deve ser avisado imediatamente em caso de qualquer acidente.</p>
+            <p>Durante toda a execução do serviço, evite brincadeiras ou distrações, visando sempre manter adequada concentração nas atividades.</p>
+            <p>Não utilize adornos (anéis, pulseiras, piercing, etc.) e cabelos compridos soltos durante a execução dos trabalhos.</p>
+        </fieldset>
+
+        <fieldset class="section">
+            <legend>OBSERVAÇÕES</legend>
+            <table style="width:100%">
+                <tr>
+                    <td>
+				<div class="input-container">
+				<textarea name="w3review" rows="4" cols="50" class="full-width-input"></textarea>
+				</div>
+			 </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset class="section">
+            <legend>RESPONSÁVEL</legend>
+            <table style="width:100%">
+                <tr>
+                    <th>Nome</th>
+                    <th>Matrícula</th>
+                    <th>Assinatura</th>
+                </tr>
+                <tr>
+                    <td><div class="input-container">
+				<input type="text" name="responsavel" style="text-transform:uppercase" class="full-width-input">
+				</div></td>
+                    <td><div class="input-container">
+				<input type="text" name="matricula" style="text-transform:uppercase" class="full-width-input">
+				</div></td>
+                    <td><div class="input-container">
+                    <input type="text" name="assinatura" style="text-transform:uppercase" class="full-width-input">
+				</div></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+
+
+ <script>
+        const canvas = document.getElementById("assinaturaCanvas");
+        const ctx = canvas.getContext("2d");
+
+        let desenhando = false;
+
+        function iniciarDesenho(event) {
+            desenhando = true;
+            ctx.beginPath();
+            ctx.moveTo(event.offsetX, event.offsetY);
+        }
+
+        function desenhar(event) {
+            if (!desenhando) return;
+            ctx.lineTo(event.offsetX, event.offsetY);
+            ctx.stroke();
+        }
+
+        function pararDesenho() {
+            desenhando = false;
+            ctx.closePath();
+        }
+
+        function limparAssinatura() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        canvas.addEventListener("mousedown", iniciarDesenho);
+        canvas.addEventListener("mousemove", desenhar);
+        canvas.addEventListener("mouseup", pararDesenho);
+        canvas.addEventListener("mouseleave", pararDesenho);
+
+        // Suporte para dispositivos touch
+        canvas.addEventListener("touchstart", (event) => {
+            event.preventDefault();
+            iniciarDesenho(event.touches[0]);
+        });
+
+        canvas.addEventListener("touchmove", (event) => {
+            event.preventDefault();
+            desenhar(event.touches[0]);
+        });
+
+        canvas.addEventListener("touchend", pararDesenho);
+    </script>
+
+                <button id="printButton">IMPRIMIR</button>
+                <div id="pdfContainer"></div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+                <script>
+                    document.getElementById('printButton').addEventListener('click', function() {
+                        window.print();
+                    });
+                
+                    // Initialize PDF.js
+                    const pdfContainer = document.getElementById('pdfContainer');
+                    const loadingTask = pdfjsLib.getDocument("${iframeUrl}"); // Use the blob URL created for the PDF
+                    loadingTask.promise.then(function(pdf) {
+                        // Fetch the first page
+                        pdf.getPage(1).then(function(page) {
+                            const scale = 2; // Adjust scale to ensure full-page fit
+                            const viewport = page.getViewport({ scale: scale });
+                            const canvas = document.createElement('canvas');
+                            const context = canvas.getContext('2d');
+                            canvas.height = viewport.height;
+                            canvas.width = viewport.width;
+                            const renderContext = {
+                                canvasContext: context,
+                                viewport: viewport
+                            };
+                            page.render(renderContext).promise.then(function() {
+                                pdfContainer.innerHTML = '';
+                                pdfContainer.appendChild(canvas);
+                                // Adjust canvas to fit the container
+                                canvas.style.width = '100%';
+                                canvas.style.height = '100%';
+                            });
+                        });
+                    });
+                </script>
+</body>
+</html>
+
