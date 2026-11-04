@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mapa Corporativo</title>
+
+<link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+<style>
+
+html,
+body{
+    margin:0;
+    padding:0;
+    height:100%;
+    font-family:Segoe UI, Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+}
+
+#topbar{
+    padding:10px;
+    background:#ffffff;
+    border-bottom:1px solid #d9d9d9;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    z-index:1000;
+}
+
+#txtPesquisa{
+    flex:1;
+    min-width:300px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+
+button{
+    padding:10px 14px;
+    border:1px solid #ccc;
+    border-radius:4px;
+    background:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#f2f2f2;
+}
+
+#map{
+    flex:1;
+    width:100%;
+}
+
+#info{
+    padding:12px;
+    background:#fafafa;
+    border-top:1px solid #d9d9d9;
+}
+
+#coordenadas{
+    font-size:18px;
+    font-weight:600;
+    color:#005A9C;
+    margin-bottom:8px;
+}
+
+#endereco{
+    color:#444;
+    line-height:1.4;
+}
+
+.leaflet-container{
+    background:#f5f5f5;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="topbar">
+
+    <input
+        id="txtPesquisa"
+        type="text"
+        placeholder="Digite um endereço ou Latitude,Longitude"
+    >
+
+    <button onclick="pesquisar()">
+        🔍 Buscar
+    </button>
+
+    <button onclick="minhaLocalizacao()">
+        📍 Minha Localização
+    </button>
+
+</div>
+
+<div id="map"></div>
+
+<div id="info">
+
+    <div id="coordenadas">
+        -, -
+    </div>
+
+    <div id="endereco">
+        Clique em um ponto no mapa para capturar as coordenadas.
+    </div>
+
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+
+console.log("Leaflet:", typeof L);
+
+let marker = null;
+
+const map = L.map("map").setView(
+    [-23.55052, -46.633308],
+    12
+);
+
+const camadaMapa = L.tileLayer(
+    "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+    {
+        maxZoom: 20,
+        attribution: "&copy; OpenStreetMap"
+    }
+);
+
+const camadaSatelite = L.tileLayer(
+    "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+    {
+        maxZoom: 20,
+        attribution: "Esri World Imagery"
+    }
+);
+
+const camadaRotulos = L.tileLayer(
+    "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}",
+    {
+        attribution: "Esri Labels"
+    }
+);
+
+camadaSatelite.addTo(map);
+camadaRotulos.addTo(map);
+
+const baseMaps = {
+    "Mapa": camadaMapa,
+    "Satélite": camadaSatelite
+};
+
+L.control.layers(baseMaps).addTo(map);
+
+function atualizarCoordenadas(lat, lon){
+
+    document.getElementById(
+        "coordenadas"
+    ).innerHTML =
+        lat.toFixed(6) +
+        ", " +
+        lon.toFixed(6);
+
+}
+
+async function obterEndereco(lat, lon){
+
+    try{
+
+        const response = await fetch(
+            `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lon}`
+        );
+
+        const dados = await response.json();
+
+        document.getElementById(
+            "endereco"
+        ).innerHTML =
+            "<strong>Endereço:</strong><br>" +
+            (dados.display_name || "Não encontrado");
+
+    }
+    catch(ex){
+
+        document.getElementById(
+            "endereco"
+        ).innerHTML =
+            "Não foi possível obter o endereço.";
+
+    }
+
+}
+
+function enviarParaPowerApps(lat, lon){
+
+    try{
+
+        window.parent.postMessage(
+            {
+                latitude: lat,
+                longitude: lon
+            },
+            "*"
+        );
+
+    }
+    catch(ex){
+
+        console.log(ex);
+
+    }
+
+}
+
+function atualizarPonto(lat, lon){
+
+    atualizarCoordenadas(
+        lat,
+        lon
+    );
+
+    if(marker){
+
+        marker.setLatLng(
+            [lat, lon]
+        );
+
+    }
+    else{
+
+        marker = L.marker(
+            [lat, lon],
+            {
+                draggable:true
+            }
+        ).addTo(map);
+
+        marker.on(
+            "dragend",
+            function(e){
+
+                const pos =
+                    e.target.getLatLng();
+
+                atualizarPonto(
+                    pos.lat,
+                    pos.lng
+                );
+
+            }
+        );
+
+    }
+
+    obterEndereco(
+        lat,
+        lon
+    );
+
+    enviarParaPowerApps(
+        lat,
+        lon
+    );
+
+}
+
+map.on(
+    "click",
+    function(e){
+
+        atualizarPonto(
+            e.latlng.lat,
+            e.latlng.lng
+        );
+
+    }
+);
+
+async function pesquisar(){
+
+    const termo =
+        document
+            .getElementById(
+                "txtPesquisa"
+            )
+            .value
+            .trim();
+
+    if(!termo){
+        return;
+    }
+
+    const coordenadaRegex =
+        /^(-?\d+(\.\d+)?)\s*,\s*(-?\d+(\.\d+)?)$/;
+
+    if(coordenadaRegex.test(termo)){
+
+        const partes =
+            termo.split(",");
+
+        const lat =
+            parseFloat(partes[0]);
+
+        const lon =
+            parseFloat(partes[1]);
+
+        map.setView(
+            [lat, lon],
+            18
+        );
+
+        atualizarPonto(
+            lat,
+            lon
+        );
+
+        return;
+
+    }
+
+    try{
+
+        const response =
+            await fetch(
+                "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&q=" +
+                encodeURIComponent(termo)
+            );
+
+        const dados =
+            await response.json();
+
+        if(dados.length === 0){
+
+            alert(
+                "Endereço não encontrado."
+            );
+
+            return;
+
+        }
+
+        const lat =
+            Number(dados[0].lat);
+
+        const lon =
+            Number(dados[0].lon);
+
+        map.setView(
+            [lat, lon],
+            18
+        );
+
+        atualizarPonto(
+            lat,
+            lon
+        );
+
+    }
+    catch(ex){
+
+        alert(
+            "Erro ao pesquisar endereço."
+        );
+
+        console.error(ex);
+
+    }
+
+}
+
+function minhaLocalizacao(){
+
+    if(!navigator.geolocation){
+
+        alert(
+            "Geolocalização não suportada."
+        );
+
+        return;
+
+    }
+
+    navigator.geolocation.getCurrentPosition(
+
+        function(pos){
+
+            const lat =
+                pos.coords.latitude;
+
+            const lon =
+                pos.coords.longitude;
+
+            map.setView(
+                [lat, lon],
+                18
+            );
+
+            atualizarPonto(
+                lat,
+                lon
+            );
+
+        },
+
+        function(){
+
+            alert(
+                "Não foi possível obter sua localização."
+            );
+
+        }
+
+    );
+
+}
+
+</script>
+
+</body>
+</html>
