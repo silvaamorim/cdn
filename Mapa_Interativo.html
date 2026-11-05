@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <title>Mapa Corporativo Corrigido | Captura de Coordenadas & CSV</title>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- Fontes Google: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+  <style>
+    :root {
+      color-scheme: light dark;
+      
+      --brand-primary: #1769aa;
+      --brand-primary-hover: #10578f;
+      --brand-dark: #0f172a;
+      --brand-dark-surface: #1e293b;
+      
+      --bg-canvas: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-panel: #ffffff;
+      --border-color: #e2e8f0;
+      --border-focus: #3b82f6;
+
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --text-white: #ffffff;
+
+      --status-success: #10b981;
+      --status-error: #ef4444;
+
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+      --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.12);
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-canvas: #090d16;
+        --bg-surface: #0f172a;
+        --bg-panel: #1e293b;
+        --border-color: #334155;
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; padding: 0; }
+    body { overflow-x: hidden; background: var(--bg-canvas); color: var(--text-main); }
+
+    .app {
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Cabeçalho */
+    .header {
+      position: relative;
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 24px;
+      color: #fff;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-mark {
+      width: 42px; height: 42px; flex: 0 0 42px;
+      display: grid; place-items: center;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.08);
+      color: #38bdf8;
+    }
+    .brand h1 { margin: 0; font-size: 17px; font-weight: 700; letter-spacing: -0.2px; color: #fff; }
+    .brand p { margin: 2px 0 0; color: #94a3b8; font-size: 12px; font-weight: 500; }
+
+    .header-status {
+      display: flex; align-items: center; gap: 8px;
+      padding: 6px 12px; border-radius: 20px;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      color: #cbd5e1; font-size: 12px; font-weight: 500; white-space: nowrap;
+    }
+    .status-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--status-success);
+      box-shadow: 0 0 0 3px rgba(16,185,129,0.25);
+    }
+
+    /* Workspace */
+    .workspace {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 380px minmax(0, 1fr);
+      gap: 16px;
+      padding: 16px;
+      transition: grid-template-columns 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .workspace.collapsed {
+      grid-template-columns: 60px minmax(0, 1fr);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      min-height: 0;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding-right: 4px;
+      position: relative;
+    }
+
+    .workspace.collapsed .sidebar-content {
+      display: none;
+    }
+
+    .btn-expand-sidebar {
+      display: none;
+      width: 44px; height: 44px; padding: 0;
+      align-items: center; justify-content: center;
+      border: 1px solid var(--border-color); border-radius: var(--radius-md);
+      background: var(--bg-surface); color: var(--text-main); cursor: pointer;
+      box-shadow: var(--shadow-md);
+      margin: 0 auto;
+      transition: all 0.2s ease;
+    }
+
+    .workspace.collapsed .btn-expand-sidebar {
+      display: flex;
+    }
+
+    .btn-expand-sidebar:hover {
+      background: var(--brand-primary);
+      color: #ffffff;
+      border-color: var(--brand-primary);
+      transform: scale(1.05);
+    }
+
+    .panel {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.2s;
+    }
+    .panel-pad { padding: 18px; }
+
+    .eyebrow {
+      display: block; margin-bottom: 4px; color: var(--text-muted);
+      font-size: 11px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase;
+    }
+    .section-title {
+      margin: 0 0 14px; color: var(--text-main); font-size: 14px; font-weight: 700;
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    }
+
+    .btn-toggle-sidebar {
+      width: 34px; height: 34px; padding: 0;
+      display: inline-flex; align-items: center; justify-content: center;
+      border: 1px solid var(--border-color); border-radius: var(--radius-md);
+      background: var(--bg-canvas); color: var(--text-muted); cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-toggle-sidebar:hover {
+      color: var(--brand-primary);
+      border-color: var(--border-focus);
+      background: var(--bg-surface);
+    }
+
+    /* Form & Inputs */
+    .search-wrap { position: relative; }
+    .search-wrap .search-icon {
+      position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+      color: var(--text-muted); pointer-events: none; display: flex;
+    }
+    input {
+      width: 100%; min-width: 0; height: 44px;
+      padding: 0 14px 0 42px;
+      border: 1px solid var(--border-color); border-radius: var(--radius-md);
+      outline: none; background: var(--bg-canvas); color: var(--text-main);
+      font: inherit; font-size: 13px; font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    input:focus {
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.18);
+      background: var(--bg-surface);
+    }
+    input::placeholder { color: var(--text-muted); }
+
+    .button-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+
+    button {
+      min-height: 40px; padding: 8px 12px;
+      border: 1px solid var(--border-color); border-radius: var(--radius-md);
+      background: var(--bg-surface); color: var(--text-main);
+      font: inherit; font-size: 12px; font-weight: 600;
+      cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      transition: all 0.18s ease; user-select: none;
+    }
+    button:hover:not(:disabled) {
+      border-color: #cbd5e1; background: var(--bg-canvas);
+      transform: translateY(-1px); box-shadow: var(--shadow-sm);
+    }
+    button:active:not(:disabled) { transform: scale(0.98); }
+    button:focus-visible { outline: 2px solid var(--border-focus); outline-offset: 2px; }
+    button:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+
+    .btn-primary { color: #fff; border-color: var(--brand-primary); background: var(--brand-primary); }
+    .btn-primary:hover:not(:disabled) { color: #fff; border-color: var(--brand-primary-hover); background: var(--brand-primary-hover); }
+
+    .btn-success { color: #fff; border-color: #059669; background: #10b981; }
+    .btn-success:hover:not(:disabled) { color: #fff; background: #059669; border-color: #047857; }
+
+    .hint { margin: 8px 0 0; color: var(--text-muted); font-size: 11px; line-height: 1.5; }
+
+    /* Exibição do Ponto Atual */
+    .coord-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .coord-value {
+      flex: 1;
+      padding: 10px 12px; border: 1px solid rgba(59,130,246,0.2); border-radius: var(--radius-md);
+      background: linear-gradient(135deg, rgba(59,130,246,0.06), rgba(37,99,235,0.02));
+      color: var(--brand-primary); font-size: 14px; font-weight: 700;
+      font-variant-numeric: tabular-nums; letter-spacing: 0.2px;
+      overflow-wrap: anywhere; text-align: center;
+    }
+    .btn-copy {
+      min-height: 40px;
+      padding: 0 12px;
+      white-space: nowrap;
+    }
+
+    .coord-label { margin: 10px 0 4px; color: var(--text-muted); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    .address { min-height: 38px; color: var(--text-main); font-size: 12px; line-height: 1.5; overflow-wrap: anywhere; }
+
+    .skeleton {
+      background: linear-gradient(90deg, var(--border-color) 25%, var(--bg-canvas) 50%, var(--border-color) 75%);
+      background-size: 200% 100%;
+      animation: skeleton-loading 1.5s infinite;
+      border-radius: 4px; display: inline-block; width: 100%; height: 14px;
+    }
+    @keyframes skeleton-loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+    /* Tabela / Lista de Pontos Capturados */
+    .list-panel { display: flex; flex-direction: column; gap: 10px; }
+    .points-table-wrap {
+      max-height: 180px; overflow-y: auto; border: 1px solid var(--border-color);
+      border-radius: var(--radius-md); background: var(--bg-canvas);
+    }
+    table.points-table {
+      width: 100%; border-collapse: collapse; font-size: 11px; text-align: left;
+    }
+    table.points-table th {
+      position: sticky; top: 0; background: var(--bg-surface); padding: 8px 10px;
+      border-bottom: 1px solid var(--border-color); color: var(--text-muted); font-weight: 700;
+    }
+    table.points-table td {
+      padding: 8px 10px; border-bottom: 1px solid var(--border-color); color: var(--text-main);
+      font-variant-numeric: tabular-nums;
+    }
+    table.points-table tr:last-child td { border-bottom: none; }
+    table.points-table tr:hover { background: rgba(59,130,246,0.05); }
+
+    .btn-del {
+      padding: 3px 6px; min-height: auto; border: none; background: transparent; color: var(--status-error); cursor: pointer;
+    }
+    .btn-del:hover { background: rgba(239,68,68,0.1); border-radius: 4px; }
+
+    .map-panel {
+      position: relative; width: 100%; height: 100%; min-width: 0; min-height: 350px;
+      overflow: hidden; border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg); background: #e2e8f0; box-shadow: var(--shadow-md);
+    }
+    #map { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; }
+
+    .map-toolbar {
+      position: absolute; z-index: 400; top: 14px; left: 14px;
+      display: flex; flex-wrap: wrap; gap: 8px; max-width: calc(100% - 28px);
+    }
+    .map-chip {
+      min-height: 36px; padding: 8px 14px;
+      border: 1px solid var(--border-color); border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.92); backdrop-filter: blur(8px);
+      box-shadow: var(--shadow-sm); color: #1e293b; font-size: 12px; font-weight: 600;
+    }
+    .map-chip.active { color: var(--brand-primary); border-color: rgba(59,130,246,0.4); background: #eff6ff; }
+
+    .map-attribution {
+      position: absolute; z-index: 400; right: 10px; bottom: 8px;
+      padding: 4px 8px; border-radius: var(--radius-sm);
+      background: rgba(255,255,255,0.85); backdrop-filter: blur(4px);
+      color: #475569; font-size: 10px;
+    }
+
+    .toast {
+      position: fixed; z-index: 9999; left: 50%; bottom: 24px;
+      transform: translate(-50%, 16px); opacity: 0; pointer-events: none;
+      max-width: calc(100% - 32px); padding: 12px 18px;
+      border-radius: var(--radius-md); background: #0f172a; color: #fff;
+      box-shadow: var(--shadow-lg); font-size: 13px; font-weight: 500; text-align: center;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+    /* Custom Leaflet Marker Pulse Effect */
+    .custom-marker {
+      position: relative; width: 22px; height: 22px;
+      background: var(--brand-primary); border: 3px solid #fff;
+      border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display: grid; place-items: center; color: #fff; font-size: 10px; font-weight: 800;
+    }
+    .custom-marker::after {
+      content: ''; position: absolute; top: -5px; left: -5px; right: -5px; bottom: -5px;
+      border: 2px solid var(--brand-primary); border-radius: 50%;
+      animation: pulse-ring 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.7); opacity: 0.8; }
+      100% { transform: scale(1.6); opacity: 0; }
+    }
+
+    .loading-spinner {
+      display: inline-block; width: 14px; height: 14px;
+      border: 2px solid currentColor; border-right-color: transparent;
+      border-radius: 50%; animation: spin 0.7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Ajustes para Dispositivos Móveis */
+    @media (max-width: 768px) {
+      body { overflow-y: auto; }
+      .app { height: auto; min-height: 100vh; }
+      .header-status { display: none; }
+      
+      .workspace {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 12px;
+      }
+      
+      .map-panel {
+        order: 1;
+        height: 360px;
+        min-height: 360px;
+      }
+      
+      .sidebar {
+        order: 2;
+        overflow-y: visible;
+        width: 100%;
+      }
+      
+      .btn-toggle-sidebar, .btn-expand-sidebar { display: none !important; }
+      .sidebar-content { display: flex !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+        </div>
+        <div>
+          <h1>Mapa Corporativo</h1>
+          <p>Captura de Coordenadas & Exportador CSV</p>
+        </div>
+      </div>
+      <div class="header-status">
+        <span class="status-dot"></span> Serviço de mapas disponível
+      </div>
+    </header>
+
+    <section class="workspace" id="workspace">
+      <aside class="sidebar" aria-label="Ferramentas do mapa">
+        <button class="btn-expand-sidebar" id="btnExpand" type="button" title="Expandir menu lateral">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+
+        <div class="sidebar-content" style="display: flex; flex-direction: column; gap: 14px;">
+          
+          <section class="panel panel-pad search-panel">
+            <span class="eyebrow">Localização</span>
+            <div class="section-title">
+              <span>Pesquisar local</span>
+              <button class="btn-toggle-sidebar" id="btnCollapse" type="button" title="Recolher menu">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+            </div>
+            <form id="searchForm">
+              <div class="search-wrap">
+                <span class="search-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </span>
+                <input id="txtPesquisa" type="text" autocomplete="off"
+                       placeholder="Ex.: Mogi das Cruzes ou -23.52, -46.18"
+                       aria-label="Digite um endereço ou coordenadas">
+              </div>
+              <div class="button-row">
+                <button class="btn-primary" id="btnBuscar" type="submit">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  Buscar
+                </button>
+                <button id="btnLocalizacao" type="button">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3"/></svg>
+                  Localizar-me
+                </button>
+              </div>
+            </form>
+          </section>
+
+          <!-- Ponto Selecionado Atualmente -->
+          <section class="panel panel-pad details-panel" aria-live="polite">
+            <span class="eyebrow">Ponto Selecionado</span>
+            <h2 class="section-title">
+              Dados Atuais
+              <span id="pointState" style="color:var(--text-muted);font-size:11px;font-weight:600">Aguardando clique</span>
+            </h2>
+            
+            <div class="coord-box">
+              <div class="coord-value" id="coordenadas">—, —</div>
+              <button id="btnCopiarDados" class="btn-copy" type="button" title="Copiar apenas as coordenadas">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copiar
+              </button>
+            </div>
+
+            <div class="coord-label">Endereço aproximado</div>
+            <div class="address" id="endereco">Clique no mapa para marcar um ponto.</div>
+            
+            <div style="margin-top: 12px; display: flex; gap: 8px;">
+              <input id="txtNomePonto" type="text" placeholder="Nome do ponto (opcional)" style="height: 38px; font-size: 12px;">
+              <button id="btnAdicionarLista" class="btn-primary" type="button" disabled style="min-height:38px; white-space:nowrap;">
+                + Salvar na Lista
+              </button>
+            </div>
+          </section>
+
+          <!-- Lista de Pontos Salvos & Exportação CSV -->
+          <section class="panel panel-pad list-panel">
+            <div class="section-title" style="margin-bottom: 8px;">
+              <span>Lista de Pontos (<span id="totalPontos">0</span>)</span>
+              <button class="btn-success" id="btnExportarCSV" type="button" disabled style="min-height: 32px; padding: 4px 10px; font-size: 11px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Baixar CSV
+              </button>
+            </div>
+            
+            <div class="points-table-wrap">
+              <table class="points-table">
+                <thead>
+                  <tr>
+                    <th>ponto</th>
+                    <th>coordenadas</th>
+                    <th style="width: 30px;"></th>
+                  </tr>
+                </thead>
+                <tbody id="tbPontos">
+                  <tr>
+                    <td colspan="3" style="text-align: center; color: var(--text-muted); padding: 16px;">
+                      Nenhum ponto adicionado à lista.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button id="btnLimparLista" type="button" style="min-height: 32px; font-size: 11px; align-self: flex-end;">
+              Limpar Lista
+            </button>
+          </section>
+
+        </div>
+      </aside>
+
+      <section class="map-panel" aria-label="Mapa interativo">
+        <div id="map"></div>
+        <div class="map-toolbar" role="tablist">
+          <button class="map-chip active" id="btnMapa" type="button">Mapa de ruas</button>
+          <button class="map-chip" id="btnSatelite" type="button">Satélite</button>
+          <button class="map-chip" id="btnEnquadrar" type="button">Visão inicial</button>
+        </div>
+        <div class="map-attribution">Cartografia &copy; OpenStreetMap &amp; Esri</div>
+      </section>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <script>
+    "use strict";
+
+    const DEFAULT_CENTER = [-23.55052, -46.633308];
+    const DEFAULT_ZOOM = 11;
+    const $ = (id) => document.getElementById(id);
+
+    // Inicialização segura do Leaflet
+    const map = L.map("map", { zoomControl: false }).setView(DEFAULT_CENTER, DEFAULT_ZOOM);
+    L.control.zoom({ position: "bottomright" }).addTo(map);
+
+    // Camada principal OpenStreetMap
+    const streets = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{y}/{x}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    });
+
+    // Camada Satélite Esri
+    const satellite = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
+      maxZoom: 19,
+      attribution: 'Imagery &copy; Esri'
+    });
+
+    streets.addTo(map);
+
+    setTimeout(() => { map.invalidateSize(); }, 200);
+
+    let activeMarker = null;
+    let selectedPoint = null;
+    let reverseRequestId = 0;
+    let toastTimer = null;
+    let pontosLista = []; 
+    let markersGroup = L.layerGroup().addTo(map);
+
+    function showToast(message, duration = 3000) {
+      const toast = $("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove("show"), duration);
+    }
+
+    function setBusy(button, busy, label) {
+      button.disabled = busy;
+      if (busy) {
+        button.dataset.originalText = button.innerHTML;
+        button.innerHTML = '<span class="loading-spinner" aria-hidden="true"></span> ' + label;
+      } else if (button.dataset.originalText) {
+        button.innerHTML = button.dataset.originalText;
+        delete button.dataset.originalText;
+      }
+    }
+
+    function validarCoordenadas(lat, lon) {
+      return Number.isFinite(lat) && Number.isFinite(lon) &&
+        lat >= -90 && lat <= 90 && lon >= -180 && lon <= 180;
+    }
+
+    function atualizarInterface(lat, lon) {
+      $("coordenadas").textContent = `${lat.toFixed(6)}, ${lon.toFixed(6)}`;
+      $("pointState").textContent = "Selecionado";
+      $("pointState").style.color = "var(--status-success)";
+      $("btnAdicionarLista").disabled = false;
+    }
+
+    function resetarDadosAtuais() {
+      selectedPoint = null;
+      if (activeMarker) {
+        map.removeLayer(activeMarker);
+        activeMarker = null;
+      }
+      $("coordenadas").textContent = "—, —";
+      $("pointState").textContent = "Aguardando clique";
+      $("pointState").style.color = "var(--text-muted)";
+      $("endereco").textContent = "Clique no mapa para marcar um ponto.";
+      $("txtNomePonto").value = "";
+      $("btnAdicionarLista").disabled = true;
+    }
+
+    async function obterEndereco(lat, lon) {
+      const requestId = ++reverseRequestId;
+      $("endereco").innerHTML = '<span class="skeleton"></span>';
+
+      try {
+        const url = new URL("https://nominatim.openstreetmap.org/reverse");
+        url.search = new URLSearchParams({
+          format: "jsonv2",
+          lat: String(lat),
+          lon: String(lon),
+          zoom: "18",
+          addressdetails: "1",
+          email: "app-corporativo@empresa.com"
+        }).toString();
+
+        const response = await fetch(url, { headers: { "Accept": "application/json" } });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+
+        if (requestId !== reverseRequestId) return;
+        const enderecoText = data.display_name || "Endereço não identificado.";
+        $("endereco").textContent = enderecoText;
+        if (selectedPoint) selectedPoint.endereco = enderecoText;
+      } catch (error) {
+        if (requestId === reverseRequestId) {
+          $("endereco").textContent = "Endereço não disponível.";
+        }
+      }
+    }
+
+    function atualizarPonto(lat, lon, options = {}) {
+      if (!validarCoordenadas(lat, lon)) {
+        showToast("Coordenadas inválidas.");
+        return;
+      }
+
+      selectedPoint = { lat, lon, endereco: "" };
+      atualizarInterface(lat, lon);
+
+      const customIcon = L.divIcon({
+        className: 'custom-marker-wrapper',
+        html: '<div class="custom-marker">?</div>',
+        iconSize: [22, 22],
+        iconAnchor: [11, 11]
+      });
+
+      if (!activeMarker) {
+        activeMarker = L.marker([lat, lon], { icon: customIcon, draggable: true }).addTo(map);
+        activeMarker.on("dragend", (e) => {
+          const pos = e.target.getLatLng();
+          atualizarPonto(pos.lat, pos.lng, { pan: false });
+        });
+      } else {
+        activeMarker.setLatLng([lat, lon]);
+      }
+
+      if (options.pan !== false) map.panTo([lat, lon], { animate: true });
+      obterEndereco(lat, lon);
+    }
+
+    function copiarDadosAtuais() {
+      const coordsText = $("coordenadas").textContent;
+
+      if (!selectedPoint || coordsText === "—, —") {
+        showToast("Nenhuma coordenada selecionada para copiar.");
+        return;
+      }
+
+      navigator.clipboard.writeText(coordsText)
+        .then(() => showToast("Coordenadas copiadas para a área de transferência!"))
+        .catch(() => showToast("Erro ao copiar as coordenadas."));
+    }
+
+    function renderizarTabelaPontos() {
+      const tbody = $("tbPontos");
+      $("totalPontos").textContent = pontosLista.length;
+      $("btnExportarCSV").disabled = pontosLista.length === 0;
+
+      if (pontosLista.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="3" style="text-align: center; color: var(--text-muted); padding: 16px;">
+              Nenhum ponto adicionado à lista.
+            </td>
+          </tr>`;
+        return;
+      }
+
+      tbody.innerHTML = pontosLista.map((p, idx) => `
+        <tr>
+          <td><strong>${p.nome}</strong></td>
+          <td>${p.coordenadas}</td>
+          <td style="text-align:center;">
+            <button class="btn-del" onclick="removerPontoLista(${idx})" title="Remover">✕</button>
+          </td>
+        </tr>
+      `).join("");
+    }
+
+    function adicionarPontoNaLista() {
+      if (!selectedPoint) return;
+
+      const nomeCustom = $("txtNomePonto").value.trim();
+      const seqIndex = pontosLista.length + 1;
+      const nomePonto = nomeCustom || `Ponto ${seqIndex}`;
+      const coordsText = `${selectedPoint.lat.toFixed(6)}, ${selectedPoint.lon.toFixed(6)}`;
+
+      const novoPonto = {
+        ponto: nomePonto,
+        nome: nomePonto,
+        latitude: selectedPoint.lat,
+        longitude: selectedPoint.lon,
+        coordenadas: coordsText,
+        endereco: selectedPoint.endereco
+      };
+
+      pontosLista.push(novoPonto);
+      
+      const fixedIcon = L.divIcon({
+        className: 'custom-marker-wrapper',
+        html: `<div class="custom-marker" style="background:#10b981;">${pontosLista.length}</div>`,
+        iconSize: [22, 22],
+        iconAnchor: [11, 11]
+      });
+
+      const m = L.marker([selectedPoint.lat, selectedPoint.lon], { icon: fixedIcon }).addTo(markersGroup);
+      m.bindPopup(`<strong>${nomePonto}</strong><br>${coordsText}`);
+
+      renderizarTabelaPontos();
+      showToast(`"${nomePonto}" adicionado à lista!`);
+      
+      resetarDadosAtuais();
+    }
+
+    window.removerPontoLista = function(index) {
+      pontosLista.splice(index, 1);
+      markersGroup.clearLayers();
+      pontosLista.forEach((pt, i) => {
+        const icon = L.divIcon({
+          className: 'custom-marker-wrapper',
+          html: `<div class="custom-marker" style="background:#10b981;">${i + 1}</div>`,
+          iconSize: [22, 22],
+          iconAnchor: [11, 11]
+        });
+        const m = L.marker([pt.latitude, pt.longitude], { icon: icon }).addTo(markersGroup);
+        m.bindPopup(`<strong>${pt.nome}</strong><br>${pt.coordenadas}`);
+      });
+
+      renderizarTabelaPontos();
+      showToast("Ponto removido da lista.");
+    };
+
+    function exportarParaCSV() {
+      if (pontosLista.length === 0) return;
+
+      let csvContent = "\uFEFFponto;coordenadas\n";
+      pontosLista.forEach(p => {
+        const pontoEscaped = `"${p.nome.replace(/"/g, '""')}"`;
+        const coordEscaped = `"${p.coordenadas}"`;
+        csvContent += `${pontoEscaped};${coordEscaped}\n`;
+      });
+
+      const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", `pontos_coordenadas_${new Date().toISOString().slice(0,10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      showToast("Download do CSV iniciado!");
+    }
+
+    function limparTodaLista() {
+      pontosLista = [];
+      markersGroup.clearLayers();
+      renderizarTabelaPontos();
+      resetarDadosAtuais();
+      showToast("Lista de pontos e dados atuais limpos.");
+    }
+
+    $("searchForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const query = $("txtPesquisa").value.trim();
+      if (!query) return;
+
+      const parts = query.split(/[,;]/).map(v => v.trim());
+      if (parts.length === 2 && !isNaN(Number(parts[0].replace(',', '.'))) && !isNaN(Number(parts[1].replace(',', '.')))) {
+        const lat = Number(parts[0].replace(',', '.'));
+        const lon = Number(parts[1].replace(',', '.'));
+        if (validarCoordenadas(lat, lon)) {
+          map.setView([lat, lon], 17);
+          atualizarPonto(lat, lon);
+          return;
+        }
+      }
+
+      const button = $("btnBuscar");
+      setBusy(button, true, "Buscando");
+
+      fetch(`https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&email=app-corporativo@empresa.com&q=${encodeURIComponent(query)}`)
+        .then(res => res.json())
+        .then(results => {
+          if (results.length) {
+            const lat = Number(results[0].lat);
+            const lon = Number(results[0].lon);
+            map.setView([lat, lon], 17);
+            atualizarPonto(lat, lon);
+            showToast("Local encontrado.");
+          } else {
+            showToast("Nenhum resultado encontrado.");
+          }
+        })
+        .catch(() => showToast("Erro na busca."))
+        .finally(() => setBusy(button, false));
+    });
+
+    $("btnLocalizacao").addEventListener("click", () => {
+      if (!navigator.geolocation) return showToast("Sem suporte à geolocalização.");
+      const button = $("btnLocalizacao");
+      setBusy(button, true, "Localizando");
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          map.setView([pos.coords.latitude, pos.coords.longitude], 18);
+          atualizarPonto(pos.coords.latitude, pos.coords.longitude);
+          setBusy(button, false);
+        },
+        () => { showToast("Não foi possível obter a localização."); setBusy(button, false); }
+      );
+    });
+
+    $("btnCopiarDados").addEventListener("click", copiarDadosAtuais);
+    $("btnAdicionarLista").addEventListener("click", adicionarPontoNaLista);
+    $("btnExportarCSV").addEventListener("click", exportarParaCSV);
+    $("btnLimparLista").addEventListener("click", limparTodaLista);
+
+    $("btnMapa").addEventListener("click", () => {
+      if (map.hasLayer(satellite)) map.removeLayer(satellite);
+      if (!map.hasLayer(streets)) map.addLayer(streets);
+      $("btnMapa").classList.add("active"); $("btnSatelite").classList.remove("active");
+    });
+
+    $("btnSatelite").addEventListener("click", () => {
+      if (map.hasLayer(streets)) map.removeLayer(streets);
+      if (!map.hasLayer(satellite)) map.addLayer(satellite);
+      $("btnSatelite").classList.add("active"); $("btnMapa").classList.remove("active");
+    });
+
+    $("btnEnquadrar").addEventListener("click", () => {
+      map.setView(DEFAULT_CENTER, DEFAULT_ZOOM);
+    });
+
+    map.on("click", (e) => atualizarPonto(e.latlng.lat, e.latlng.lng));
+
+    function toggleSidebar() {
+      $("workspace").classList.toggle("collapsed");
+      setTimeout(() => map.invalidateSize(), 320);
+    }
+    $("btnCollapse").addEventListener("click", toggleSidebar);
+    $("btnExpand").addEventListener("click", toggleSidebar);
+
+    if ("ResizeObserver" in window) {
+      const observer = new ResizeObserver(() => map.invalidateSize());
+      observer.observe($("map"));
+    }
+  </script>
+</body>
+</html>
+
